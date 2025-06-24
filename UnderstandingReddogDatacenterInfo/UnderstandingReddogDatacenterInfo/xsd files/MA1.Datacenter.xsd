@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MachinePool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Vlan" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Name" type="xs:string" />
+      <xs:attribute name="FCCCluster" type="xs:string" />
+      <xs:attribute name="UsingSoftwareLoadBalancerOnly" type="xs:string" />
+      <xs:attribute name="TorAsRouter" type="xs:string" />
+      <xs:attribute name="VipRange" type="xs:string" />
+      <xs:attribute name="Capabilities" type="xs:string" />
+      <xs:attribute name="FillFactor" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Vlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RoutingEntry" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Range" type="xs:string" />
+            <xs:attribute name="Gateway" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IPRange" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="StartIP" type="xs:string" />
+            <xs:attribute name="EndIP" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MacRange" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="StartMac" type="xs:string" />
+            <xs:attribute name="EndMac" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Name" type="xs:string" />
+      <xs:attribute name="Range" type="xs:string" />
+      <xs:attribute name="RouterGateway" type="xs:string" />
+      <xs:attribute name="StartIP" type="xs:string" />
+      <xs:attribute name="EndIP" type="xs:string" />
+      <xs:attribute name="IPv6Prefix" type="xs:string" />
+      <xs:attribute name="Tag" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VIPRange">
+    <xs:complexType>
+      <xs:attribute name="RouterSetName" type="xs:string" />
+      <xs:attribute name="StartIP" type="xs:string" />
+      <xs:attribute name="EndIP" type="xs:string" />
+      <xs:attribute name="AllocationPolicy" type="xs:string" />
+      <xs:attribute name="Name" type="xs:string" />
+      <xs:attribute name="Subnet" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Datacenter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MachinePool" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="Vlan" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="CoreSerialServer" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Port" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="ConnectsTo" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Location" type="xs:string" />
+            <xs:attribute name="SKU" type="xs:string" />
+            <xs:attribute name="Address" type="xs:string" />
+            <xs:attribute name="Vlan" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rack" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NetworkSwitch" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="Address" type="xs:string" />
+                  <xs:attribute name="Vlan" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SerialServer" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="Address" type="xs:string" />
+                  <xs:attribute name="Vlan" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PowerStrip" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="Address" type="xs:string" />
+                  <xs:attribute name="Vlan" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Blade" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="NetworkInterface" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="IPAddress" type="xs:string" />
+                        <xs:attribute name="MacAddress" type="xs:string" />
+                        <xs:attribute name="Port" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="MachinePool" type="xs:string" />
+                  <xs:attribute name="BladeIP" type="xs:string" />
+                  <xs:attribute name="BladeId" type="xs:string" />
+                  <xs:attribute name="Asset" type="xs:string" />
+                  <xs:attribute name="NIC1" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Location" type="xs:string" />
+            <xs:attribute name="SKU" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cluster" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="MachinePool" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Certificate" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Path" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element ref="VIPRange" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="SnatRule" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Type" type="xs:string" />
+                  <xs:attribute name="Subnet" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DirectIpVlan" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="MachinePoolNames" type="xs:string" />
+                  <xs:attribute name="RouterGateway" type="xs:string" />
+                  <xs:attribute name="Range" type="xs:string" />
+                  <xs:attribute name="StartIP" type="xs:string" />
+                  <xs:attribute name="EndIP" type="xs:string" />
+                  <xs:attribute name="StartMac" type="xs:string" />
+                  <xs:attribute name="EndMac" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="FCCCluster" type="xs:string" />
+            <xs:attribute name="DatacenterVipRange" type="xs:string" />
+            <xs:attribute name="DnsServersIpRange" type="xs:string" />
+            <xs:attribute name="UtilityNodesIpRange" type="xs:string" />
+            <xs:attribute name="PrivateVipNodesIpRange" type="xs:string" />
+            <xs:attribute name="FabricBackendJumpboxesIpRange" type="xs:string" />
+            <xs:attribute name="MonitorNodesIpRange" type="xs:string" />
+            <xs:attribute name="KmsNodesIpRange" type="xs:string" />
+            <xs:attribute name="DefaultIpRange" type="xs:string" />
+            <xs:attribute name="XStoreVipsIpRange" type="xs:string" />
+            <xs:attribute name="RdfeSnatsIpRange" type="xs:string" />
+            <xs:attribute name="FcIpRange" type="xs:string" />
+            <xs:attribute name="FabricPoolName" type="xs:string" />
+            <xs:attribute name="SwitchDigiPowerIpRange" type="xs:string" />
+            <xs:attribute name="ClusterId" type="xs:string" />
+            <xs:attribute name="FfeVipRange" type="xs:string" />
+            <xs:attribute name="UfcIpRange" type="xs:string" />
+            <xs:attribute name="UsingSoftwareLoadBalancerOnly" type="xs:string" />
+            <xs:attribute name="TorAsRouter" type="xs:string" />
+            <xs:attribute name="ClusterFeatureSet" type="xs:string" />
+            <xs:attribute name="FCCDiskDriveSizeInGB" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RouterSet" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="VIPRange" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Router" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="PeeringEndpoint" type="xs:string" />
+                  <xs:attribute name="RouterAS" type="xs:string" />
+                  <xs:attribute name="PeeringAS" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="SKU" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Location" type="xs:string" />
+      <xs:attribute name="AuthProxyIpRange" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MachinePool" />
+        <xs:element ref="Vlan" />
+        <xs:element ref="VIPRange" />
+        <xs:element ref="Datacenter" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

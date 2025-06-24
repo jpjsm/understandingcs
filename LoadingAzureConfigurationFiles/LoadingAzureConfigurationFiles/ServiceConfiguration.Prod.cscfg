@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="HWReconcilerAzureService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="WorkflowManager">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hwreconcilerstorage;AccountKey=fP/17Na/qhoP/8wD3it4kOXKt9E0JGE798FcDT5Lg96HVakf8Wlf+iWswGEIfRpbySMc/J5YauhPJjCcdLtTkw==" />
+      <Setting name="Microsoft.KeyVault.Url" value="https://AssetReconKeyVault.vault.azure.net" />
+      <Setting name="ConfigStoreConnectionStringName" value="ARStorageConnectionString" />
+      <Setting name="ConfigStoreClientId" value="{6EFDF961-E8CF-4329-A049-ED9918CC32F0}" />
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.GSAA.SubscriptionID" value="20ecae7c-600f-451d-b3fb-092fe8c96a6e" />-->
+      <!-- CMA Configuration Settings -->
+      <Setting name="MDMAccount" value="MCIOCommon" />
+      <Setting name="MDMNamespace" value="AssetReconciliation" />
+      <Setting name="CMAMonitoringConfiguration" value="Monitoring\MAConfig.xml" />
+      <Setting name="CMATenantName" value="AssetReconciliation" />
+      <Setting name="DomainName" value="Cloud" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="KeyVaultCertificate" thumbprint="ECBD258A2296EC7ABAC725E2E4371EA77376C376" thumbprintAlgorithm="sha1" />
+      <Certificate name="MDSCertificate" thumbprint="2304E97FEDE464DD7FD2E87ED928D06522A9E755" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="ProcessingHandler">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hwreconcilerstorage;AccountKey=fP/17Na/qhoP/8wD3it4kOXKt9E0JGE798FcDT5Lg96HVakf8Wlf+iWswGEIfRpbySMc/J5YauhPJjCcdLtTkw==" />
+      <Setting name="Microsoft.KeyVault.Url" value="https://AssetReconKeyVault.vault.azure.net" />
+      <Setting name="ConfigStoreConnectionStringName" value="ARStorageConnectionString" />
+      <Setting name="ConfigStoreClientId" value="{6EFDF961-E8CF-4329-A049-ED9918CC32F0}" />
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.GSAA.SubscriptionID" value="20ecae7c-600f-451d-b3fb-092fe8c96a6e" />-->
+      <!-- CMA Configuration Settings -->
+      <Setting name="MDMAccount" value="MCIOCommon" />
+      <Setting name="MDMNamespace" value="AssetReconciliation" />
+      <Setting name="CMAMonitoringConfiguration" value="Monitoring\MAConfig.xml" />
+      <Setting name="CMATenantName" value="AssetReconciliation" />
+      <Setting name="DomainName" value="Local" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="KeyVaultCertificate" thumbprint="ECBD258A2296EC7ABAC725E2E4371EA77376C376" thumbprintAlgorithm="sha1" />
+      <Certificate name="MDSCertificate" thumbprint="2304E97FEDE464DD7FD2E87ED928D06522A9E755" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="HydrationHandler">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hwreconcilerstorage;AccountKey=fP/17Na/qhoP/8wD3it4kOXKt9E0JGE798FcDT5Lg96HVakf8Wlf+iWswGEIfRpbySMc/J5YauhPJjCcdLtTkw==" />
+      <Setting name="Microsoft.KeyVault.Url" value="https://AssetReconKeyVault.vault.azure.net" />
+      <Setting name="ConfigStoreConnectionStringName" value="ARStorageConnectionString" />
+      <Setting name="ConfigStoreClientId" value="{6EFDF961-E8CF-4329-A049-ED9918CC32F0}" />
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.GSAA.SubscriptionID" value="20ecae7c-600f-451d-b3fb-092fe8c96a6e" />-->
+      <!-- CMA Configuration Settings -->
+      <Setting name="MDMAccount" value="MCIOCommon" />
+      <Setting name="MDMNamespace" value="AssetReconciliation" />
+      <Setting name="CMAMonitoringConfiguration" value="Monitoring\MAConfig.xml" />
+      <Setting name="CMATenantName" value="AssetReconciliation" />
+      <Setting name="DomainName" value="Local" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="KeyVaultCertificate" thumbprint="ECBD258A2296EC7ABAC725E2E4371EA77376C376" thumbprintAlgorithm="sha1" />
+      <Certificate name="MDSCertificate" thumbprint="2304E97FEDE464DD7FD2E87ED928D06522A9E755" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="UploaderWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hwreconcilerstorage;AccountKey=fP/17Na/qhoP/8wD3it4kOXKt9E0JGE798FcDT5Lg96HVakf8Wlf+iWswGEIfRpbySMc/J5YauhPJjCcdLtTkw==" />
+      <Setting name="Microsoft.KeyVault.Url" value="https://AssetReconKeyVault.vault.azure.net" />
+      <Setting name="ConfigStoreConnectionStringName" value="ARStorageConnectionString" />
+      <Setting name="ConfigStoreClientId" value="{6EFDF961-E8CF-4329-A049-ED9918CC32F0}" />
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.GSAA.SubscriptionID" value="20ecae7c-600f-451d-b3fb-092fe8c96a6e" />-->
+      <!-- CMA Configuration Settings -->
+      <Setting name="MDMAccount" value="MCIOCommon" />
+      <Setting name="MDMNamespace" value="AssetReconciliation" />
+      <Setting name="CMAMonitoringConfiguration" value="Monitoring\MAConfig.xml" />
+      <Setting name="CMATenantName" value="AssetReconciliation" />
+      <Setting name="DomainName" value="Local" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="KeyVaultCertificate" thumbprint="ECBD258A2296EC7ABAC725E2E4371EA77376C376" thumbprintAlgorithm="sha1" />
+      <Certificate name="MDSCertificate" thumbprint="2304E97FEDE464DD7FD2E87ED928D06522A9E755" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="BSLReceiving">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=hwreconcilerstorage;AccountKey=fP/17Na/qhoP/8wD3it4kOXKt9E0JGE798FcDT5Lg96HVakf8Wlf+iWswGEIfRpbySMc/J5YauhPJjCcdLtTkw==" />
+      <Setting name="Microsoft.KeyVault.Url" value="https://AssetReconKeyVault.vault.azure.net" />
+      <Setting name="ConfigStoreConnectionStringName" value="ARStorageConnectionString" />
+      <Setting name="ConfigStoreClientId" value="{6EFDF961-E8CF-4329-A049-ED9918CC32F0}" />
+      <!--<Setting name="Microsoft.WindowsAzure.Plugins.GSAA.SubscriptionID" value="20ecae7c-600f-451d-b3fb-092fe8c96a6e" />-->
+      <Setting name="BSLTopicName" value="events" />
+      <Setting name="BSLBusConnectionKey" value="ProdBslBusKey" />
+      <Setting name="BSLStorageConnectionKey" value="HASstateprodKey" />
+      <Setting name="BSLStorageTableName" value="hardware" />
+      <Setting name="BSLMSAssetUri" value="http://asset.api.msdial.com/AssetRW/Asset.svc" />
+      <!-- CMA Configuration Settings -->
+      <Setting name="MDMAccount" value="MCIOCommon" />
+      <Setting name="MDMNamespace" value="AssetReconciliation" />
+      <Setting name="CMAMonitoringConfiguration" value="Monitoring\MAConfig.xml" />
+      <Setting name="CMATenantName" value="AssetReconciliation" />
+      <Setting name="DomainName" value="Local" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="KeyVaultCertificate" thumbprint="ECBD258A2296EC7ABAC725E2E4371EA77376C376" thumbprintAlgorithm="sha1" />
+      <Certificate name="MDSCertificate" thumbprint="2304E97FEDE464DD7FD2E87ED928D06522A9E755" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <NetworkConfiguration>
+    <VirtualNetworkSite name="ecoarvagmenet" />
+    <AddressAssignments>
+      <InstanceAddress roleName="WorkflowManager">
+        <Subnets>
+          <Subnet name="TenantSubnet" />
+        </Subnets>
+      </InstanceAddress>
+      <InstanceAddress roleName="ProcessingHandler">
+        <Subnets>
+          <Subnet name="TenantSubnet" />
+        </Subnets>
+      </InstanceAddress>
+      <InstanceAddress roleName="HydrationHandler">
+        <Subnets>
+          <Subnet name="TenantSubnet" />
+        </Subnets>
+      </InstanceAddress>
+      <InstanceAddress roleName="UploaderWorker">
+        <Subnets>
+          <Subnet name="TenantSubnet" />
+        </Subnets>
+      </InstanceAddress>
+      <InstanceAddress roleName="BSLReceiving">
+        <Subnets>
+          <Subnet name="TenantSubnet" />
+        </Subnets>
+      </InstanceAddress>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: jpjofre
+  name: opa-logger
+  labels:
+    app: opa-logger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opa-logger
+  template:
+    metadata:
+      labels:
+        app: opa-logger
+    spec:
+      containers:
+      - image: jpjofresm/opa-logger-server:latest
+        name: opa-logger
+        ports:
+        - containerPort: 80
+          hostPort: 29009
+          name: http-opa-logs
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+          requests: 
+            memory: "500Mi"
+            cpu: "500m"
+        volumeMounts:
+        - name: logs
+          mountPath: /var/logs
+      volumes:
+      - name: logs
+        hostPath:
+          # directory location on host
+          path: /var/logs
+          # this field is optional
+          type: Directory      

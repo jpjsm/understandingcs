@@ -1,0 +1,1401 @@
+<?xml version="1.0"?><Datacenter Location="CO1" AuthProxyIpRange="10.7.51.8/29;10.113.253.17/32;10.7.32.54/32;10.115.12.25/32;10.28.132.138/32;10.211.132.18/32;10.62.12.17/32">
+  <MachinePool Name="CO1IntApp01UFCMP1" VipRange="10.0.0.1" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="fabriccore;app" FillFactor="1.0">
+    <Vlan Name="243" Range="10.59.14.48/29" RouterGateway="10.59.14.49" StartIP="10.59.14.50" EndIP="10.59.14.54">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.14.50" EndIP="10.59.14.54" />                          <!-- Last Allocation 10.59.14.50 -->
+      <MacRange StartMac="00155D601318" EndMac="00155D60131B" />                     
+    </Vlan>
+  </MachinePool>  
+  <MachinePool Name="CO1IntApp01UFC2MP1" VipRange="10.0.0.2" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="fabriccore;app" FillFactor="1.0">
+    <Vlan Name="241" Range="10.59.14.32/29" RouterGateway="10.59.14.33" StartIP="10.59.14.34" EndIP="10.59.14.38">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.14.34" EndIP="10.59.14.38" />                          <!-- Last Allocation 10.59.14.34 -->
+      <MacRange StartMac="00155D601310" EndMac="00155D601313" />                     
+    </Vlan>
+    <Vlan Name="242" Range="10.59.14.40/29" RouterGateway="10.59.14.41" StartIP="10.59.14.42" EndIP="10.59.14.46">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.14.42" EndIP="10.59.14.46" />                          <!-- Last Allocation 10.59.14.42 -->
+      <MacRange StartMac="00155D601314" EndMac="00155D601317" />                     
+    </Vlan>
+  </MachinePool>  
+  <MachinePool Name="CO1IntApp01FCCMP1" VipRange="168.62.92.0/27" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="fabriccore;app" FillFactor="1.0">
+    <Vlan Name="141" Range="10.59.15.0/27" RouterGateway="10.59.15.1" StartIP="10.59.15.2" EndIP="10.59.15.30">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.2" EndIP="10.59.15.30" />                           <!-- Last Allocation 10.59.15.3 -->
+      <MacRange StartMac="00155D60131C" EndMac="00155D601336" />                     
+    </Vlan>
+    <Vlan Name="142" Range="10.59.15.32/27" RouterGateway="10.59.15.33" StartIP="10.59.15.34" EndIP="10.59.15.62">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.34" EndIP="10.59.15.62" />                          <!-- Last Allocation 10.59.15.35 -->
+      <MacRange StartMac="00155D601337" EndMac="00155D601351" />                     
+    </Vlan>
+    <Vlan Name="143" Range="10.59.15.64/27" RouterGateway="10.59.15.65" StartIP="10.59.15.66" EndIP="10.59.15.94">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.66" EndIP="10.59.15.94" />                          <!-- Last Allocation 10.59.15.67 -->
+      <MacRange StartMac="00155D601352" EndMac="00155D60136C" />                     
+    </Vlan>
+    <Vlan Name="144" Range="10.59.15.96/27" RouterGateway="10.59.15.97" StartIP="10.59.15.98" EndIP="10.59.15.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.98" EndIP="10.59.15.126" />                         <!-- Last Allocation 10.59.15.100 -->
+      <MacRange StartMac="00155D60136D" EndMac="00155D601386" />                     
+    </Vlan>
+    <Vlan Name="145" Range="10.59.15.128/27" RouterGateway="10.59.15.129" StartIP="10.59.15.130" EndIP="10.59.15.158">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.130" EndIP="10.59.15.158" />                        <!-- Last Allocation 10.59.15.132 -->
+      <MacRange StartMac="00155D601387" EndMac="00155D6013A0" />                     
+    </Vlan>
+  </MachinePool>
+  <MachinePool Name="CO1IntApp01MP1" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="vm;app" FillFactor="0.75">
+    <Vlan Name="741" Range="10.113.24.0/23" RouterGateway="10.113.24.1" StartIP="10.113.24.2" EndIP="10.113.25.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.24.2" EndIP="10.113.25.254" />                        <!-- Last Allocation 10.113.24.199 -->
+      <MacRange StartMac="00155D600000" EndMac="00155D6001E9" />                     
+    </Vlan>
+    <Vlan Name="742" Range="10.113.28.0/23" RouterGateway="10.113.28.1" StartIP="10.113.28.2" EndIP="10.113.29.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.28.2" EndIP="10.113.29.254" />                        <!-- Last Allocation 10.113.28.199 -->
+      <MacRange StartMac="00155D6001EA" EndMac="00155D6003D3" />                     
+    </Vlan>
+    <Vlan Name="743" Range="10.113.124.0/23" RouterGateway="10.113.124.1" StartIP="10.113.124.2" EndIP="10.113.125.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.124.2" EndIP="10.113.125.254" />                      <!-- Last Allocation 10.113.124.199 -->
+      <MacRange StartMac="00155D6003D4" EndMac="00155D6005BD" />                     
+    </Vlan>
+    <Vlan Name="744" Range="10.113.220.0/23" RouterGateway="10.113.220.1" StartIP="10.113.220.2" EndIP="10.113.221.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.220.2" EndIP="10.113.221.254" />                      <!-- Last Allocation 10.113.220.199 -->
+      <MacRange StartMac="00155D6005BE" EndMac="00155D6007A7" />                     
+    </Vlan>
+    <Vlan Name="745" Range="10.113.232.0/23" RouterGateway="10.113.232.1" StartIP="10.113.232.2" EndIP="10.113.233.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.232.2" EndIP="10.113.233.254" />                      <!-- Last Allocation 10.113.232.199 -->
+      <MacRange StartMac="00155D6007A8" EndMac="00155D600991" />                     
+    </Vlan>
+    <Vlan Name="841" Range="10.113.26.0/23" RouterGateway="10.113.26.1" StartIP="10.113.26.2" EndIP="10.113.27.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.26.2" EndIP="10.113.27.254" />                        <!-- Last Allocation 10.113.26.239 -->
+      <MacRange StartMac="00155D600992" EndMac="00155D600B77" />                     
+    </Vlan>
+    <Vlan Name="842" Range="10.113.30.0/23" RouterGateway="10.113.30.1" StartIP="10.113.30.2" EndIP="10.113.31.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.30.2" EndIP="10.113.31.254" />                        <!-- Last Allocation 10.113.30.239 -->
+      <MacRange StartMac="00155D600B78" EndMac="00155D600D5D" />                     
+    </Vlan>
+    <Vlan Name="843" Range="10.113.126.0/23" RouterGateway="10.113.126.1" StartIP="10.113.126.2" EndIP="10.113.127.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.126.2" EndIP="10.113.127.254" />                      <!-- Last Allocation 10.113.126.239 -->
+      <MacRange StartMac="00155D600D5E" EndMac="00155D600F43" />                     
+    </Vlan>
+    <Vlan Name="844" Range="10.113.222.0/23" RouterGateway="10.113.222.1" StartIP="10.113.222.2" EndIP="10.113.223.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.222.2" EndIP="10.113.223.254" />                      <!-- Last Allocation 10.113.222.239 -->
+      <MacRange StartMac="00155D600F44" EndMac="00155D601129" />                     
+    </Vlan>
+    <Vlan Name="845" Range="10.113.234.0/23" RouterGateway="10.113.234.1" StartIP="10.113.234.2" EndIP="10.113.235.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.234.2" EndIP="10.113.235.254" />                      <!-- Last Allocation 10.113.234.239 -->
+      <MacRange StartMac="00155D60112A" EndMac="00155D60130F" />                     
+    </Vlan>
+  </MachinePool>
+  <MachinePool Name="CO1IntApp02FCCMP1" VipRange="168.62.92.32/27" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="fabriccore;app" FillFactor="1.0">
+    <Vlan Name="146" Range="10.59.15.160/27" RouterGateway="10.59.15.161" StartIP="10.59.15.162" EndIP="10.59.15.190">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.162" EndIP="10.59.15.190" />                        <!-- Last Allocation 10.59.15.164 -->
+      <MacRange StartMac="00155D6026B1" EndMac="00155D6026CA" />                     
+    </Vlan>
+    <Vlan Name="147" Range="10.59.15.192/27" RouterGateway="10.59.15.193" StartIP="10.59.15.194" EndIP="10.59.15.222">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.194" EndIP="10.59.15.222" />                        <!-- Last Allocation 10.59.15.196 -->
+      <MacRange StartMac="00155D6026CB" EndMac="00155D6026E4" />                     
+    </Vlan>
+    <Vlan Name="148" Range="10.59.15.224/27" RouterGateway="10.59.15.225" StartIP="10.59.15.226" EndIP="10.59.15.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.15.226" EndIP="10.59.15.254" />                        <!-- Last Allocation 10.59.15.228 -->
+      <MacRange StartMac="00155D6026E5" EndMac="00155D6026FE" />                     
+    </Vlan>
+    <Vlan Name="149" Range="10.59.14.96/27" RouterGateway="10.59.14.97" StartIP="10.59.14.98" EndIP="10.59.14.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.14.98" EndIP="10.59.14.126" />                         <!-- Last Allocation 10.59.14.100 -->
+      <MacRange StartMac="00155D6026FF" EndMac="00155D602718" />                     
+    </Vlan>
+    <Vlan Name="150" Range="10.59.14.128/27" RouterGateway="10.59.14.129" StartIP="10.59.14.130" EndIP="10.59.14.158">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.14.130" EndIP="10.59.14.158" />                        <!-- Last Allocation 10.59.14.132 -->
+      <MacRange StartMac="00155D602719" EndMac="00155D602732" />                     
+    </Vlan>
+  </MachinePool>
+  <MachinePool Name="CO1IntApp02MP1" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="vm;app" FillFactor="0.75">
+    <Vlan Name="746" Range="10.113.236.0/23" RouterGateway="10.113.236.1" StartIP="10.113.236.2" EndIP="10.113.237.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.236.2" EndIP="10.113.237.254" />                      <!-- Last Allocation 10.113.236.219 -->
+      <MacRange StartMac="00155D6013A1" EndMac="00155D601588" />                     
+    </Vlan>
+    <Vlan Name="747" Range="10.113.240.0/23" RouterGateway="10.113.240.1" StartIP="10.113.240.2" EndIP="10.113.241.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.240.2" EndIP="10.113.241.254" />                      <!-- Last Allocation 10.113.240.219 -->
+      <MacRange StartMac="00155D601589" EndMac="00155D601770" />                     
+    </Vlan>
+    <Vlan Name="748" Range="10.113.244.0/23" RouterGateway="10.113.244.1" StartIP="10.113.244.2" EndIP="10.113.245.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.244.2" EndIP="10.113.245.254" />                      <!-- Last Allocation 10.113.244.219 -->
+      <MacRange StartMac="00155D601771" EndMac="00155D601958" />                     
+    </Vlan>
+    <Vlan Name="749" Range="10.113.248.0/23" RouterGateway="10.113.248.1" StartIP="10.113.248.2" EndIP="10.113.249.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.248.2" EndIP="10.113.249.254" />                      <!-- Last Allocation 10.113.248.219 -->
+      <MacRange StartMac="00155D601959" EndMac="00155D601B40" />                     
+    </Vlan>
+    <Vlan Name="750" Range="10.59.196.0/23" RouterGateway="10.59.196.1" StartIP="10.59.196.2" EndIP="10.59.197.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.196.2" EndIP="10.59.197.254" />                        <!-- Last Allocation 10.59.196.219 -->
+      <MacRange StartMac="00155D601B41" EndMac="00155D601D28" />                     
+    </Vlan>
+    <Vlan Name="846" Range="10.113.238.0/23" RouterGateway="10.113.238.1" StartIP="10.113.238.2" EndIP="10.113.239.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.238.2" EndIP="10.113.239.254" />                      <!-- Last Allocation 10.113.238.219 -->
+      <MacRange StartMac="00155D601D29" EndMac="00155D601F10" />                     
+    </Vlan>
+    <Vlan Name="847" Range="10.113.242.0/23" RouterGateway="10.113.242.1" StartIP="10.113.242.2" EndIP="10.113.243.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.242.2" EndIP="10.113.243.254" />                      <!-- Last Allocation 10.113.242.219 -->
+      <MacRange StartMac="00155D601F11" EndMac="00155D6020F8" />                     
+    </Vlan>
+    <Vlan Name="848" Range="10.113.246.0/23" RouterGateway="10.113.246.1" StartIP="10.113.246.2" EndIP="10.113.247.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.246.2" EndIP="10.113.247.254" />                      <!-- Last Allocation 10.113.246.219 -->
+      <MacRange StartMac="00155D6020F9" EndMac="00155D6022E0" />                     
+    </Vlan>
+    <Vlan Name="849" Range="10.113.250.0/23" RouterGateway="10.113.250.1" StartIP="10.113.250.2" EndIP="10.113.251.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.250.2" EndIP="10.113.251.254" />                      <!-- Last Allocation 10.113.250.219 -->
+      <MacRange StartMac="00155D6022E1" EndMac="00155D6024C8" />                     
+    </Vlan>
+    <Vlan Name="850" Range="10.59.198.0/23" RouterGateway="10.59.198.1" StartIP="10.59.198.2" EndIP="10.59.199.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.59.198.2" EndIP="10.59.199.254" />                        <!-- Last Allocation 10.59.198.219 -->
+      <MacRange StartMac="00155D6024C9" EndMac="00155D6026B0" />                     
+    </Vlan>
+  </MachinePool>
+  <MachinePool Name="CO1IntStr01FCCMP1" FCCCluster="CO1IntApp01FCC" VipRange="168.62.92.64/27" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="fabriccore;app" FillFactor="1.0">
+    <Vlan Name="151" Range="10.113.13.128/28" RouterGateway="10.113.13.129" StartIP="10.113.13.130" EndIP="10.113.13.142">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.130" EndIP="10.113.13.138" />                      <!-- Last Allocation 10.113.13.131 -->
+      <MacRange StartMac="00155D602D52" EndMac="00155D602D58" />
+    </Vlan>
+    <Vlan Name="152" Range="10.113.13.144/28" RouterGateway="10.113.13.145" StartIP="10.113.13.146" EndIP="10.113.13.158">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.146" EndIP="10.113.13.149" />                      <!-- Last Allocation 10.113.13.146 -->
+      <MacRange StartMac="00155D602D59" EndMac="00155D602D5B" />
+    </Vlan>
+    <Vlan Name="153" Range="10.113.13.160/28" RouterGateway="10.113.13.161" StartIP="10.113.13.162" EndIP="10.113.13.174">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.162" EndIP="10.113.13.167" />                      <!-- Last Allocation 10.113.13.162 -->
+      <MacRange StartMac="00155D602D5C" EndMac="00155D602D60" />
+    </Vlan>
+    <Vlan Name="154" Range="10.113.13.176/28" RouterGateway="10.113.13.177" StartIP="10.113.13.178" EndIP="10.113.13.190">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.178" EndIP="10.113.13.183" />                      <!-- Last Allocation 10.113.13.178 -->
+      <MacRange StartMac="00155D602D61" EndMac="00155D602D65" />
+    </Vlan>
+    <Vlan Name="155" Range="10.113.13.192/28" RouterGateway="10.113.13.193" StartIP="10.113.13.194" EndIP="10.113.13.206">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.194" EndIP="10.113.13.199" />                      <!-- Last Allocation 10.113.13.194 -->
+      <MacRange StartMac="00155D602D66" EndMac="00155D602D6A" />
+    </Vlan>
+  </MachinePool>
+  <MachinePool Name="CO1IntStr02FCCMP1" FCCCluster="CO1IntApp01FCC" VipRange="168.62.92.64/27" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="fabriccore;app" FillFactor="1.0">
+    <Vlan Name="151" Range="10.113.13.128/28" RouterGateway="10.113.13.129" StartIP="10.113.13.130" EndIP="10.113.13.142">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.139" EndIP="10.113.13.142" />                      <!-- Last Allocation 10.113.13.132 -->
+      <MacRange StartMac="00155D602D6B" EndMac="00155D602D6D" />
+    </Vlan>
+    <Vlan Name="152" Range="10.113.13.144/28" RouterGateway="10.113.13.145" StartIP="10.113.13.146" EndIP="10.113.13.158">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.150" EndIP="10.113.13.158" />                      <!-- Last Allocation 10.113.13.148 -->
+      <MacRange StartMac="00155D602D6E" EndMac="00155D602D74" />
+    </Vlan>
+    <Vlan Name="153" Range="10.113.13.160/28" RouterGateway="10.113.13.161" StartIP="10.113.13.162" EndIP="10.113.13.174">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.168" EndIP="10.113.13.174" />                      <!-- Last Allocation 10.113.13.163 -->
+      <MacRange StartMac="00155D602D75" EndMac="00155D602D7A" />
+    </Vlan>
+    <Vlan Name="154" Range="10.113.13.176/28" RouterGateway="10.113.13.177" StartIP="10.113.13.178" EndIP="10.113.13.190">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.184" EndIP="10.113.13.190" />                      <!-- Last Allocation 10.113.13.179 -->
+      <MacRange StartMac="00155D602D7B" EndMac="00155D602D80" />
+    </Vlan>
+    <Vlan Name="155" Range="10.113.13.192/28" RouterGateway="10.113.13.193" StartIP="10.113.13.194" EndIP="10.113.13.206">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.13.200" EndIP="10.113.13.206" />                      <!-- Last Allocation 10.113.13.195 -->
+      <MacRange StartMac="00155D602D81" EndMac="00155D602D86" />
+    </Vlan>
+  </MachinePool>
+  <MachinePool Name="CO1IntStr01MP1" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="hightransfer;app" FillFactor="1.0">
+      <Vlan Name="551" Range="10.113.3.0/25" RouterGateway="10.113.3.1" StartIP="10.113.3.2" EndIP="10.113.3.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.3.2" EndIP="10.113.3.62" />                           <!-- Last Allocation 10.113.3.17 -->
+      <MacRange StartMac="00155D602C3F" EndMac="00155D602C6B" />
+    </Vlan>
+      <Vlan Name="552" Range="10.113.3.128/25" RouterGateway="10.113.3.129" StartIP="10.113.3.130" EndIP="10.113.3.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.3.130" EndIP="10.113.3.193" />                        <!-- Last Allocation 10.113.3.146 -->
+      <MacRange StartMac="00155D602C10" EndMac="00155D602C3E" />
+    </Vlan>
+      <Vlan Name="553" Range="10.113.4.0/25" RouterGateway="10.113.4.1" StartIP="10.113.4.2" EndIP="10.113.4.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.4.2" EndIP="10.113.4.63" />                           <!-- Last Allocation 10.113.4.18 -->
+      <MacRange StartMac="00155D602BE3" EndMac="00155D602C0F" />
+    </Vlan>
+      <Vlan Name="554" Range="10.113.4.128/25" RouterGateway="10.113.4.129" StartIP="10.113.4.130" EndIP="10.113.4.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.4.130" EndIP="10.113.4.191" />                        <!-- Last Allocation 10.113.4.146 -->
+      <MacRange StartMac="00155D602BB6" EndMac="00155D602BE2" />
+    </Vlan>
+      <Vlan Name="555" Range="10.113.5.0/25" RouterGateway="10.113.5.1" StartIP="10.113.5.2" EndIP="10.113.5.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.5.2" EndIP="10.113.5.63" />                           <!-- Last Allocation 10.113.5.18 -->
+      <MacRange StartMac="00155D602B89" EndMac="00155D602BB5" />
+    </Vlan>
+  </MachinePool>
+  <MachinePool Name="CO1IntStr02MP1" UsingSoftwareLoadBalancerOnly="true" TorAsRouter="true" Capabilities="hightransfer;app" FillFactor="1.0">
+      <Vlan Name="551" Range="10.113.3.0/25" RouterGateway="10.113.3.1" StartIP="10.113.3.2" EndIP="10.113.3.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.3.63" EndIP="10.113.3.126" />                         <!-- Last Allocation 10.113.3.34 -->
+      <MacRange StartMac="00155D602D23" EndMac="00155D602D51" />
+    </Vlan>
+      <Vlan Name="552" Range="10.113.3.128/25" RouterGateway="10.113.3.129" StartIP="10.113.3.130" EndIP="10.113.3.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.3.194" EndIP="10.113.3.254" />                        <!-- Last Allocation 10.113.3.162 -->
+      <MacRange StartMac="00155D602CF6" EndMac="00155D602D22" />
+    </Vlan>
+      <Vlan Name="553" Range="10.113.4.0/25" RouterGateway="10.113.4.1" StartIP="10.113.4.2" EndIP="10.113.4.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.4.64" EndIP="10.113.4.126" />                         <!-- Last Allocation 10.113.4.35 -->
+      <MacRange StartMac="00155D602CC8" EndMac="00155D602CF5" />
+    </Vlan>
+      <Vlan Name="554" Range="10.113.4.128/25" RouterGateway="10.113.4.129" StartIP="10.113.4.130" EndIP="10.113.4.254">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.4.192" EndIP="10.113.4.254" />                        <!-- Last Allocation 10.113.4.163 -->
+      <MacRange StartMac="00155D602C9A" EndMac="00155D602CC7" />
+    </Vlan>
+      <Vlan Name="555" Range="10.113.5.0/25" RouterGateway="10.113.5.1" StartIP="10.113.5.2" EndIP="10.113.5.126">
+      <RoutingEntry Range="0.0.0.0/0" Gateway="RouterGateway" />                     <!-- DefaultAllDips -->
+      <IPRange StartIP="10.113.5.64" EndIP="10.113.5.126" />                         <!-- Last Allocation 10.113.5.35 -->
+      <MacRange StartMac="00155D602C6C" EndMac="00155D602C99" />
+    </Vlan>
+  </MachinePool>
+
+  <Vlan Name="10dA" Range="10.59.14.56/29" RouterGateway="10.59.14.57" />
+  <Vlan Name="10dB" Range="10.59.14.64/29" RouterGateway="10.59.14.65" />
+  <Vlan Name="10dC" Range="10.59.14.72/29" RouterGateway="10.59.14.73" />
+  <Vlan Name="10dD" Range="10.59.14.80/29" RouterGateway="10.59.14.81" />
+  <Vlan Name="10dE" Range="10.59.14.88/29" RouterGateway="10.59.14.89" />
+  <Vlan Name="VlanCoreco1-38t-cis-3" Range="10.7.4.49/32" RouterGateway="10.7.4.49" />
+  <Vlan Name="VlanTor" Range="10.59.0.0/24" RouterGateway="10.59.0.1" />
+  <Vlan Name="11dA" Range="10.59.14.160/29" RouterGateway="10.59.14.161" />
+  <Vlan Name="11dB" Range="10.59.14.168/29" RouterGateway="10.59.14.169" />
+  <Vlan Name="11dC" Range="10.59.14.176/29" RouterGateway="10.59.14.177" />
+  <Vlan Name="11dD" Range="10.59.14.184/29" RouterGateway="10.59.14.185" />
+  <Vlan Name="11dE" Range="10.59.14.192/29" RouterGateway="10.59.14.193" />
+  <Vlan Name="30dA" Range="10.113.13.64/29" RouterGateway="10.113.13.65" />
+  <Vlan Name="30dB" Range="10.113.13.72/29" RouterGateway="10.113.13.73" />
+  <Vlan Name="30dC" Range="10.113.13.80/29" RouterGateway="10.113.13.81" />
+  <Vlan Name="30dD" Range="10.113.13.88/29" RouterGateway="10.113.13.89" />
+  <Vlan Name="30dE" Range="10.113.13.96/29" RouterGateway="10.113.13.97" />
+  <!-- INT Clusters -->
+  <Cluster Name="CO1IntApp01UFC"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.7.51.0/28;10.208.129.0/24;10.113.253.0/24;10.37.210.64/24;10.113.254.0/24;10.59.3.0/24;10.194.93.0/24"
+           UtilityNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24"
+           PrivateVipNodesIpRange="10.59.3.0/24;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254"
+           FabricBackendJumpboxesIpRange="10.59.3.0/24"
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.35.91/32;65.52.75.244/32;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+           SwitchDigiPowerIpRange="10.59.14.56/29;10.59.14.64/27;10.59.14.160/27;10.59.14.192/29"
+           FcIpRange="10.59.14.32/28;10.59.14.48/29"
+          >
+    <Certificate Path="certificates\CO1TstUUFC.cer" />
+    <MachinePool Name="CO1IntApp01UFCMP1" />
+      <SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+      <SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+      <SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+      <SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+ 
+  <Cluster Name="CO1IntApp01UFC2"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.7.51.0/28;10.208.129.0/24;10.113.253.0/24;10.37.210.64/24;10.113.254.0/24;10.59.3.0/24;10.194.93.0/24"
+           UtilityNodesIpRange="10.59.3.0/27;10.113.253.0/24;10.208.171.0/26;10.208.239.0/26"
+           PrivateVipNodesIpRange="10.59.3.32/27;10.113.254.0/24;10.208.171.64/26;10.208.239.64/26;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254"
+           FabricBackendJumpboxesIpRange="10.59.3.0/27;10.113.253.0/24;10.208.171.0/26;10.208.239.0/26"
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.35.91/32;65.52.75.244/32;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+           SwitchDigiPowerIpRange="10.59.14.56/29;10.59.14.64/27;10.59.14.160/27;10.59.14.192/29"
+           FcIpRange="10.59.14.32/28;10.59.14.48/29"
+          >
+    <Certificate Path="certificates\CO1TstUUFC.cer" />
+    <MachinePool Name="CO1IntApp01UFC2MP1" />
+      <SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+      <SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+      <SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+      <SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+
+  <Cluster Name="CO1IntApp01FCC2"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           UtilityNodesIpRange="10.59.3.0/27;10.113.253.0/24;10.208.171.0/26;10.208.239.0/26"
+           PrivateVipNodesIpRange="10.59.3.32/27;10.113.254.0/24;10.208.171.64/26;10.208.239.64/26;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254"
+           FabricBackendJumpboxesIpRange="10.59.3.0/27;10.113.253.0/24;10.208.171.0/26;10.208.239.0/26"
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.8.0/21;70.37.35.91/32;65.52.75.244/32;70.37.75.110/32;168.62.76.22/32;168.62.76.0/22;168.62.80.0/22;168.62.76.37/32;168.62.80.17/32;65.52.169.152/32;137.116.32.18/32;137.116.32.21/32;168.62.10.190/32;168.62.221.128/32;168.63.101.13/32;168.61.144.85/32;168.62.212.173/32;70.37.88.21/32;70.37.88.161/32;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+           SwitchDigiPowerIpRange="10.59.14.56/29;10.59.14.64/27;10.59.14.160/27;10.59.14.192/29;10.113.13.64/27;10.113.13.96/29"
+           FcIpRange="10.59.14.96/27;10.59.14.128/27;10.59.15.0/24;10.113.13.128/26;10.113.13.192/28;10.59.15.128/27;10.59.15.160/27;10.59.15.192/26"
+          >
+    <Certificate Path="certificates\CO1IntApp01UFC2.cer" />
+      <SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+      <SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+      <SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+      <SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+	
+  <Cluster Name="CO1IntApp01FCC"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           UtilityNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.0/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           PrivateVipNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.0/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254"
+           FabricBackendJumpboxesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.8.0/21;70.37.35.91/32;65.52.75.244/32;70.37.75.110/32;168.62.76.22/32;168.62.76.0/22;168.62.80.0/22;168.62.76.37/32;168.62.80.17/32;65.52.169.152/32;137.116.32.18/32;137.116.32.21/32;168.62.10.190/32;168.62.221.128/32;168.63.101.13/32;168.61.144.85/32;168.62.212.173/32;70.37.88.21/32;70.37.88.161/32;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+           SwitchDigiPowerIpRange="10.59.14.56/29;10.59.14.64/27;10.59.14.160/27;10.59.14.192/29;10.113.13.64/27;10.113.13.96/29"
+           FcIpRange="10.59.14.96/27;10.59.14.128/27;10.59.15.0/24;10.113.13.128/26;10.113.13.192/28;10.59.15.128/27;10.59.15.160/27;10.59.15.192/26"
+          >
+    <Certificate Path="certificates\CO1IntApp01UFC.cer" />
+    <MachinePool Name="CO1IntApp01FCCMP1" />
+    <MachinePool Name="CO1IntApp02FCCMP1" />
+    <MachinePool Name="CO1IntStr01FCCMP1" />
+    <MachinePool Name="CO1IntStr02FCCMP1" />
+    <VIPRange RouterSetName="CO1.RS1" StartIP="168.62.92.10" EndIP="168.62.92.30" AllocationPolicy="Dynamic" /> <!-- Copied FFE  CO1IntApp01 -->
+    <VIPRange RouterSetName="CO1.RS1" StartIP="168.62.92.42" EndIP="168.62.92.62" AllocationPolicy="Dynamic" /> <!-- Copied FFE  CO1IntApp02 -->
+    <VIPRange RouterSetName="CO1.RS1" StartIP="168.62.92.74" EndIP="168.62.92.84" AllocationPolicy="Dynamic" /> <!-- Copied FFE  CO1IntStr01 -->
+    <VIPRange RouterSetName="CO1.RS1" StartIP="168.62.92.85" EndIP="168.62.92.94" AllocationPolicy="Dynamic" /> <!-- Copied FFE  CO1IntStr02 -->
+      <SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+      <SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+      <SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+      <SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+    
+  <Cluster Name="CO1IntApp01"
+           FcIpRange="10.59.15.0/25;10.59.15.128/27"
+           UfcIpRange="10.59.14.32/29;10.59.14.40/29;10.59.14.48/29"
+           SwitchDigiPowerIpRange="10.59.14.56/29;10.59.14.64/27"
+           UsingSoftwareLoadBalancerOnly="true"
+           TorAsRouter="true"
+           FabricPoolName="CO1IntApp01FCCMP1"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           UtilityNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           PrivateVipNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254;10.20.221.60;10.20.222.99"
+           FabricBackendJumpboxesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.8.0/21;70.37.35.91/32;65.52.75.244/32;70.37.75.110/32;168.62.76.0/22;168.62.80.0/22;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+           FCCCluster="CO1IntApp01FCC"
+          >
+    <VIPRange RouterSetName="CO1.RS1" Name="10CA/22" AllocationPolicy="Dynamic" StartIP="168.62.76.10" EndIP="168.62.78.247" />
+    <VIPRange RouterSetName="CO1.RS1" Name="10CA/22" AllocationPolicy="Static" StartIP="168.62.78.248" EndIP="168.62.78.255" />
+    <VIPRange RouterSetName="CO1.RS1" Name="10CA/22" AllocationPolicy="Dynamic" StartIP="168.62.79.0" EndIP="168.62.79.254" />    
+    <MachinePool Name="CO1IntApp01MP1" />
+    <Certificate Path="certificates\CO1IntApp01.cer" />
+	<SnatRule Name="BypassCO1IntStr01Range4" Type="Disable" Subnet="168.62.92.143/32" /> 
+	<SnatRule Name="BypassCO1IntStr01Range3" Type="Disable" Subnet="168.62.92.144/31" /> 
+	<SnatRule Name="BypassCO1IntStr01Range2" Type="Disable" Subnet="168.62.92.151/32" /> 
+	<SnatRule Name="BypassCO1IntStr01Range1" Type="Disable" Subnet="168.62.92.152/31" /> 
+	<SnatRule Name="BypassCO1IntStr02Range4" Type="Disable" Subnet="168.62.92.203/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range3" Type="Disable" Subnet="168.62.92.204/31" /> 
+	<SnatRule Name="BypassCO1IntStr02Range2" Type="Disable" Subnet="168.62.92.211/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range1" Type="Disable" Subnet="168.62.92.212/31" /> 
+        <SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+        <SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+        <SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+        <SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+  
+  <Cluster Name="CO1IntApp02"
+           FcIpRange="10.59.14.96/27;10.59.14.128/27;10.59.15.160/27;10.59.15.192/26"
+           SwitchDigiPowerIpRange="10.59.14.160/27;10.59.14.192/29"
+           UsingSoftwareLoadBalancerOnly="true"
+           TorAsRouter="true"
+           FabricPoolName="CO1IntApp02FCCMP1"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           UtilityNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           PrivateVipNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254;10.20.221.60;10.20.222.99"
+           FabricBackendJumpboxesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.8.0/21;70.37.35.91/32;65.52.75.244/32;70.37.75.110/32;168.62.76.0/22;168.62.80.0/22;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+           FCCCluster="CO1IntApp01FCC"
+          >
+    <VIPRange RouterSetName="CO1.RS1" Name="11CA/22" AllocationPolicy="Dynamic" StartIP="168.62.80.10" EndIP="168.62.82.244" />
+	<VIPRange RouterSetName="CO1.RS1" Name="11CA/22" AllocationPolicy="Static" StartIP="168.62.82.245" EndIP="168.62.82.255" />
+	<VIPRange RouterSetName="CO1.RS1" Name="11CA/22" AllocationPolicy="Dynamic" StartIP="168.62.83.0" EndIP="168.62.83.254" />
+    <MachinePool Name="CO1IntApp02MP1" />
+    <Certificate Path="certificates\CO1IntApp02.cer" />
+	<SnatRule Name="BypassCO1IntStr01Range4" Type="Disable" Subnet="168.62.92.143/32" /> 
+	<SnatRule Name="BypassCO1IntStr01Range3" Type="Disable" Subnet="168.62.92.144/31" /> 
+	<SnatRule Name="BypassCO1IntStr01Range2" Type="Disable" Subnet="168.62.92.151/32" /> 
+	<SnatRule Name="BypassCO1IntStr01Range1" Type="Disable" Subnet="168.62.92.152/31" /> 
+	<SnatRule Name="BypassCO1IntStr02Range4" Type="Disable" Subnet="168.62.92.203/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range3" Type="Disable" Subnet="168.62.92.204/31" /> 
+	<SnatRule Name="BypassCO1IntStr02Range2" Type="Disable" Subnet="168.62.92.211/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range1" Type="Disable" Subnet="168.62.92.212/31" /> 
+      	<SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+      	<SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+      	<SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+      	<SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+  
+  <Cluster Name="CO1IntStr01"
+           ClusterId="30"
+           FfeVipRange="168.62.92.64/27"
+           FcIpRange="10.113.13.128/26;10.113.13.192/28"
+           SwitchDigiPowerIpRange="10.113.13.64/27;10.113.13.96/29"
+           UsingSoftwareLoadBalancerOnly="true"
+           TorAsRouter="true"
+           FabricPoolName="CO1IntStr01FCCMP1"
+           FCCCluster="CO1IntApp01FCC"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           UtilityNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           PrivateVipNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254;10.20.221.60;10.20.222.99"
+           FabricBackendJumpboxesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.8.0/21;70.37.35.91/32;65.52.75.244/32;70.37.75.110/32;168.62.76.0/22;168.62.80.0/22;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+          >
+    <VIPRange RouterSetName="CO1.RS1" Name="30SA/25" AllocationPolicy="Dynamic" StartIP="168.62.92.138" EndIP="168.62.92.196" />
+    <MachinePool Name="CO1IntStr01MP1" />
+    <Certificate Path="certificates\CO1IntStr01.cer" />
+      	<SnatRule Name="BypassCO1IntStr01Range1" Type="Disable" Subnet="168.62.92.143/32" />
+      	<SnatRule Name="BypassCO1IntStr01Range2" Type="Disable" Subnet="168.62.92.144/31" />
+      	<SnatRule Name="BypassCO1IntStr01Range3" Type="Disable" Subnet="168.62.92.151/32" />
+      	<SnatRule Name="BypassCO1IntStr01Range4" Type="Disable" Subnet="168.62.92.152/31" />
+	<SnatRule Name="BypassCO1IntStr02Range4" Type="Disable" Subnet="168.62.92.203/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range3" Type="Disable" Subnet="168.62.92.204/31" /> 
+	<SnatRule Name="BypassCO1IntStr02Range2" Type="Disable" Subnet="168.62.92.211/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range1" Type="Disable" Subnet="168.62.92.212/31" /> 
+      	<SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+      	<SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+      	<SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+      	<SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+  
+  <Cluster Name="CO1IntStr02"
+           ClusterId="30"
+           FfeVipRange="168.62.92.64/27"
+           FcIpRange="10.113.13.128/26;10.113.13.192/28"
+           SwitchDigiPowerIpRange="10.113.13.64/27;10.113.13.96/29"
+           UsingSoftwareLoadBalancerOnly="true"
+           TorAsRouter="true"
+           FabricPoolName="CO1IntStr02FCCMP1"
+           FCCCluster="CO1IntApp01FCC"
+           DefaultIpRange=""
+           DatacenterVipRange="65.55.25.112/28;65.55.25.96/28"
+           MonitorNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           UtilityNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26"
+           PrivateVipNodesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26;40.115.1.228/32;207.46.225.165/32;40.124.12.188/32;40.122.207.154/32;40.76.26.205/32;40.124.12.90/32"
+           KmsNodesIpRange="10.20.0.0/16"
+           DnsServersIpRange="10.20.223.254;10.20.220.254;10.20.221.60;10.20.222.99"
+           FabricBackendJumpboxesIpRange="10.59.3.0/24;10.113.253.0/24;10.113.254.0/24;10.37.210.64/24;10.194.93.0/24;10.208.171.0/24;10.37.143.80/28;10.208.239.0/26 "
+           RdfeSnatsIpRange="23.96.103.225/32;138.91.143.225/32;65.52.23.225/32;137.135.183.225/32;168.63.135.225/32;137.117.167.225/32;137.116.55.225/32;191.238.39.225/32;23.98.71.225/32;23.96.215.225/32;23.102.135.225/32;104.214.15.225/32;138.91.7.225/32;23.97.103.225/32;191.234.23.225/32;40.113.223.225/32;191.236.199.225/32;104.41.167.225/32;191.239.71.225/32;191.239.183.225/32;104.46.95.225/32;104.214.215.225/32;104.215.175.225/32;40.122.151.225/32;104.215.79.225/32;70.37.8.0/21;70.37.35.91/32;65.52.75.244/32;70.37.75.110/32;168.62.76.0/22;168.62.80.0/22;104.42.23.250/32"
+           XStoreVipsIpRange="65.55.25.112/28"
+          >
+    <VIPRange RouterSetName="CO1.RS1" Name="30SA/25" AllocationPolicy="Dynamic" StartIP="168.62.92.197" EndIP="168.62.92.254" />
+    <MachinePool Name="CO1IntStr02MP1" />
+    <Certificate Path="certificates\CO1IntStr02.cer" />
+	<SnatRule Name="BypassCO1IntStr01Range4" Type="Disable" Subnet="168.62.92.143/32" /> 
+	<SnatRule Name="BypassCO1IntStr01Range3" Type="Disable" Subnet="168.62.92.144/31" /> 
+	<SnatRule Name="BypassCO1IntStr01Range2" Type="Disable" Subnet="168.62.92.151/32" /> 
+	<SnatRule Name="BypassCO1IntStr01Range1" Type="Disable" Subnet="168.62.92.152/31" /> 
+	<SnatRule Name="BypassCO1IntStr02Range4" Type="Disable" Subnet="168.62.92.203/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range3" Type="Disable" Subnet="168.62.92.204/31" /> 
+	<SnatRule Name="BypassCO1IntStr02Range2" Type="Disable" Subnet="168.62.92.211/32" /> 
+	<SnatRule Name="BypassCO1IntStr02Range1" Type="Disable" Subnet="168.62.92.212/31" /> 
+      	<SnatRule Name="BypassPrivateIpRange2" Type="Disable" Subnet="100.64.0.0/10" />
+      	<SnatRule Name="BypassPrivateIpRange1" Type="Disable" Subnet="10.0.0.0/8" />
+      	<SnatRule Name="BypassMulticast" Type="Disable" Subnet="224.0.0.0/4" />
+      	<SnatRule Name="SnatIpv4Default" Type="Enable" Subnet="0.0.0.0/0" />
+    </Cluster>
+
+
+  <!-- Routers -->
+  <RouterSet Name="CO1.RS1" SKU="CiscoNexus3K">
+    <VIPRange StartIP="168.62.76.10" EndIP="168.62.79.254" Subnet="168.62.76.0/22" />
+    <!-- Copy From CO1IntApp01 -->
+    <VIPRange StartIP="168.62.92.10" EndIP="168.62.92.30" Subnet="168.62.92.0/27" />
+    <!-- Copy From CO1IntApp01FCC -->
+    <VIPRange StartIP="168.62.80.10" EndIP="168.62.83.254" Subnet="168.62.80.0/22" />
+    <!-- Copy From CO1IntApp02 -->
+    <VIPRange StartIP="168.62.92.42" EndIP="168.62.92.62" Subnet="168.62.92.32/27" />
+    <!-- Copy From CO1IntApp02FCC -->
+    <VIPRange StartIP="168.62.92.138" EndIP="168.62.92.254" Subnet="168.62.92.128/25" /> <!-- Copy From CO1IntStr01 and Co1IntStr02 -->
+    <!--CO1IntStr01 StartIP="168.62.92.138" EndIP="168.62.92.196"-->
+    <!--CO1IntStr02 StartIP="168.62.92.197" EndIP="168.62.92.254"-->
+    <VIPRange StartIP="168.62.92.74" EndIP="168.62.92.94" Subnet="168.62.92.64/27" /> <!-- Copy From CO1IntApp01FCC -->
+    <!-- Copy From CO1IntApp01FCC -->
+    <Router Name="cO1-x3hl-cis-1" Location="1" PeeringEndpoint="10.20.8.199:179" RouterAS="0" PeeringAS="65511" />
+  </RouterSet>
+
+  <!-- LoadBalancers -->
+
+  <!-- Core VLANs -->
+  <Vlan Name="VlanCTS" Range="10.7.4.16/32" RouterGateway="10.7.4.1" />
+  <Vlan Name="VlanCore" Range="10.114.68.64/26" RouterGateway="10.114.68.65" />
+  <Vlan Name="VlanTor" Range="10.7.0.0/22" RouterGateway="10.7.0.1" />
+  <Vlan Name="Vlan981" Range="10.114.90.128/26" RouterGateway="10.114.90.129" />
+  <!-- Serial Server Information -->
+  <CoreSerialServer Location="CTS1" Address="10.7.4.16" Vlan="VlanCTS">
+    <Port Location="2080" ConnectsTo="BQ322.TS1.UPLINK_1" />
+    <Port Location="2084" ConnectsTo="BQ323.TS1.UPLINK_1" />
+    <Port Location="2085" ConnectsTo="BQ324.TS1.UPLINK_1" />
+    <Port Location="2088" ConnectsTo="BQ327.TS1.UPLINK_1" />
+    <Port Location="2089" ConnectsTo="BQ328.TS1.UPLINK_1" />
+    <Port Location="2090" ConnectsTo="BQ329.TS1.UPLINK_1" />
+    <Port Location="2091" ConnectsTo="BQ330.TS1.UPLINK_1" />
+    <Port Location="2092" ConnectsTo="BQ331.TS1.UPLINK_1" />
+  </CoreSerialServer>
+  
+  <CoreSerialServer Location="co1-38t-cis-3" Address="10.7.4.49">
+  <Port Location="1/1" ConnectsTo="1.5.BC517_U.TS1.UPLINK_1" />
+  <Port Location="1/0" ConnectsTo="1.5.BC517_U.TS2.UPLINK_1" />
+  <Port Location="1/3" ConnectsTo="1.5.BC517_L.TS1.UPLINK_1" />
+  <Port Location="1/2" ConnectsTo="1.5.BC517_L.TS2.UPLINK_1" />
+  <Port Location="1/5" ConnectsTo="1.5.BC518_U.TS1.UPLINK_1" />
+  <Port Location="1/4" ConnectsTo="1.5.BC518_U.TS2.UPLINK_1" />
+  <Port Location="1/7" ConnectsTo="1.5.BC518_L.TS1.UPLINK_1" />
+  <Port Location="1/6" ConnectsTo="1.5.BC518_L.TS2.UPLINK_1" />
+  <Port Location="1/9" ConnectsTo="1.5.BC519_U.TS1.UPLINK_1" />
+  <Port Location="1/8" ConnectsTo="1.5.BC519_U.TS2.UPLINK_1" />
+  <Port Location="1/11" ConnectsTo="1.5.BC519_L.TS1.UPLINK_1" />
+  <Port Location="1/10" ConnectsTo="1.5.BC519_L.TS2.UPLINK_1" />
+  <Port Location="1/13" ConnectsTo="1.5.BC520_U.TS1.UPLINK_1" />
+  <Port Location="1/12" ConnectsTo="1.5.BC520_U.TS2.UPLINK_1" />
+  <Port Location="1/15" ConnectsTo="1.5.BC520_L.TS1.UPLINK_1" />
+  <Port Location="1/14" ConnectsTo="1.5.BC520_L.TS2.UPLINK_1" />
+  <Port Location="1/17" ConnectsTo="1.5.AY526_U.TS1.UPLINK_1" />
+  <Port Location="1/16" ConnectsTo="1.5.AY526_U.TS2.UPLINK_1" />
+  <Port Location="1/19" ConnectsTo="1.5.AY526_L.TS1.UPLINK_1" />
+  <Port Location="1/18" ConnectsTo="1.5.AY526_L.TS2.UPLINK_1" />
+  <Port Location="1/23" ConnectsTo="1.5.BC521.TS1.UPLINK_1" />
+  <Port Location="1/22" ConnectsTo="1.5.BC521.TS2.UPLINK_1" />
+  <Port Location="1/21" ConnectsTo="1.5.BC521.TS3.UPLINK_1" />
+  <Port Location="1/20" ConnectsTo="1.5.BC521.TS4.UPLINK_1" />
+  <Port Location="1/27" ConnectsTo="1.5.BC522.TS1.UPLINK_1" />
+  <Port Location="1/26" ConnectsTo="1.5.BC522.TS2.UPLINK_1" />
+  <Port Location="1/25" ConnectsTo="1.5.BC522.TS3.UPLINK_1" />
+  <Port Location="1/24" ConnectsTo="1.5.BC522.TS4.UPLINK_1" />
+  <Port Location="1/31" ConnectsTo="1.5.BC523.TS1.UPLINK_1" />
+  <Port Location="1/30" ConnectsTo="1.5.BC523.TS2.UPLINK_1" />
+  <Port Location="1/29" ConnectsTo="1.5.BC523.TS3.UPLINK_1" />
+  <Port Location="1/28" ConnectsTo="1.5.BC523.TS4.UPLINK_1" />
+  <Port Location="2/3" ConnectsTo="1.5.BC524.TS1.UPLINK_1" />
+  <Port Location="2/2" ConnectsTo="1.5.BC524.TS2.UPLINK_1" />
+  <Port Location="2/1" ConnectsTo="1.5.BC524.TS3.UPLINK_1" />
+  <Port Location="2/0" ConnectsTo="1.5.BC524.TS4.UPLINK_1" />
+  <Port Location="2/7" ConnectsTo="1.5.BC525.TS1.UPLINK_1" />
+  <Port Location="2/6" ConnectsTo="1.5.BC525.TS2.UPLINK_1" />
+  <Port Location="2/5" ConnectsTo="1.5.BC525.TS3.UPLINK_1" />
+  <Port Location="2/4" ConnectsTo="1.5.BC525.TS4.UPLINK_1" />
+</CoreSerialServer>
+
+  <!-- Rack Configuration -->  
+ <Rack Location="1.5.BC517_U" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Upper">
+    <NetworkSwitch Location="NS1" Address="10.59.0.56" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.58" Vlan="10dA" />
+    <SerialServer Location="TS2" Address="10.59.14.59" Vlan="10dA" />
+    <PowerStrip Location="PS1" Address="10.59.14.58" Vlan="10dA" />
+    <PowerStrip Location="PS2" Address="10.59.14.59" Vlan="10dA" />
+    <Blade Location="3_1" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.2" BladeId="03452449-0000-0000-0000-008CFA022324" Asset="3452449" NIC1="008CFA022324" />
+    <Blade Location="3_2" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.10" BladeId="03452436-0000-0000-0000-008CFA022706" Asset="3452436" NIC1="008CFA022706" />
+    <Blade Location="3_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.20" BladeId="03452446-0000-0000-0000-008CFA022640" Asset="3452446" NIC1="008CFA022640" />
+    <Blade Location="3_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.10" BladeId="03452434-0000-0000-0000-008CFA02228C" Asset="3452434" NIC1="008CFA02228C" />
+    <Blade Location="3_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.20" BladeId="03452386-0000-0000-0000-008CFA0222B4" Asset="3452386" NIC1="008CFA0222B4" />
+    <Blade Location="3_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.30" BladeId="03452389-0000-0000-0000-008CFA0222B6" Asset="3452389" NIC1="008CFA0222B6" />
+    <Blade Location="3_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.40" BladeId="03452387-0000-0000-0000-008CFA0222BA" Asset="3452387" NIC1="008CFA0222BA" />
+    <Blade Location="3_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.50" BladeId="03415459-0000-0000-0000-008CFA020594" Asset="3415459" NIC1="008CFA020594" />
+    <Blade Location="3_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.60" BladeId="03452026-0000-0000-0000-008CFA0295F6" Asset="3452026" NIC1="008CFA0295F6" />
+    <Blade Location="3_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.70" BladeId="03452424-0000-0000-0000-008CFA0204E0" Asset="3452424" NIC1="008CFA0204E0" />
+    <Blade Location="3_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.80" BladeId="03415648-0000-0000-0000-008CFA0208DE" Asset="3415648" NIC1="008CFA0208DE" />
+    <Blade Location="3_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.90" BladeId="03452441-0000-0000-0000-008CFA022708" Asset="3452441" NIC1="008CFA022708" />
+    <Blade Location="3_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.100" BladeId="03452415-0000-0000-0000-008CFA0220E0" Asset="3452415" NIC1="008CFA0220E0" />
+    <Blade Location="3_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.110" BladeId="03452373-0000-0000-0000-008CFA0220E4" Asset="3452373" NIC1="008CFA0220E4" />
+    <Blade Location="3_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.120" BladeId="03452495-0000-0000-0000-008CFA02264A" Asset="3452495" NIC1="008CFA02264A" />
+    <Blade Location="3_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.130" BladeId="03452167-0000-0000-0000-008CFA0222FE" Asset="3452167" NIC1="008CFA0222FE" />
+    <Blade Location="3_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.140" BladeId="03452197-0000-0000-0000-008CFA0222DC" Asset="3452197" NIC1="008CFA0222DC" />
+    <Blade Location="3_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.150" BladeId="03452426-0000-0000-0000-008CFA02245C" Asset="3452426" NIC1="008CFA02245C" />
+    <Blade Location="3_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.160" BladeId="03452508-0000-0000-0000-008CFA0226F2" Asset="3452508" NIC1="008CFA0226F2" />
+    <Blade Location="3_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.170" BladeId="03415649-0000-0000-0000-008CFA029766" Asset="3415649" NIC1="008CFA029766" />
+    <Blade Location="3_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.180" BladeId="03415556-0000-0000-0000-008CFA020CD2" Asset="3415556" NIC1="008CFA020CD2" />
+    <Blade Location="3_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.24.190" BladeId="03415645-0000-0000-0000-008CFA028352" Asset="3415645" NIC1="008CFA028352" />
+    <Blade Location="4_1" MachinePool="CO1IntApp01UFC2MP1" BladeIP="10.59.14.34" BladeId="03452443-0000-0000-0000-008CFA0223DE" Asset="3452443" NIC1="008CFA0223DE" />
+    <Blade Location="4_2" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.3" BladeId="03452499-0000-0000-0000-008CFA022066" Asset="3452499" NIC1="008CFA022066" />
+    <Blade Location="4_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.30" BladeId="03415494-0000-0000-0000-008CFA028CFC" Asset="3415494" NIC1="008CFA028CFC" />
+    <Blade Location="4_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.40" BladeId="03452308-0000-0000-0000-008CFA01D3AE" Asset="3452308" NIC1="008CFA01D3AE" />
+    <Blade Location="4_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.50" BladeId="03452257-0000-0000-0000-008CFA0201E8" Asset="3452257" NIC1="008CFA0201E8" />
+    <Blade Location="4_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.60" BladeId="03452252-0000-0000-0000-008CFA0206A8" Asset="3452252" NIC1="008CFA0206A8" />
+    <Blade Location="4_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.70" BladeId="03452228-0000-0000-0000-008CFA0222EA" Asset="3452228" NIC1="008CFA0222EA" />
+    <Blade Location="4_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.80" BladeId="03452262-0000-0000-0000-008CFA022162" Asset="3452262" NIC1="008CFA022162" />
+    <Blade Location="4_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.90" BladeId="03452438-0000-0000-0000-008CFA0221AC" Asset="3452438" NIC1="008CFA0221AC" />
+    <Blade Location="4_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.100" BladeId="03452296-0000-0000-0000-008CFA022604" Asset="3452296" NIC1="008CFA022604" />
+    <Blade Location="4_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.110" BladeId="03452318-0000-0000-0000-008CFA02270E" Asset="3452318" NIC1="008CFA02270E" />
+    <Blade Location="4_12" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.120" BladeId="03452239-0000-0000-0000-008CFA022388" Asset="3452239" NIC1="008CFA022388" />
+    <Blade Location="4_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.130" BladeId="03452182-0000-0000-0000-008CFA022698" Asset="3452182" NIC1="008CFA022698" />
+    <Blade Location="4_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.140" BladeId="03452488-0000-0000-0000-008CFA02242C" Asset="3452488" NIC1="008CFA02242C" />
+    <Blade Location="4_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.150" BladeId="03452198-0000-0000-0000-008CFA02257C" Asset="3452198" NIC1="008CFA02257C" />
+    <Blade Location="4_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.160" BladeId="03452435-0000-0000-0000-008CFA022068" Asset="3452435" NIC1="008CFA022068" />
+    <Blade Location="4_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.170" BladeId="03452480-0000-0000-0000-008CFA02269E" Asset="3452480" NIC1="008CFA02269E" />
+    <Blade Location="4_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.180" BladeId="03452505-0000-0000-0000-008CFA02255C" Asset="3452505" NIC1="008CFA02255C" />
+    <Blade Location="4_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.190" BladeId="03452230-0000-0000-0000-008CFA022180" Asset="3452230" NIC1="008CFA022180" />
+    <Blade Location="4_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.200" BladeId="03452253-0000-0000-0000-008CFA02262A" Asset="3452253" NIC1="008CFA02262A" />
+    <Blade Location="4_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.210" BladeId="03452263-0000-0000-0000-008CFA022550" Asset="3452263" NIC1="008CFA022550" />
+    <Blade Location="4_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.220" BladeId="03452313-0000-0000-0000-008CFA02253C" Asset="3452313" NIC1="008CFA02253C" />
+    <Blade Location="4_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.26.230" BladeId="03452302-0000-0000-0000-008CFA02273A" Asset="3452302" NIC1="008CFA02273A" />
+  </Rack>
+
+  <Rack Location="1.5.BC517_L" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Lower">
+    <NetworkSwitch Location="NS1" Address="10.59.0.57" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.66" Vlan="10dB" />
+    <SerialServer Location="TS2" Address="10.59.14.67" Vlan="10dB" />
+    <PowerStrip Location="PS1" Address="10.59.14.66" Vlan="10dB" />
+    <PowerStrip Location="PS2" Address="10.59.14.67" Vlan="10dB" />
+    <Blade Location="1_1" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.34" BladeId="03452494-0000-0000-0000-008CFA020D2A" Asset="3452494" NIC1="008CFA020D2A" />
+    <Blade Location="1_2" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.10" BladeId="03452240-0000-0000-0000-008CFA02220A" Asset="3452240" NIC1="008CFA02220A" />
+    <Blade Location="1_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.20" BladeId="03452283-0000-0000-0000-008CFA0220E8" Asset="3452283" NIC1="008CFA0220E8" />
+    <Blade Location="1_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.10" BladeId="03452176-0000-0000-0000-008CFA022208" Asset="3452176" NIC1="008CFA022208" />
+    <Blade Location="1_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.20" BladeId="03452177-0000-0000-0000-008CFA0221D4" Asset="3452177" NIC1="008CFA0221D4" />
+    <Blade Location="1_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.30" BladeId="03452248-0000-0000-0000-008CFA0220BA" Asset="3452248" NIC1="008CFA0220BA" />
+    <Blade Location="1_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.40" BladeId="03452487-0000-0000-0000-008CFA0203C6" Asset="3452487" NIC1="008CFA0203C6" />
+    <Blade Location="1_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.50" BladeId="03452307-0000-0000-0000-008CFA022246" Asset="3452307" NIC1="008CFA022246" />
+    <Blade Location="1_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.60" BladeId="03452235-0000-0000-0000-008CFA0223A6" Asset="3452235" NIC1="008CFA0223A6" />
+    <Blade Location="1_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.70" BladeId="03452419-0000-0000-0000-008CFA022274" Asset="3452419" NIC1="008CFA022274" />
+    <Blade Location="1_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.80" BladeId="03452321-0000-0000-0000-008CFA022560" Asset="3452321" NIC1="008CFA022560" />
+    <Blade Location="1_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.90" BladeId="03452036-0000-0000-0000-008CFA029016" Asset="3452036" NIC1="008CFA029016" />
+    <Blade Location="1_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.100" BladeId="03452483-0000-0000-0000-008CFA02263E" Asset="3452483" NIC1="008CFA02263E" />
+    <Blade Location="1_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.110" BladeId="03452245-0000-0000-0000-008CFA022702" Asset="3452245" NIC1="008CFA022702" />
+    <Blade Location="1_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.120" BladeId="03452171-0000-0000-0000-008CFA0223A8" Asset="3452171" NIC1="008CFA0223A8" />
+    <Blade Location="1_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.130" BladeId="03452181-0000-0000-0000-008CFA0226C2" Asset="3452181" NIC1="008CFA0226C2" />
+    <Blade Location="1_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.140" BladeId="03452454-0000-0000-0000-008CFA022088" Asset="3452454" NIC1="008CFA022088" />
+    <Blade Location="1_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.150" BladeId="03452360-0000-0000-0000-008CFA013C66" Asset="3452360" NIC1="008CFA013C66" />
+    <Blade Location="1_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.160" BladeId="03452406-0000-0000-0000-008CFA022676" Asset="3452406" NIC1="008CFA022676" />
+    <Blade Location="1_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.170" BladeId="03452226-0000-0000-0000-008CFA0226AE" Asset="3452226" NIC1="008CFA0226AE" />
+    <Blade Location="1_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.180" BladeId="03452432-0000-0000-0000-008CFA0224CE" Asset="3452432" NIC1="008CFA0224CE" />
+    <Blade Location="1_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.28.190" BladeId="03452460-0000-0000-0000-008CFA02216A" Asset="3452460" NIC1="008CFA02216A" />
+    <Blade Location="2_1" MachinePool="CO1IntApp01UFC2MP1" BladeIP="10.59.14.42" BladeId="03452453-0000-0000-0000-008CFA02243A" Asset="3452453" NIC1="008CFA02243A" />
+    <Blade Location="2_2" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.35" BladeId="03415403-0000-0000-0000-008CFA0289DE" Asset="3415403" NIC1="008CFA0289DE" />
+    <Blade Location="2_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.30" BladeId="03452450-0000-0000-0000-008CFA02038C" Asset="3452450" NIC1="008CFA02038C" />
+    <Blade Location="2_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.40" BladeId="03452365-0000-0000-0000-008CFA0203CA" Asset="3452365" NIC1="008CFA0203CA" />
+    <Blade Location="2_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.50" BladeId="03452180-0000-0000-0000-008CFA0222CE" Asset="3452180" NIC1="008CFA0222CE" />
+    <Blade Location="2_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.60" BladeId="03452136-0000-0000-0000-008CFA02207A" Asset="3452136" NIC1="008CFA02207A" />
+    <Blade Location="2_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.70" BladeId="03452500-0000-0000-0000-008CFA022352" Asset="3452500" NIC1="008CFA022352" />
+    <Blade Location="2_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.80" BladeId="03452459-0000-0000-0000-008CFA01D284" Asset="3452459" NIC1="008CFA01D284" />
+    <Blade Location="2_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.90" BladeId="03415587-0000-0000-0000-008CFA028220" Asset="3415587" NIC1="008CFA028220" />
+    <Blade Location="2_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.100" BladeId="03452366-0000-0000-0000-008CFA01D3B0" Asset="3452366" NIC1="008CFA01D3B0" />
+    <Blade Location="2_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.110" BladeId="03452475-0000-0000-0000-008CFA01D290" Asset="3452475" NIC1="008CFA01D290" />
+    <Blade Location="2_12" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.120" BladeId="03452050-0000-0000-0000-008CFA02042C" Asset="3452050" NIC1="008CFA02042C" />
+    <Blade Location="2_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.130" BladeId="03452186-0000-0000-0000-008CFA0222FC" Asset="3452186" NIC1="008CFA0222FC" />
+    <Blade Location="2_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.140" BladeId="03452464-0000-0000-0000-008CFA02270A" Asset="3452464" NIC1="008CFA02270A" />
+    <Blade Location="2_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.150" BladeId="03452437-0000-0000-0000-008CFA0222BE" Asset="3452437" NIC1="008CFA0222BE" />
+    <Blade Location="2_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.160" BladeId="03415311-0000-0000-0000-008CFA02221E" Asset="3415311" NIC1="008CFA02221E" />
+    <Blade Location="2_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.170" BladeId="03452463-0000-0000-0000-008CFA020974" Asset="3452463" NIC1="008CFA020974" />
+    <Blade Location="2_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.180" BladeId="03452179-0000-0000-0000-008CFA0220CC" Asset="3452179" NIC1="008CFA0220CC" />
+    <Blade Location="2_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.190" BladeId="03452433-0000-0000-0000-008CFA02234A" Asset="3452433" NIC1="008CFA02234A" />
+    <Blade Location="2_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.200" BladeId="03452165-0000-0000-0000-008CFA022078" Asset="3452165" NIC1="008CFA022078" />
+    <Blade Location="2_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.210" BladeId="03452456-0000-0000-0000-008CFA0205F8" Asset="3452456" NIC1="008CFA0205F8" />
+    <Blade Location="2_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.220" BladeId="03452367-0000-0000-0000-008CFA021062" Asset="3452367" NIC1="008CFA021062" />
+    <Blade Location="2_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.30.230" BladeId="03452485-0000-0000-0000-008CFA02095A" Asset="3452485" NIC1="008CFA02095A" />
+  </Rack>
+
+  <Rack Location="1.5.BC518_U" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Upper">
+    <NetworkSwitch Location="NS1" Address="10.59.0.58" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.74" Vlan="10dC" />
+    <SerialServer Location="TS2" Address="10.59.14.75" Vlan="10dC" />
+    <PowerStrip Location="PS1" Address="10.59.14.74" Vlan="10dC" />
+    <PowerStrip Location="PS2" Address="10.59.14.75" Vlan="10dC" />
+    <Blade Location="3_1" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.66" BladeId="03415733-0000-0000-0000-008CFA02272A" Asset="3415733" NIC1="008CFA02272A" />
+    <Blade Location="3_2" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.10" BladeId="03415338-0000-0000-0000-008CFA029990" Asset="3415338" NIC1="008CFA029990" />
+    <Blade Location="3_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.20" BladeId="03415512-0000-0000-0000-008CFA0292A0" Asset="3415512" NIC1="008CFA0292A0" />
+    <Blade Location="3_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.10" BladeId="03452482-0000-0000-0000-008CFA0225FC" Asset="3452482" NIC1="008CFA0225FC" />
+    <Blade Location="3_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.20" BladeId="03452323-0000-0000-0000-008CFA022404" Asset="3452323" NIC1="008CFA022404" />
+    <Blade Location="3_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.30" BladeId="03452013-0000-0000-0000-008CFA022258" Asset="3452013" NIC1="008CFA022258" />
+    <Blade Location="3_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.40" BladeId="03452423-0000-0000-0000-008CFA0225C6" Asset="3452423" NIC1="008CFA0225C6" />
+    <Blade Location="3_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.50" BladeId="03415353-0000-0000-0000-008CFA0281FC" Asset="3415353" NIC1="008CFA0281FC" />
+    <Blade Location="3_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.60" BladeId="03415511-0000-0000-0000-008CFA02860C" Asset="3415511" NIC1="008CFA02860C" />
+    <Blade Location="3_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.70" BladeId="03452003-0000-0000-0000-008CFA0284A2" Asset="3452003" NIC1="008CFA0284A2" />
+    <Blade Location="3_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.80" BladeId="03452265-0000-0000-0000-008CFA028D86" Asset="3452265" NIC1="008CFA028D86" />
+    <Blade Location="3_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.90" BladeId="03415227-0000-0000-0000-008CFA0297D6" Asset="3415227" NIC1="008CFA0297D6" />
+    <Blade Location="3_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.100" BladeId="03452140-0000-0000-0000-008CFA02231A" Asset="3452140" NIC1="008CFA02231A" />
+    <Blade Location="3_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.110" BladeId="03415204-0000-0000-0000-008CFA02998E" Asset="3415204" NIC1="008CFA02998E" />
+    <Blade Location="3_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.120" BladeId="03415677-0000-0000-0000-008CFA02848A" Asset="3415677" NIC1="008CFA02848A" />
+    <Blade Location="3_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.130" BladeId="03452322-0000-0000-0000-008CFA020A84" Asset="3452322" NIC1="008CFA020A84" />
+    <Blade Location="3_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.140" BladeId="03452006-0000-0000-0000-008CFA012972" Asset="3452006" NIC1="008CFA012972" />
+    <Blade Location="3_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.150" BladeId="03452009-0000-0000-0000-008CFA0201F2" Asset="3452009" NIC1="008CFA0201F2" />
+    <Blade Location="3_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.160" BladeId="03452041-0000-0000-0000-008CFA02852E" Asset="3452041" NIC1="008CFA02852E" />
+    <Blade Location="3_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.170" BladeId="03452229-0000-0000-0000-008CFA0221A6" Asset="3452229" NIC1="008CFA0221A6" />
+    <Blade Location="3_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.180" BladeId="03415329-0000-0000-0000-008CFA028EC8" Asset="3415329" NIC1="008CFA028EC8" />
+    <Blade Location="3_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.124.190" BladeId="03415704-0000-0000-0000-008CFA02952E" Asset="3415704" NIC1="008CFA02952E" />
+    <Blade Location="4_1" MachinePool="CO1IntApp01UFCMP1" BladeIP="10.59.14.50" BladeId="03452398-0000-0000-0000-008CFA01CFF4" Asset="3452398" NIC1="008CFA01CFF4" />
+    <Blade Location="4_2" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.67" BladeId="03452261-0000-0000-0000-008CFA02260A" Asset="3452261" NIC1="008CFA02260A" />
+    <Blade Location="4_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.30" BladeId="03452143-0000-0000-0000-008CFA022564" Asset="3452143" NIC1="008CFA022564" />
+    <Blade Location="4_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.40" BladeId="03452211-0000-0000-0000-008CFA020C90" Asset="3452211" NIC1="008CFA020C90" />
+    <Blade Location="4_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.50" BladeId="03415378-0000-0000-0000-008CFA02948A" Asset="3415378" NIC1="008CFA02948A" />
+    <Blade Location="4_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.60" BladeId="03452286-0000-0000-0000-008CFA0226EE" Asset="3452286" NIC1="008CFA0226EE" />
+    <Blade Location="4_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.70" BladeId="03415383-0000-0000-0000-008CFA028D82" Asset="3415383" NIC1="008CFA028D82" />
+    <Blade Location="4_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.80" BladeId="03452291-0000-0000-0000-008CFA01D236" Asset="3452291" NIC1="008CFA01D236" />
+    <Blade Location="4_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.90" BladeId="03415665-0000-0000-0000-008CFA0204A6" Asset="3415665" NIC1="008CFA0204A6" />
+    <Blade Location="4_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.100" BladeId="03452037-0000-0000-0000-008CFA0289DA" Asset="3452037" NIC1="008CFA0289DA" />
+    <Blade Location="4_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.110" BladeId="03452401-0000-0000-0000-008CFA01D3AC" Asset="3452401" NIC1="008CFA01D3AC" />
+    <Blade Location="4_12" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.120" BladeId="03415472-0000-0000-0000-008CFA028F08" Asset="3415472" NIC1="008CFA028F08" />
+    <Blade Location="4_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.130" BladeId="03452442-0000-0000-0000-008CFA022634" Asset="3452442" NIC1="008CFA022634" />
+    <Blade Location="4_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.140" BladeId="03415203-0000-0000-0000-008CFA02997C" Asset="3415203" NIC1="008CFA02997C" />
+    <Blade Location="4_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.150" BladeId="03452369-0000-0000-0000-008CFA022574" Asset="3452369" NIC1="008CFA022574" />
+    <Blade Location="4_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.160" BladeId="03452222-0000-0000-0000-008CFA01CF02" Asset="3452222" NIC1="008CFA01CF02" />
+    <Blade Location="4_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.170" BladeId="03452066-0000-0000-0000-008CFA020282" Asset="3452066" NIC1="008CFA020282" />
+    <Blade Location="4_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.180" BladeId="03452383-0000-0000-0000-008CFA022142" Asset="3452383" NIC1="008CFA022142" />
+    <Blade Location="4_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.190" BladeId="03452191-0000-0000-0000-008CFA022346" Asset="3452191" NIC1="008CFA022346" />
+    <Blade Location="4_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.200" BladeId="03452160-0000-0000-0000-008CFA022304" Asset="3452160" NIC1="008CFA022304" />
+    <Blade Location="4_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.210" BladeId="03415651-0000-0000-0000-008CFA022426" Asset="3415651" NIC1="008CFA022426" />
+    <Blade Location="4_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.220" BladeId="03452152-0000-0000-0000-008CFA022334" Asset="3452152" NIC1="008CFA022334" />
+    <Blade Location="4_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.126.230" BladeId="03452316-0000-0000-0000-008CFA02269C" Asset="3452316" NIC1="008CFA02269C" />
+  </Rack>
+
+  <Rack Location="1.5.BC518_L" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Lower">
+    <NetworkSwitch Location="NS1" Address="10.59.0.59" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.82" Vlan="10dD" />
+    <SerialServer Location="TS2" Address="10.59.14.83" Vlan="10dD" />
+    <PowerStrip Location="PS1" Address="10.59.14.82" Vlan="10dD" />
+    <PowerStrip Location="PS2" Address="10.59.14.83" Vlan="10dD" />
+    <Blade Location="1_1" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.98" BladeId="03452382-0000-0000-0000-008CFA0226C4" Asset="3452382" NIC1="008CFA0226C4" />
+    <Blade Location="1_2" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.10" BladeId="03452272-0000-0000-0000-008CFA022240" Asset="3452272" NIC1="008CFA022240" />
+    <Blade Location="1_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.20" BladeId="03415495-0000-0000-0000-008CFA028606" Asset="3415495" NIC1="008CFA028606" />
+    <Blade Location="1_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.10" BladeId="03452241-0000-0000-0000-008CFA0206DA" Asset="3452241" NIC1="008CFA0206DA" />
+    <Blade Location="1_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.20" BladeId="03452402-0000-0000-0000-008CFA02255A" Asset="3452402" NIC1="008CFA02255A" />
+    <Blade Location="1_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.30" BladeId="03415352-0000-0000-0000-008CFA022554" Asset="3415352" NIC1="008CFA022554" />
+    <Blade Location="1_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.40" BladeId="03452473-0000-0000-0000-008CFA020476" Asset="3452473" NIC1="008CFA020476" />
+    <Blade Location="1_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.50" BladeId="03452477-0000-0000-0000-008CFA0224D0" Asset="3452477" NIC1="008CFA0224D0" />
+    <Blade Location="1_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.60" BladeId="03452183-0000-0000-0000-008CFA0222EE" Asset="3452183" NIC1="008CFA0222EE" />
+    <Blade Location="1_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.70" BladeId="03452270-0000-0000-0000-008CFA02027E" Asset="3452270" NIC1="008CFA02027E" />
+    <Blade Location="1_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.80" BladeId="03452390-0000-0000-0000-008CFA01D3C8" Asset="3452390" NIC1="008CFA01D3C8" />
+    <Blade Location="1_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.90" BladeId="03452288-0000-0000-0000-008CFA0221FA" Asset="3452288" NIC1="008CFA0221FA" />
+    <Blade Location="1_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.100" BladeId="03452371-0000-0000-0000-008CFA0202FA" Asset="3452371" NIC1="008CFA0202FA" />
+    <Blade Location="1_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.110" BladeId="03452280-0000-0000-0000-008CFA01D3EA" Asset="3452280" NIC1="008CFA01D3EA" />
+    <Blade Location="1_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.120" BladeId="03415297-0000-0000-0000-008CFA01D298" Asset="3415297" NIC1="008CFA01D298" />
+    <Blade Location="1_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.130" BladeId="03452236-0000-0000-0000-008CFA02030A" Asset="3452236" NIC1="008CFA02030A" />
+    <Blade Location="1_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.140" BladeId="03452184-0000-0000-0000-008CFA020C94" Asset="3452184" NIC1="008CFA020C94" />
+    <Blade Location="1_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.150" BladeId="03415370-0000-0000-0000-008CFA013328" Asset="3415370" NIC1="008CFA013328" />
+    <Blade Location="1_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.160" BladeId="03452214-0000-0000-0000-008CFA01D296" Asset="3452214" NIC1="008CFA01D296" />
+    <Blade Location="1_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.170" BladeId="03452201-0000-0000-0000-008CFA020ACC" Asset="3452201" NIC1="008CFA020ACC" />
+    <Blade Location="1_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.180" BladeId="03452451-0000-0000-0000-008CFA0208A4" Asset="3452451" NIC1="008CFA0208A4" />
+    <Blade Location="1_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.220.190" BladeId="03452224-0000-0000-0000-008CFA02027C" Asset="3452224" NIC1="008CFA02027C" />
+    <Blade Location="2_1" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.99" BladeId="03452126-0000-0000-0000-008CFA020B5C" Asset="3452126" NIC1="008CFA020B5C" />
+    <Blade Location="2_2" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.100" BladeId="03415627-0000-0000-0000-008CFA020B18" Asset="3415627" NIC1="008CFA020B18" />
+    <Blade Location="2_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.30" BladeId="03452506-0000-0000-0000-008CFA0226BA" Asset="3452506" NIC1="008CFA0226BA" />
+    <Blade Location="2_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.40" BladeId="03452298-0000-0000-0000-008CFA01D3C6" Asset="3452298" NIC1="008CFA01D3C6" />
+    <Blade Location="2_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.50" BladeId="03452202-0000-0000-0000-008CFA01D28E" Asset="3452202" NIC1="008CFA01D28E" />
+    <Blade Location="2_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.60" BladeId="03452225-0000-0000-0000-008CFA020B50" Asset="3452225" NIC1="008CFA020B50" />
+    <Blade Location="2_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.70" BladeId="03415560-0000-0000-0000-008CFA0225EA" Asset="3415560" NIC1="008CFA0225EA" />
+    <Blade Location="2_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.80" BladeId="03452079-0000-0000-0000-008CFA01D020" Asset="3452079" NIC1="008CFA01D020" />
+    <Blade Location="2_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.90" BladeId="03452258-0000-0000-0000-008CFA0221F8" Asset="3452258" NIC1="008CFA0221F8" />
+    <Blade Location="2_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.100" BladeId="03415454-0000-0000-0000-008CFA0282A0" Asset="3415454" NIC1="008CFA0282A0" />
+    <Blade Location="2_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.110" BladeId="03452440-0000-0000-0000-008CFA022534" Asset="3452440" NIC1="008CFA022534" />
+    <Blade Location="2_12" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.120" BladeId="03452231-0000-0000-0000-008CFA0203AE" Asset="3452231" NIC1="008CFA0203AE" />
+    <Blade Location="2_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.130" BladeId="03415542-0000-0000-0000-008CFA0295D2" Asset="3415542" NIC1="008CFA0295D2" />
+    <Blade Location="2_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.140" BladeId="03415334-0000-0000-0000-008CFA029470" Asset="3415334" NIC1="008CFA029470" />
+    <Blade Location="2_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.150" BladeId="03452095-0000-0000-0000-008CFA0208D8" Asset="3452095" NIC1="008CFA0208D8" />
+    <Blade Location="2_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.160" BladeId="03452001-0000-0000-0000-008CFA0223C8" Asset="3452001" NIC1="008CFA0223C8" />
+    <Blade Location="2_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.170" BladeId="03452242-0000-0000-0000-008CFA0201F6" Asset="3452242" NIC1="008CFA0201F6" />
+    <Blade Location="2_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.180" BladeId="03415628-0000-0000-0000-008CFA020C84" Asset="3415628" NIC1="008CFA020C84" />
+    <Blade Location="2_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.190" BladeId="03452162-0000-0000-0000-008CFA01D280" Asset="3452162" NIC1="008CFA01D280" />
+    <Blade Location="2_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.200" BladeId="03452491-0000-0000-0000-008CFA0226CA" Asset="3452491" NIC1="008CFA0226CA" />
+    <Blade Location="2_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.210" BladeId="03452476-0000-0000-0000-008CFA020BD0" Asset="3452476" NIC1="008CFA020BD0" />
+    <Blade Location="2_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.220" BladeId="03415663-0000-0000-0000-008CFA02829C" Asset="3415663" NIC1="008CFA02829C" />
+    <Blade Location="2_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.222.230" BladeId="03415355-0000-0000-0000-008CFA02849C" Asset="3415355" NIC1="008CFA02849C" />
+  </Rack>
+
+  <Rack Location="1.5.BC519_U" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Upper">
+    <NetworkSwitch Location="NS1" Address="10.59.0.60" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.90" Vlan="10dE" />
+    <SerialServer Location="TS2" Address="10.59.14.91" Vlan="10dE" />
+    <PowerStrip Location="PS1" Address="10.59.14.90" Vlan="10dE" />
+    <PowerStrip Location="PS2" Address="10.59.14.91" Vlan="10dE" />
+    <Blade Location="3_1" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.130" BladeId="03452311-0000-0000-0000-008CFA020590" Asset="3452311" NIC1="008CFA020590" />
+    <Blade Location="3_2" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.10" BladeId="03452218-0000-0000-0000-008CFA02058C" Asset="3452218" NIC1="008CFA02058C" />
+    <Blade Location="3_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.20" BladeId="03452194-0000-0000-0000-008CFA0203B2" Asset="3452194" NIC1="008CFA0203B2" />
+    <Blade Location="3_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.10" BladeId="03452275-0000-0000-0000-008CFA020592" Asset="3452275" NIC1="008CFA020592" />
+    <Blade Location="3_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.20" BladeId="03452169-0000-0000-0000-008CFA020898" Asset="3452169" NIC1="008CFA020898" />
+    <Blade Location="3_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.30" BladeId="03452173-0000-0000-0000-008CFA01D544" Asset="3452173" NIC1="008CFA01D544" />
+    <Blade Location="3_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.40" BladeId="03452342-0000-0000-0000-008CFA020958" Asset="3452342" NIC1="008CFA020958" />
+    <Blade Location="3_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.50" BladeId="03452347-0000-0000-0000-008CFA01D3BA" Asset="3452347" NIC1="008CFA01D3BA" />
+    <Blade Location="3_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.60" BladeId="03452331-0000-0000-0000-008CFA01D3D0" Asset="3452331" NIC1="008CFA01D3D0" />
+    <Blade Location="3_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.70" BladeId="03415430-0000-0000-0000-008CFA0203B0" Asset="3415430" NIC1="008CFA0203B0" />
+    <Blade Location="3_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.80" BladeId="03452106-0000-0000-0000-008CFA02221C" Asset="3452106" NIC1="008CFA02221C" />
+    <Blade Location="3_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.90" BladeId="03452127-0000-0000-0000-008CFA0220FE" Asset="3452127" NIC1="008CFA0220FE" />
+    <Blade Location="3_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.100" BladeId="03452170-0000-0000-0000-008CFA01D2FC" Asset="3452170" NIC1="008CFA01D2FC" />
+    <Blade Location="3_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.110" BladeId="03452234-0000-0000-0000-008CFA0205F2" Asset="3452234" NIC1="008CFA0205F2" />
+    <Blade Location="3_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.120" BladeId="03415343-0000-0000-0000-008CFA0223CA" Asset="3415343" NIC1="008CFA0223CA" />
+    <Blade Location="3_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.130" BladeId="03452150-0000-0000-0000-008CFA01D018" Asset="3452150" NIC1="008CFA01D018" />
+    <Blade Location="3_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.140" BladeId="03452168-0000-0000-0000-008CFA0210C0" Asset="3452168" NIC1="008CFA0210C0" />
+    <Blade Location="3_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.150" BladeId="03452238-0000-0000-0000-008CFA02241E" Asset="3452238" NIC1="008CFA02241E" />
+    <Blade Location="3_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.160" BladeId="03452232-0000-0000-0000-008CFA0205FE" Asset="3452232" NIC1="008CFA0205FE" />
+    <Blade Location="3_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.170" BladeId="03452156-0000-0000-0000-008CFA01D3E4" Asset="3452156" NIC1="008CFA01D3E4" />
+    <Blade Location="3_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.180" BladeId="03452065-0000-0000-0000-008CFA0220B0" Asset="3452065" NIC1="008CFA0220B0" />
+    <Blade Location="3_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.232.190" BladeId="03452363-0000-0000-0000-008CFA0205F0" Asset="3452363" NIC1="008CFA0205F0" />
+    <Blade Location="4_1" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.131" BladeId="03415647-0000-0000-0000-008CFA02931A" Asset="3415647" NIC1="008CFA02931A" />
+    <Blade Location="4_2" MachinePool="CO1IntApp01FCCMP1" BladeIP="10.59.15.132" BladeId="03452380-0000-0000-0000-008CFA022538" Asset="3452380" NIC1="008CFA022538" />
+    <Blade Location="4_3" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.30" BladeId="03415277-0000-0000-0000-008CFA028EE4" Asset="3415277" NIC1="008CFA028EE4" />
+    <Blade Location="4_4" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.40" BladeId="03415395-0000-0000-0000-008CFA028624" Asset="3415395" NIC1="008CFA028624" />
+    <Blade Location="4_5" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.50" BladeId="03452425-0000-0000-0000-008CFA0226D4" Asset="3452425" NIC1="008CFA0226D4" />
+    <Blade Location="4_6" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.60" BladeId="03415486-0000-0000-0000-008CFA02959A" Asset="3415486" NIC1="008CFA02959A" />
+    <Blade Location="4_7" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.70" BladeId="03452203-0000-0000-0000-008CFA0222E4" Asset="3452203" NIC1="008CFA0222E4" />
+    <Blade Location="4_8" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.80" BladeId="03452511-0000-0000-0000-008CFA020E56" Asset="3452511" NIC1="008CFA020E56" />
+    <Blade Location="4_9" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.90" BladeId="03452420-0000-0000-0000-008CFA022316" Asset="3452420" NIC1="008CFA022316" />
+    <Blade Location="4_10" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.100" BladeId="03415325-0000-0000-0000-008CFA0220A4" Asset="3415325" NIC1="008CFA0220A4" />
+    <Blade Location="4_11" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.110" BladeId="03452378-0000-0000-0000-008CFA02244A" Asset="3452378" NIC1="008CFA02244A" />
+    <Blade Location="4_12" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.120" BladeId="03452492-0000-0000-0000-008CFA0225AC" Asset="3452492" NIC1="008CFA0225AC" />
+    <Blade Location="4_13" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.130" BladeId="03452421-0000-0000-0000-008CFA022284" Asset="3452421" NIC1="008CFA022284" />
+    <Blade Location="4_14" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.140" BladeId="03452447-0000-0000-0000-008CFA0220E6" Asset="3452447" NIC1="008CFA0220E6" />
+    <Blade Location="4_15" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.150" BladeId="03452404-0000-0000-0000-008CFA0225B0" Asset="3452404" NIC1="008CFA0225B0" />
+    <Blade Location="4_16" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.160" BladeId="03452397-0000-0000-0000-008CFA0225CE" Asset="3452397" NIC1="008CFA0225CE" />
+    <Blade Location="4_17" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.170" BladeId="03415630-0000-0000-0000-008CFA020880" Asset="3415630" NIC1="008CFA020880" />
+    <Blade Location="4_18" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.180" BladeId="03452479-0000-0000-0000-008CFA022752" Asset="3452479" NIC1="008CFA022752" />
+    <Blade Location="4_19" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.190" BladeId="03452452-0000-0000-0000-008CFA020402" Asset="3452452" NIC1="008CFA020402" />
+    <Blade Location="4_20" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.200" BladeId="03452427-0000-0000-0000-008CFA02253A" Asset="3452427" NIC1="008CFA02253A" />
+    <Blade Location="4_21" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.210" BladeId="03452462-0000-0000-0000-008CFA020572" Asset="3452462" NIC1="008CFA020572" />
+    <Blade Location="4_22" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.220" BladeId="03452465-0000-0000-0000-008CFA022318" Asset="3452465" NIC1="008CFA022318" />
+    <Blade Location="4_23" MachinePool="CO1IntApp01MP1" BladeIP="10.113.234.230" BladeId="03452493-0000-0000-0000-008CFA0201FA" Asset="3452493" NIC1="008CFA0201FA" />
+  </Rack>
+
+  <Rack Location="1.5.BC519_L" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Lower">
+    <NetworkSwitch Location="NS1" Address="10.59.0.61" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.162" Vlan="11dA" />
+    <SerialServer Location="TS2" Address="10.59.14.163" Vlan="11dA" />
+    <PowerStrip Location="PS1" Address="10.59.14.162" Vlan="11dA" />
+    <PowerStrip Location="PS2" Address="10.59.14.163" Vlan="11dA" />
+    <Blade Location="2_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.162" BladeId="03452200-0000-0000-0000-008CFA020D74" Asset="3452200" NIC1="008CFA020D74" />
+    <Blade Location="1_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.163" BladeId="03452264-0000-0000-0000-008CFA020496" Asset="3452264" NIC1="008CFA020496" />
+    <Blade Location="2_2" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.164" BladeId="03415539-0000-0000-0000-008CFA0223D8" Asset="3415539" NIC1="008CFA0223D8" />
+    <Blade Location="1_2" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.10" BladeId="03452305-0000-0000-0000-008CFA0210C6" Asset="3452305" NIC1="008CFA0210C6" />
+    <Blade Location="1_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.20" BladeId="03452163-0000-0000-0000-008CFA020368" Asset="3452163" NIC1="008CFA020368" />
+    <Blade Location="1_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.30" BladeId="03452429-0000-0000-0000-008CFA0222F6" Asset="3452429" NIC1="008CFA0222F6" />
+    <Blade Location="1_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.40" BladeId="03415416-0000-0000-0000-008CFA020312" Asset="3415416" NIC1="008CFA020312" />
+    <Blade Location="1_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.50" BladeId="03452413-0000-0000-0000-008CFA020710" Asset="3452413" NIC1="008CFA020710" />
+    <Blade Location="1_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.60" BladeId="03415521-0000-0000-0000-008CFA028E1E" Asset="3415521" NIC1="008CFA028E1E" />
+    <Blade Location="1_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.70" BladeId="03415420-0000-0000-0000-008CFA020C2E" Asset="3415420" NIC1="008CFA020C2E" />
+    <Blade Location="1_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.80" BladeId="03415428-0000-0000-0000-008CFA028DDA" Asset="3415428" NIC1="008CFA028DDA" />
+    <Blade Location="1_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.90" BladeId="03452012-0000-0000-0000-008CFA021030" Asset="3452012" NIC1="008CFA021030" />
+    <Blade Location="1_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.100" BladeId="03452005-0000-0000-0000-008CFA028372" Asset="3452005" NIC1="008CFA028372" />
+    <Blade Location="1_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.110" BladeId="03452346-0000-0000-0000-008CFA020FEE" Asset="3452346" NIC1="008CFA020FEE" />
+    <Blade Location="1_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.120" BladeId="03452325-0000-0000-0000-008CFA020358" Asset="3452325" NIC1="008CFA020358" />
+    <Blade Location="1_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.130" BladeId="03452256-0000-0000-0000-008CFA020B30" Asset="3452256" NIC1="008CFA020B30" />
+    <Blade Location="1_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.140" BladeId="03452470-0000-0000-0000-008CFA022724" Asset="3452470" NIC1="008CFA022724" />
+    <Blade Location="1_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.150" BladeId="03452385-0000-0000-0000-008CFA02052A" Asset="3452385" NIC1="008CFA02052A" />
+    <Blade Location="1_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.160" BladeId="03452481-0000-0000-0000-008CFA02076A" Asset="3452481" NIC1="008CFA02076A" />
+    <Blade Location="1_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.170" BladeId="03452409-0000-0000-0000-008CFA022654" Asset="3452409" NIC1="008CFA022654" />
+    <Blade Location="1_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.180" BladeId="03415336-0000-0000-0000-008CFA028B20" Asset="3415336" NIC1="008CFA028B20" />
+    <Blade Location="1_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.190" BladeId="03452430-0000-0000-0000-008CFA0225C0" Asset="3452430" NIC1="008CFA0225C0" />
+    <Blade Location="1_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.200" BladeId="03452372-0000-0000-0000-008CFA0226E0" Asset="3452372" NIC1="008CFA0226E0" />
+    <Blade Location="1_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.236.210" BladeId="03452351-0000-0000-0000-008CFA022536" Asset="3452351" NIC1="008CFA022536" />
+    <Blade Location="2_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.10" BladeId="03452208-0000-0000-0000-008CFA0205FA" Asset="3452208" NIC1="008CFA0205FA" />
+    <Blade Location="2_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.20" BladeId="03452348-0000-0000-0000-008CFA022194" Asset="3452348" NIC1="008CFA022194" />
+    <Blade Location="2_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.30" BladeId="03415668-0000-0000-0000-008CFA020FB0" Asset="3415668" NIC1="008CFA020FB0" />
+    <Blade Location="2_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.40" BladeId="03415671-0000-0000-0000-008CFA02214A" Asset="3415671" NIC1="008CFA02214A" />
+    <Blade Location="2_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.50" BladeId="03452276-0000-0000-0000-008CFA01D004" Asset="3452276" NIC1="008CFA01D004" />
+    <Blade Location="2_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.60" BladeId="03452349-0000-0000-0000-008CFA0204B8" Asset="3452349" NIC1="008CFA0204B8" />
+    <Blade Location="2_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.70" BladeId="03452293-0000-0000-0000-008CFA01D3DE" Asset="3452293" NIC1="008CFA01D3DE" />
+    <Blade Location="2_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.80" BladeId="03452271-0000-0000-0000-008CFA02050C" Asset="3452271" NIC1="008CFA02050C" />
+    <Blade Location="2_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.90" BladeId="03452341-0000-0000-0000-008CFA020AE2" Asset="3452341" NIC1="008CFA020AE2" />
+    <Blade Location="2_12" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.100" BladeId="03452199-0000-0000-0000-008CFA02069A" Asset="3452199" NIC1="008CFA02069A" />
+    <Blade Location="2_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.110" BladeId="03415604-0000-0000-0000-008CFA02086A" Asset="3415604" NIC1="008CFA02086A" />
+    <Blade Location="2_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.120" BladeId="03452212-0000-0000-0000-008CFA021058" Asset="3452212" NIC1="008CFA021058" />
+    <Blade Location="2_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.130" BladeId="03452142-0000-0000-0000-008CFA01D008" Asset="3452142" NIC1="008CFA01D008" />
+    <Blade Location="2_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.140" BladeId="03452254-0000-0000-0000-008CFA020566" Asset="3452254" NIC1="008CFA020566" />
+    <Blade Location="2_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.150" BladeId="03452133-0000-0000-0000-008CFA01D058" Asset="3452133" NIC1="008CFA01D058" />
+    <Blade Location="2_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.160" BladeId="03415523-0000-0000-0000-008CFA0220AE" Asset="3415523" NIC1="008CFA0220AE" />
+    <Blade Location="2_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.170" BladeId="03452267-0000-0000-0000-008CFA02025C" Asset="3452267" NIC1="008CFA02025C" />
+    <Blade Location="2_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.180" BladeId="03452266-0000-0000-0000-008CFA01D286" Asset="3452266" NIC1="008CFA01D286" />
+    <Blade Location="2_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.190" BladeId="03452251-0000-0000-0000-008CFA01D28A" Asset="3452251" NIC1="008CFA01D28A" />
+    <Blade Location="2_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.200" BladeId="03452290-0000-0000-0000-008CFA0209BA" Asset="3452290" NIC1="008CFA0209BA" />
+    <Blade Location="2_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.238.210" BladeId="03452335-0000-0000-0000-008CFA0203B4" Asset="3452335" NIC1="008CFA0203B4" />
+  </Rack>
+
+  <Rack Location="1.5.BC520_U" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Upper">
+    <NetworkSwitch Location="NS1" Address="10.59.0.62" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.170" Vlan="11dB" />
+    <SerialServer Location="TS2" Address="10.59.14.171" Vlan="11dB" />
+    <PowerStrip Location="PS1" Address="10.59.14.170" Vlan="11dB" />
+    <PowerStrip Location="PS2" Address="10.59.14.171" Vlan="11dB" />
+    <Blade Location="4_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.194" BladeId="03452147-0000-0000-0000-008CFA0225D4" Asset="3452147" NIC1="008CFA0225D4" />
+    <Blade Location="3_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.195" BladeId="03452471-0000-0000-0000-008CFA0226C6" Asset="3452471" NIC1="008CFA0226C6" />
+    <Blade Location="4_2" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.196" BladeId="03452187-0000-0000-0000-008CFA01D3E6" Asset="3452187" NIC1="008CFA01D3E6" />
+    <Blade Location="3_2" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.10" BladeId="03452412-0000-0000-0000-008CFA022606" Asset="3452412" NIC1="008CFA022606" />
+    <Blade Location="3_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.20" BladeId="03452310-0000-0000-0000-008CFA022210" Asset="3452310" NIC1="008CFA022210" />
+    <Blade Location="3_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.30" BladeId="03452489-0000-0000-0000-008CFA0225B8" Asset="3452489" NIC1="008CFA0225B8" />
+    <Blade Location="3_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.40" BladeId="03452166-0000-0000-0000-008CFA02220C" Asset="3452166" NIC1="008CFA02220C" />
+    <Blade Location="3_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.50" BladeId="03452220-0000-0000-0000-008CFA0206B0" Asset="3452220" NIC1="008CFA0206B0" />
+    <Blade Location="3_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.60" BladeId="03452119-0000-0000-0000-008CFA01D28C" Asset="3452119" NIC1="008CFA01D28C" />
+    <Blade Location="3_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.70" BladeId="03452350-0000-0000-0000-008CFA01D3DA" Asset="3452350" NIC1="008CFA01D3DA" />
+    <Blade Location="3_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.80" BladeId="03452131-0000-0000-0000-008CFA0201D8" Asset="3452131" NIC1="008CFA0201D8" />
+    <Blade Location="3_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.90" BladeId="03452210-0000-0000-0000-008CFA0220F6" Asset="3452210" NIC1="008CFA0220F6" />
+    <Blade Location="3_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.100" BladeId="03452134-0000-0000-0000-008CFA01D288" Asset="3452134" NIC1="008CFA01D288" />
+    <Blade Location="3_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.110" BladeId="03452388-0000-0000-0000-008CFA022720" Asset="3452388" NIC1="008CFA022720" />
+    <Blade Location="3_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.120" BladeId="03452278-0000-0000-0000-008CFA0226C8" Asset="3452278" NIC1="008CFA0226C8" />
+    <Blade Location="3_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.130" BladeId="03452289-0000-0000-0000-008CFA0226E2" Asset="3452289" NIC1="008CFA0226E2" />
+    <Blade Location="3_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.140" BladeId="03452329-0000-0000-0000-008CFA022112" Asset="3452329" NIC1="008CFA022112" />
+    <Blade Location="3_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.150" BladeId="03452285-0000-0000-0000-008CFA022502" Asset="3452285" NIC1="008CFA022502" />
+    <Blade Location="3_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.160" BladeId="03452300-0000-0000-0000-008CFA0221CE" Asset="3452300" NIC1="008CFA0221CE" />
+    <Blade Location="3_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.170" BladeId="03452096-0000-0000-0000-008CFA0221F0" Asset="3452096" NIC1="008CFA0221F0" />
+    <Blade Location="3_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.180" BladeId="03452509-0000-0000-0000-008CFA0223E4" Asset="3452509" NIC1="008CFA0223E4" />
+    <Blade Location="3_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.190" BladeId="03452217-0000-0000-0000-008CFA020C96" Asset="3452217" NIC1="008CFA020C96" />
+    <Blade Location="3_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.200" BladeId="03452158-0000-0000-0000-008CFA01CFF6" Asset="3452158" NIC1="008CFA01CFF6" />
+    <Blade Location="3_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.240.210" BladeId="03452086-0000-0000-0000-008CFA01D3D4" Asset="3452086" NIC1="008CFA01D3D4" />
+    <Blade Location="4_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.10" BladeId="03452510-0000-0000-0000-008CFA022368" Asset="3452510" NIC1="008CFA022368" />
+    <Blade Location="4_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.20" BladeId="03452431-0000-0000-0000-008CFA022314" Asset="3452431" NIC1="008CFA022314" />
+    <Blade Location="4_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.30" BladeId="03452046-0000-0000-0000-008CFA0286EC" Asset="3452046" NIC1="008CFA0286EC" />
+    <Blade Location="4_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.40" BladeId="03415292-0000-0000-0000-008CFA020A36" Asset="3415292" NIC1="008CFA020A36" />
+    <Blade Location="4_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.50" BladeId="03452408-0000-0000-0000-008CFA020328" Asset="3452408" NIC1="008CFA020328" />
+    <Blade Location="4_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.60" BladeId="03452400-0000-0000-0000-008CFA0224A0" Asset="3452400" NIC1="008CFA0224A0" />
+    <Blade Location="4_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.70" BladeId="03452247-0000-0000-0000-008CFA0223EE" Asset="3452247" NIC1="008CFA0223EE" />
+    <Blade Location="4_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.80" BladeId="03452219-0000-0000-0000-008CFA020FFC" Asset="3452219" NIC1="008CFA020FFC" />
+    <Blade Location="4_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.90" BladeId="03452317-0000-0000-0000-008CFA022364" Asset="3452317" NIC1="008CFA022364" />
+    <Blade Location="4_12" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.100" BladeId="03452018-0000-0000-0000-008CFA028594" Asset="3452018" NIC1="008CFA028594" />
+    <Blade Location="4_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.110" BladeId="03452144-0000-0000-0000-008CFA0225C2" Asset="3452144" NIC1="008CFA0225C2" />
+    <Blade Location="4_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.120" BladeId="03452149-0000-0000-0000-008CFA022644" Asset="3452149" NIC1="008CFA022644" />
+    <Blade Location="4_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.130" BladeId="03452497-0000-0000-0000-008CFA020FDC" Asset="3452497" NIC1="008CFA020FDC" />
+    <Blade Location="4_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.140" BladeId="03452381-0000-0000-0000-008CFA0225AE" Asset="3452381" NIC1="008CFA0225AE" />
+    <Blade Location="4_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.150" BladeId="03452209-0000-0000-0000-008CFA020A90" Asset="3452209" NIC1="008CFA020A90" />
+    <Blade Location="4_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.160" BladeId="03452294-0000-0000-0000-008CFA022660" Asset="3452294" NIC1="008CFA022660" />
+    <Blade Location="4_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.170" BladeId="03452085-0000-0000-0000-008CFA029732" Asset="3452085" NIC1="008CFA029732" />
+    <Blade Location="4_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.180" BladeId="03452362-0000-0000-0000-008CFA020486" Asset="3452362" NIC1="008CFA020486" />
+    <Blade Location="4_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.190" BladeId="03452416-0000-0000-0000-008CFA02078E" Asset="3452416" NIC1="008CFA02078E" />
+    <Blade Location="4_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.200" BladeId="03452469-0000-0000-0000-008CFA02105E" Asset="3452469" NIC1="008CFA02105E" />
+    <Blade Location="4_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.242.210" BladeId="03452244-0000-0000-0000-008CFA020A42" Asset="3452244" NIC1="008CFA020A42" />
+  </Rack>
+
+  <Rack Location="1.5.BC520_L" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Lower">
+    <NetworkSwitch Location="NS1" Address="10.59.0.63" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.178" Vlan="11dC" />
+    <SerialServer Location="TS2" Address="10.59.14.179" Vlan="11dC" />
+    <PowerStrip Location="PS1" Address="10.59.14.178" Vlan="11dC" />
+    <PowerStrip Location="PS2" Address="10.59.14.179" Vlan="11dC" />
+    <Blade Location="2_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.226" BladeId="03452287-0000-0000-0000-008CFA02272C" Asset="3452287" NIC1="008CFA02272C" />
+    <Blade Location="1_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.227" BladeId="03452185-0000-0000-0000-008CFA022130" Asset="3452185" NIC1="008CFA022130" />
+    <Blade Location="2_2" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.15.228" BladeId="03452297-0000-0000-0000-008CFA02030E" Asset="3452297" NIC1="008CFA02030E" />
+    <Blade Location="1_2" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.10" BladeId="03415591-0000-0000-0000-008CFA0297C4" Asset="3415591" NIC1="008CFA0297C4" />
+    <Blade Location="1_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.20" BladeId="03452193-0000-0000-0000-008CFA022138" Asset="3452193" NIC1="008CFA022138" />
+    <Blade Location="1_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.30" BladeId="03452344-0000-0000-0000-008CFA01D282" Asset="3452344" NIC1="008CFA01D282" />
+    <Blade Location="1_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.40" BladeId="03452112-0000-0000-0000-008CFA021072" Asset="3452112" NIC1="008CFA021072" />
+    <Blade Location="1_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.50" BladeId="03452394-0000-0000-0000-008CFA0222C4" Asset="3452394" NIC1="008CFA0222C4" />
+    <Blade Location="1_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.60" BladeId="03452249-0000-0000-0000-008CFA0223EC" Asset="3452249" NIC1="008CFA0223EC" />
+    <Blade Location="1_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.70" BladeId="03452188-0000-0000-0000-008CFA0226BE" Asset="3452188" NIC1="008CFA0226BE" />
+    <Blade Location="1_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.80" BladeId="03452178-0000-0000-0000-008CFA02260C" Asset="3452178" NIC1="008CFA02260C" />
+    <Blade Location="1_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.90" BladeId="03452237-0000-0000-0000-008CFA02268E" Asset="3452237" NIC1="008CFA02268E" />
+    <Blade Location="1_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.100" BladeId="03452172-0000-0000-0000-008CFA0222C8" Asset="3452172" NIC1="008CFA0222C8" />
+    <Blade Location="1_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.110" BladeId="03452503-0000-0000-0000-008CFA0226EC" Asset="3452503" NIC1="008CFA0226EC" />
+    <Blade Location="1_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.120" BladeId="03452411-0000-0000-0000-008CFA022726" Asset="3452411" NIC1="008CFA022726" />
+    <Blade Location="1_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.130" BladeId="03452326-0000-0000-0000-008CFA0225BE" Asset="3452326" NIC1="008CFA0225BE" />
+    <Blade Location="1_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.140" BladeId="03452496-0000-0000-0000-008CFA02237A" Asset="3452496" NIC1="008CFA02237A" />
+    <Blade Location="1_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.150" BladeId="03452017-0000-0000-0000-008CFA013622" Asset="3452017" NIC1="008CFA013622" />
+    <Blade Location="1_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.160" BladeId="03452206-0000-0000-0000-008CFA0206AC" Asset="3452206" NIC1="008CFA0206AC" />
+    <Blade Location="1_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.170" BladeId="03452504-0000-0000-0000-008CFA0224D2" Asset="3452504" NIC1="008CFA0224D2" />
+    <Blade Location="1_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.180" BladeId="03452299-0000-0000-0000-008CFA022332" Asset="3452299" NIC1="008CFA022332" />
+    <Blade Location="1_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.190" BladeId="03452189-0000-0000-0000-008CFA02267A" Asset="3452189" NIC1="008CFA02267A" />
+    <Blade Location="1_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.200" BladeId="03452324-0000-0000-0000-008CFA02265E" Asset="3452324" NIC1="008CFA02265E" />
+    <Blade Location="1_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.244.210" BladeId="03415280-0000-0000-0000-008CFA01CFF0" Asset="3415280" NIC1="008CFA01CFF0" />
+    <Blade Location="2_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.10" BladeId="03452295-0000-0000-0000-008CFA022310" Asset="3452295" NIC1="008CFA022310" />
+    <Blade Location="2_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.20" BladeId="03452478-0000-0000-0000-008CFA0226DE" Asset="3452478" NIC1="008CFA0226DE" />
+    <Blade Location="2_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.30" BladeId="03452073-0000-0000-0000-008CFA0226B6" Asset="3452073" NIC1="008CFA0226B6" />
+    <Blade Location="2_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.40" BladeId="03452468-0000-0000-0000-008CFA022280" Asset="3452468" NIC1="008CFA022280" />
+    <Blade Location="2_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.50" BladeId="03452355-0000-0000-0000-008CFA022758" Asset="3452355" NIC1="008CFA022758" />
+    <Blade Location="2_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.60" BladeId="03452339-0000-0000-0000-008CFA0222F8" Asset="3452339" NIC1="008CFA0222F8" />
+    <Blade Location="2_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.70" BladeId="03415202-0000-0000-0000-008CFA0226F4" Asset="3415202" NIC1="008CFA0226F4" />
+    <Blade Location="2_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.80" BladeId="03452274-0000-0000-0000-008CFA0225DE" Asset="3452274" NIC1="008CFA0225DE" />
+    <Blade Location="2_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.90" BladeId="03452368-0000-0000-0000-008CFA02250C" Asset="3452368" NIC1="008CFA02250C" />
+    <Blade Location="2_12" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.100" BladeId="03452216-0000-0000-0000-008CFA02244E" Asset="3452216" NIC1="008CFA02244E" />
+    <Blade Location="2_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.110" BladeId="03415130-0000-0000-0000-008CFA022548" Asset="3415130" NIC1="008CFA022548" />
+    <Blade Location="2_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.120" BladeId="03452410-0000-0000-0000-008CFA0226BC" Asset="3452410" NIC1="008CFA0226BC" />
+    <Blade Location="2_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.130" BladeId="03452486-0000-0000-0000-008CFA022636" Asset="3452486" NIC1="008CFA022636" />
+    <Blade Location="2_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.140" BladeId="03452250-0000-0000-0000-008CFA01D002" Asset="3452250" NIC1="008CFA01D002" />
+    <Blade Location="2_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.150" BladeId="03452396-0000-0000-0000-008CFA01D2FA" Asset="3452396" NIC1="008CFA01D2FA" />
+    <Blade Location="2_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.160" BladeId="03452445-0000-0000-0000-008CFA0226E4" Asset="3452445" NIC1="008CFA0226E4" />
+    <Blade Location="2_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.170" BladeId="03452507-0000-0000-0000-008CFA022742" Asset="3452507" NIC1="008CFA022742" />
+    <Blade Location="2_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.180" BladeId="03452422-0000-0000-0000-008CFA0225DC" Asset="3452422" NIC1="008CFA0225DC" />
+    <Blade Location="2_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.190" BladeId="03452314-0000-0000-0000-008CFA0225E2" Asset="3452314" NIC1="008CFA0225E2" />
+    <Blade Location="2_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.200" BladeId="03452327-0000-0000-0000-008CFA022192" Asset="3452327" NIC1="008CFA022192" />
+    <Blade Location="2_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.246.210" BladeId="03452303-0000-0000-0000-008CFA022740" Asset="3452303" NIC1="008CFA022740" />
+  </Rack>
+
+  <Rack Location="1.5.AY526_U" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Upper">
+    <NetworkSwitch Location="NS1" Address="10.59.0.64" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.186" Vlan="11dD" />
+    <SerialServer Location="TS2" Address="10.59.14.187" Vlan="11dD" />
+    <PowerStrip Location="PS1" Address="10.59.14.186" Vlan="11dD" />
+    <PowerStrip Location="PS2" Address="10.59.14.187" Vlan="11dD" />
+    <Blade Location="4_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.14.98" BladeId="03452175-0000-0000-0000-008CFA0221D2" Asset="3452175" NIC1="008CFA0221D2" />
+    <Blade Location="3_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.14.99" BladeId="03452484-0000-0000-0000-008CFA0205B4" Asset="3452484" NIC1="008CFA0205B4" />
+    <Blade Location="4_2" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.14.100" BladeId="03452337-0000-0000-0000-008CFA0226A2" Asset="3452337" NIC1="008CFA0226A2" />
+    <Blade Location="3_2" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.10" BladeId="03452375-0000-0000-0000-008CFA0220C8" Asset="3452375" NIC1="008CFA0220C8" />
+    <Blade Location="3_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.20" BladeId="03452472-0000-0000-0000-008CFA020D5C" Asset="3452472" NIC1="008CFA020D5C" />
+    <Blade Location="3_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.30" BladeId="03452174-0000-0000-0000-008CFA022218" Asset="3452174" NIC1="008CFA022218" />
+    <Blade Location="3_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.40" BladeId="03452354-0000-0000-0000-008CFA02234E" Asset="3452354" NIC1="008CFA02234E" />
+    <Blade Location="3_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.50" BladeId="03452330-0000-0000-0000-008CFA02236A" Asset="3452330" NIC1="008CFA02236A" />
+    <Blade Location="3_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.60" BladeId="03452087-0000-0000-0000-008CFA020F88" Asset="3452087" NIC1="008CFA020F88" />
+    <Blade Location="3_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.70" BladeId="03452157-0000-0000-0000-008CFA0209A0" Asset="3452157" NIC1="008CFA0209A0" />
+    <Blade Location="3_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.80" BladeId="03415442-0000-0000-0000-008CFA02837A" Asset="3415442" NIC1="008CFA02837A" />
+    <Blade Location="3_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.90" BladeId="03415436-0000-0000-0000-008CFA012376" Asset="3415436" NIC1="008CFA012376" />
+    <Blade Location="3_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.100" BladeId="03452107-0000-0000-0000-008CFA020C24" Asset="3452107" NIC1="008CFA020C24" />
+    <Blade Location="3_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.110" BladeId="03452417-0000-0000-0000-008CFA01D006" Asset="3452417" NIC1="008CFA01D006" />
+    <Blade Location="3_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.120" BladeId="03452353-0000-0000-0000-008CFA0222C2" Asset="3452353" NIC1="008CFA0222C2" />
+    <Blade Location="3_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.130" BladeId="03452458-0000-0000-0000-008CFA02262C" Asset="3452458" NIC1="008CFA02262C" />
+    <Blade Location="3_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.140" BladeId="03452444-0000-0000-0000-008CFA020EF2" Asset="3452444" NIC1="008CFA020EF2" />
+    <Blade Location="3_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.150" BladeId="03452192-0000-0000-0000-008CFA0222C0" Asset="3452192" NIC1="008CFA0222C0" />
+    <Blade Location="3_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.160" BladeId="03452233-0000-0000-0000-008CFA022760" Asset="3452233" NIC1="008CFA022760" />
+    <Blade Location="3_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.170" BladeId="03452377-0000-0000-0000-008CFA0220CE" Asset="3452377" NIC1="008CFA0220CE" />
+    <Blade Location="3_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.180" BladeId="03415213-0000-0000-0000-008CFA028202" Asset="3415213" NIC1="008CFA028202" />
+    <Blade Location="3_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.190" BladeId="03452221-0000-0000-0000-008CFA022230" Asset="3452221" NIC1="008CFA022230" />
+    <Blade Location="3_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.200" BladeId="03452032-0000-0000-0000-008CFA0282E2" Asset="3452032" NIC1="008CFA0282E2" />
+    <Blade Location="3_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.248.210" BladeId="03415633-0000-0000-0000-008CFA020C86" Asset="3415633" NIC1="008CFA020C86" />
+    <Blade Location="4_3" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.10" BladeId="03415318-0000-0000-0000-008CFA022378" Asset="3415318" NIC1="008CFA022378" />
+    <Blade Location="4_4" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.20" BladeId="03452399-0000-0000-0000-008CFA01D2FE" Asset="3452399" NIC1="008CFA01D2FE" />
+    <Blade Location="4_5" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.30" BladeId="03415656-0000-0000-0000-008CFA022556" Asset="3415656" NIC1="008CFA022556" />
+    <Blade Location="4_6" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.40" BladeId="03452077-0000-0000-0000-008CFA0223B8" Asset="3452077" NIC1="008CFA0223B8" />
+    <Blade Location="4_7" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.50" BladeId="03415359-0000-0000-0000-008CFA0221FC" Asset="3415359" NIC1="008CFA0221FC" />
+    <Blade Location="4_8" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.60" BladeId="03452090-0000-0000-0000-008CFA020ABC" Asset="3452090" NIC1="008CFA020ABC" />
+    <Blade Location="4_9" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.70" BladeId="03415541-0000-0000-0000-008CFA020F00" Asset="3415541" NIC1="008CFA020F00" />
+    <Blade Location="4_10" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.80" BladeId="03415513-0000-0000-0000-008CFA0224F6" Asset="3415513" NIC1="008CFA0224F6" />
+    <Blade Location="4_11" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.90" BladeId="03452284-0000-0000-0000-008CFA02274C" Asset="3452284" NIC1="008CFA02274C" />
+    <Blade Location="4_12" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.100" BladeId="03452072-0000-0000-0000-008CFA020380" Asset="3452072" NIC1="008CFA020380" />
+    <Blade Location="4_13" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.110" BladeId="03415613-0000-0000-0000-008CFA022422" Asset="3415613" NIC1="008CFA022422" />
+    <Blade Location="4_14" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.120" BladeId="03452076-0000-0000-0000-008CFA0225F0" Asset="3452076" NIC1="008CFA0225F0" />
+    <Blade Location="4_15" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.130" BladeId="03415421-0000-0000-0000-008CFA022542" Asset="3415421" NIC1="008CFA022542" />
+    <Blade Location="4_16" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.140" BladeId="03452159-0000-0000-0000-008CFA01D3B4" Asset="3452159" NIC1="008CFA01D3B4" />
+    <Blade Location="4_17" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.150" BladeId="03452273-0000-0000-0000-008CFA02222E" Asset="3452273" NIC1="008CFA02222E" />
+    <Blade Location="4_18" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.160" BladeId="03415418-0000-0000-0000-008CFA020266" Asset="3415418" NIC1="008CFA020266" />
+    <Blade Location="4_19" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.170" BladeId="03452384-0000-0000-0000-008CFA022184" Asset="3452384" NIC1="008CFA022184" />
+    <Blade Location="4_20" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.180" BladeId="03415488-0000-0000-0000-008CFA022232" Asset="3415488" NIC1="008CFA022232" />
+    <Blade Location="4_21" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.190" BladeId="03415349-0000-0000-0000-008CFA028350" Asset="3415349" NIC1="008CFA028350" />
+    <Blade Location="4_22" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.200" BladeId="03452204-0000-0000-0000-008CFA0225C8" Asset="3452204" NIC1="008CFA0225C8" />
+    <Blade Location="4_23" MachinePool="CO1IntApp02MP1" BladeIP="10.113.250.210" BladeId="03452340-0000-0000-0000-008CFA022286" Asset="3452340" NIC1="008CFA022286" />
+  </Rack>
+
+  <Rack Location="1.5.AY526_L" SKU="EX-50A-RACK-90-DCS7105-MSF-005693-6000GB-COMPUTE-REVA_Lower">
+    <NetworkSwitch Location="NS1" Address="10.59.0.65" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.59.14.194" Vlan="11dE" />
+    <SerialServer Location="TS2" Address="10.59.14.195" Vlan="11dE" />
+    <PowerStrip Location="PS1" Address="10.59.14.194" Vlan="11dE" />
+    <PowerStrip Location="PS2" Address="10.59.14.195" Vlan="11dE" />
+    <Blade Location="2_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.14.130" BladeId="03452088-0000-0000-0000-008CFA0223C4" Asset="3452088" NIC1="008CFA0223C4" />
+    <Blade Location="1_1" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.14.131" BladeId="03415153-0000-0000-0000-008CFA02867A" Asset="3415153" NIC1="008CFA02867A" />
+    <Blade Location="2_2" MachinePool="CO1IntApp02FCCMP1" BladeIP="10.59.14.132" BladeId="03452094-0000-0000-0000-008CFA0223C0" Asset="3452094" NIC1="008CFA0223C0" />
+    <Blade Location="1_2" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.10" BladeId="03452292-0000-0000-0000-008CFA0129EA" Asset="3452292" NIC1="008CFA0129EA" />
+    <Blade Location="1_3" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.20" BladeId="03452334-0000-0000-0000-008CFA029892" Asset="3452334" NIC1="008CFA029892" />
+    <Blade Location="1_4" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.30" BladeId="03452439-0000-0000-0000-008CFA0202F8" Asset="3452439" NIC1="008CFA0202F8" />
+    <Blade Location="1_5" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.40" BladeId="03415662-0000-0000-0000-008CFA028292" Asset="3415662" NIC1="008CFA028292" />
+    <Blade Location="1_6" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.50" BladeId="03415670-0000-0000-0000-008CFA0220C0" Asset="3415670" NIC1="008CFA0220C0" />
+    <Blade Location="1_7" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.60" BladeId="03452196-0000-0000-0000-008CFA02038A" Asset="3452196" NIC1="008CFA02038A" />
+    <Blade Location="1_8" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.70" BladeId="03452343-0000-0000-0000-008CFA020568" Asset="3452343" NIC1="008CFA020568" />
+    <Blade Location="1_9" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.80" BladeId="03452035-0000-0000-0000-008CFA01D294" Asset="3452035" NIC1="008CFA01D294" />
+    <Blade Location="1_10" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.90" BladeId="03452164-0000-0000-0000-008CFA022306" Asset="3452164" NIC1="008CFA022306" />
+    <Blade Location="1_11" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.100" BladeId="03452282-0000-0000-0000-008CFA0221FE" Asset="3452282" NIC1="008CFA0221FE" />
+    <Blade Location="1_13" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.110" BladeId="03415650-0000-0000-0000-008CFA020C40" Asset="3415650" NIC1="008CFA020C40" />
+    <Blade Location="1_14" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.120" BladeId="03452075-0000-0000-0000-008CFA020970" Asset="3452075" NIC1="008CFA020970" />
+    <Blade Location="1_15" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.130" BladeId="03415643-0000-0000-0000-008CFA0221EE" Asset="3415643" NIC1="008CFA0221EE" />
+    <Blade Location="1_16" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.140" BladeId="03415676-0000-0000-0000-008CFA0149D4" Asset="3415676" NIC1="008CFA0149D4" />
+    <Blade Location="1_17" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.150" BladeId="03415487-0000-0000-0000-008CFA02085C" Asset="3415487" NIC1="008CFA02085C" />
+    <Blade Location="1_18" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.160" BladeId="03415382-0000-0000-0000-008CFA01D000" Asset="3415382" NIC1="008CFA01D000" />
+    <Blade Location="1_19" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.170" BladeId="03452069-0000-0000-0000-008CFA022080" Asset="3452069" NIC1="008CFA022080" />
+    <Blade Location="1_20" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.180" BladeId="03452428-0000-0000-0000-008CFA022736" Asset="3452428" NIC1="008CFA022736" />
+    <Blade Location="1_21" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.190" BladeId="03452336-0000-0000-0000-008CFA01D3A4" Asset="3452336" NIC1="008CFA01D3A4" />
+    <Blade Location="1_22" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.200" BladeId="03452501-0000-0000-0000-008CFA01335A" Asset="3452501" NIC1="008CFA01335A" />
+    <Blade Location="1_23" MachinePool="CO1IntApp02MP1" BladeIP="10.59.196.210" BladeId="03452207-0000-0000-0000-008CFA0222AC" Asset="3452207" NIC1="008CFA0222AC" />
+    <Blade Location="2_3" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.10" BladeId="03452407-0000-0000-0000-008CFA022728" Asset="3452407" NIC1="008CFA022728" />
+    <Blade Location="2_4" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.20" BladeId="03452370-0000-0000-0000-008CFA022750" Asset="3452370" NIC1="008CFA022750" />
+    <Blade Location="2_5" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.30" BladeId="03452467-0000-0000-0000-008CFA020794" Asset="3452467" NIC1="008CFA020794" />
+    <Blade Location="2_6" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.40" BladeId="03452455-0000-0000-0000-008CFA02051A" Asset="3452455" NIC1="008CFA02051A" />
+    <Blade Location="2_7" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.50" BladeId="03452246-0000-0000-0000-008CFA020AE4" Asset="3452246" NIC1="008CFA020AE4" />
+    <Blade Location="2_8" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.60" BladeId="03452395-0000-0000-0000-008CFA020C5E" Asset="3452395" NIC1="008CFA020C5E" />
+    <Blade Location="2_9" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.70" BladeId="03452374-0000-0000-0000-008CFA0207CC" Asset="3452374" NIC1="008CFA0207CC" />
+    <Blade Location="2_10" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.80" BladeId="03452379-0000-0000-0000-008CFA020E70" Asset="3452379" NIC1="008CFA020E70" />
+    <Blade Location="2_11" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.90" BladeId="03452474-0000-0000-0000-008CFA02213E" Asset="3452474" NIC1="008CFA02213E" />
+    <Blade Location="2_12" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.100" BladeId="03452320-0000-0000-0000-008CFA0226A6" Asset="3452320" NIC1="008CFA0226A6" />
+    <Blade Location="2_13" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.110" BladeId="03452190-0000-0000-0000-008CFA0226F0" Asset="3452190" NIC1="008CFA0226F0" />
+    <Blade Location="2_14" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.120" BladeId="03452084-0000-0000-0000-008CFA022642" Asset="3452084" NIC1="008CFA022642" />
+    <Blade Location="2_15" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.130" BladeId="03452141-0000-0000-0000-008CFA022486" Asset="3452141" NIC1="008CFA022486" />
+    <Blade Location="2_16" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.140" BladeId="03452448-0000-0000-0000-008CFA0224C6" Asset="3452448" NIC1="008CFA0224C6" />
+    <Blade Location="2_17" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.150" BladeId="03452466-0000-0000-0000-008CFA0209CE" Asset="3452466" NIC1="008CFA0209CE" />
+    <Blade Location="2_18" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.160" BladeId="03452405-0000-0000-0000-008CFA020206" Asset="3452405" NIC1="008CFA020206" />
+    <Blade Location="2_19" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.170" BladeId="03452490-0000-0000-0000-008CFA020B32" Asset="3452490" NIC1="008CFA020B32" />
+    <Blade Location="2_20" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.180" BladeId="03452332-0000-0000-0000-008CFA020682" Asset="3452332" NIC1="008CFA020682" />
+    <Blade Location="2_21" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.190" BladeId="03452457-0000-0000-0000-008CFA0201E4" Asset="3452457" NIC1="008CFA0201E4" />
+    <Blade Location="2_22" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.200" BladeId="03452502-0000-0000-0000-008CFA020A58" Asset="3452502" NIC1="008CFA020A58" />
+    <Blade Location="2_23" MachinePool="CO1IntApp02MP1" BladeIP="10.59.198.210" BladeId="03452195-0000-0000-0000-008CFA02266E" Asset="3452195" NIC1="008CFA02266E" />
+  </Rack>
+  
+  <Rack Location="1.5.BC521" SKU="EX-50A-RACK-36-DCS8100-MSF-006173-86016GB-APP-REVA">
+    <NetworkSwitch Location="NS1" Address="10.59.0.66" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.113.13.66" Vlan="30dA" />
+    <SerialServer Location="TS2" Address="10.113.13.67" Vlan="30dA" />
+    <SerialServer Location="TS3" Address="10.113.13.68" Vlan="30dA" />
+    <SerialServer Location="TS4" Address="10.113.13.69" Vlan="30dA" />
+    <PowerStrip Location="PS1" Address="10.113.13.66" Vlan="30dA" />
+    <PowerStrip Location="PS2" Address="10.113.13.67" Vlan="30dA" />
+    <PowerStrip Location="PS3" Address="10.113.13.68" Vlan="30dA" />
+    <PowerStrip Location="PS4" Address="10.113.13.69" Vlan="30dA" />
+    <Blade Location="1_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.2" BladeId="03441636-0000-0000-0000-008CFA038510" Asset="3441636" NIC1="008CFA038510" />
+    <Blade Location="1_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.3" BladeId="03441577-0000-0000-0000-008CFA03AF7E" Asset="3441577" NIC1="008CFA03AF7E" />
+    <Blade Location="1_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.4" BladeId="03441601-0000-0000-0000-008CFA03886E" Asset="3441601" NIC1="008CFA03886E" />
+    <Blade Location="1_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.5" BladeId="03441342-0000-0000-0000-008CFA03AE3A" Asset="3441342" NIC1="008CFA03AE3A" />
+    <Blade Location="1_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.6" BladeId="03441638-0000-0000-0000-008CFA020628" Asset="3441638" NIC1="008CFA020628" />
+    <Blade Location="1_11" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.7" BladeId="03441664-0000-0000-0000-008CFA038712" Asset="3441664" NIC1="008CFA038712" />
+    <Blade Location="2_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.8" BladeId="03415993-0000-0000-0000-008CFA043AD0" Asset="3415993" NIC1="008CFA043AD0" />
+    <Blade Location="2_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.9" BladeId="03415972-0000-0000-0000-008CFA0488A4" Asset="3415972" NIC1="008CFA0488A4" />
+    <Blade Location="2_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.10" BladeId="03441699-0000-0000-0000-008CFA0385F0" Asset="3441699" NIC1="008CFA0385F0" />
+    <Blade Location="2_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.63" BladeId="03485222-0000-0000-0000-008CFA0224DE" Asset="3485222" NIC1="008CFA0224DE" />
+    <Blade Location="2_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.64" BladeId="03441674-0000-0000-0000-008CFA048394" Asset="3441674" NIC1="008CFA048394" />
+    <Blade Location="2_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.65" BladeId="03441728-0000-0000-0000-008CFA02929E" Asset="3441728" NIC1="008CFA02929E" />
+    <Blade Location="4_1" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.66" BladeId="03441646-0000-0000-0000-008CFA0381C0" Asset="3441646" NIC1="008CFA0381C0" />
+    <Blade Location="4_3" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.67" BladeId="03441406-0000-0000-0000-008CFA035F08" Asset="3441406" NIC1="008CFA035F08" />
+    <Blade Location="4_5" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.68" BladeId="03441538-0000-0000-0000-008CFA0391D2" Asset="3441538" NIC1="008CFA0391D2" />
+    <Blade Location="4_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.69" BladeId="03441587-0000-0000-0000-008CFA038F12" Asset="3441587" NIC1="008CFA038F12" />
+    <Blade Location="4_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.70" BladeId="03445677-0000-0000-0000-008CFA04835A" Asset="3445677" NIC1="008CFA04835A" />
+    <Blade Location="4_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.71" BladeId="03441650-0000-0000-0000-008CFA048978" Asset="3441650" NIC1="008CFA048978" />
+    <Blade Location="3_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.11" BladeId="03441539-0000-0000-0000-008CFA022656" Asset="3441539" NIC1="008CFA022656" />
+    <Blade Location="3_2" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.12" BladeId="03441448-0000-0000-0000-008CFA048332" Asset="3441448" NIC1="008CFA048332" />
+    <Blade Location="3_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.13" BladeId="03441513-0000-0000-0000-008CFA02254E" Asset="3441513" NIC1="008CFA02254E" />
+    <Blade Location="3_4" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.14" BladeId="03441450-0000-0000-0000-008CFA04859A" Asset="3441450" NIC1="008CFA04859A" />
+    <Blade Location="3_5" MachinePool="CO1IntStr01FCCMP1" BladeIP="10.113.13.130" BladeId="03441582-0000-0000-0000-008CFA03CED6" Asset="3441582" NIC1="008CFA03CED6" />
+    <Blade Location="3_6" MachinePool="CO1IntStr02FCCMP1" BladeIP="10.113.13.139" BladeId="03441563-0000-0000-0000-008CFA022402" Asset="3441563" NIC1="008CFA022402" />
+    <Blade Location="3_7" MachinePool="CO1IntStr01FCCMP1" BladeIP="10.113.13.131" BladeId="03441446-0000-0000-0000-008CFA048888" Asset="3441446" NIC1="008CFA048888" />
+    <Blade Location="3_8" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.15" BladeId="03441445-0000-0000-0000-008CFA0483B0" Asset="3441445" NIC1="008CFA0483B0" />
+    <Blade Location="3_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.16" BladeId="03441569-0000-0000-0000-008CFA035FA2" Asset="3441569" NIC1="008CFA035FA2" />
+    <Blade Location="3_13" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.17" BladeId="03441560-0000-0000-0000-008CFA0361C2" Asset="3441560" NIC1="008CFA0361C2" />
+    <Blade Location="3_14" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.72" BladeId="03441679-0000-0000-0000-008CFA048684" Asset="3441679" NIC1="008CFA048684" />
+    <Blade Location="3_15" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.73" BladeId="03441453-0000-0000-0000-008CFA0488F8" Asset="3441453" NIC1="008CFA0488F8" />
+    <Blade Location="3_16" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.74" BladeId="03441511-0000-0000-0000-008CFA0226D8" Asset="3441511" NIC1="008CFA0226D8" />
+    <Blade Location="3_17" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.75" BladeId="03441439-0000-0000-0000-008CFA04859C" Asset="3441439" NIC1="008CFA04859C" />
+    <Blade Location="3_18" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.76" BladeId="03441572-0000-0000-0000-008CFA038B78" Asset="3441572" NIC1="008CFA038B78" />
+    <Blade Location="3_19" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.77" BladeId="03441304-0000-0000-0000-008CFA020D76" Asset="3441304" NIC1="008CFA020D76" />
+    <Blade Location="3_20" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.78" BladeId="03441454-0000-0000-0000-008CFA048862" Asset="3441454" NIC1="008CFA048862" />
+    <Blade Location="3_21" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.79" BladeId="03441401-0000-0000-0000-008CFA038C4C" Asset="3441401" NIC1="008CFA038C4C" />
+  </Rack>
+
+  <Rack Location="1.5.BC522" SKU="EX-50A-RACK-36-DCS8100-MSF-006173-86016GB-APP-REVA">
+    <NetworkSwitch Location="NS1" Address="10.59.0.67" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.113.13.74" Vlan="30dB" />
+    <SerialServer Location="TS2" Address="10.113.13.75" Vlan="30dB" />
+    <SerialServer Location="TS3" Address="10.113.13.76" Vlan="30dB" />
+    <SerialServer Location="TS4" Address="10.113.13.77" Vlan="30dB" />
+    <PowerStrip Location="PS1" Address="10.113.13.74" Vlan="30dB" />
+    <PowerStrip Location="PS2" Address="10.113.13.75" Vlan="30dB" />
+    <PowerStrip Location="PS3" Address="10.113.13.76" Vlan="30dB" />
+    <PowerStrip Location="PS4" Address="10.113.13.77" Vlan="30dB" />
+    <Blade Location="1_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.130" BladeId="03441501-0000-0000-0000-008CFA048382" Asset="3441501" NIC1="008CFA048382" />
+    <Blade Location="1_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.131" BladeId="03441659-0000-0000-0000-008CFA03B486" Asset="3441659" NIC1="008CFA03B486" />
+    <Blade Location="1_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.132" BladeId="03441449-0000-0000-0000-008CFA04E0F0" Asset="3441449" NIC1="008CFA04E0F0" />
+    <Blade Location="1_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.133" BladeId="03441606-0000-0000-0000-008CFA04DE66" Asset="3441606" NIC1="008CFA04DE66" />
+    <Blade Location="1_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.134" BladeId="03441137-0000-0000-0000-008CFA03CC1C" Asset="3441137" NIC1="008CFA03CC1C" />
+    <Blade Location="1_11" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.135" BladeId="03441687-0000-0000-0000-008CFA03CAC0" Asset="3441687" NIC1="008CFA03CAC0" />
+    <Blade Location="2_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.136" BladeId="03441119-0000-0000-0000-008CFA048534" Asset="3441119" NIC1="008CFA048534" />
+    <Blade Location="2_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.137" BladeId="03441602-0000-0000-0000-008CFA048882" Asset="3441602" NIC1="008CFA048882" />
+    <Blade Location="2_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.138" BladeId="03441621-0000-0000-0000-008CFA038512" Asset="3441621" NIC1="008CFA038512" />
+    <Blade Location="2_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.194" BladeId="03441586-0000-0000-0000-008CFA03842A" Asset="3441586" NIC1="008CFA03842A" />
+    <Blade Location="2_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.195" BladeId="03441527-0000-0000-0000-008CFA043B22" Asset="3441527" NIC1="008CFA043B22" />
+    <Blade Location="2_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.196" BladeId="03441176-0000-0000-0000-008CFA043F74" Asset="3441176" NIC1="008CFA043F74" />
+    <Blade Location="4_1" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.197" BladeId="03441647-0000-0000-0000-008CFA043F76" Asset="3441647" NIC1="008CFA043F76" />
+    <Blade Location="4_3" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.198" BladeId="03441492-0000-0000-0000-008CFA0383F6" Asset="3441492" NIC1="008CFA0383F6" />
+    <Blade Location="4_5" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.199" BladeId="03441660-0000-0000-0000-008CFA04DF74" Asset="3441660" NIC1="008CFA04DF74" />
+    <Blade Location="4_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.200" BladeId="03441597-0000-0000-0000-008CFA04DD3E" Asset="3441597" NIC1="008CFA04DD3E" />
+    <Blade Location="4_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.201" BladeId="03441627-0000-0000-0000-008CFA03B44E" Asset="3441627" NIC1="008CFA03B44E" />
+    <Blade Location="4_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.202" BladeId="03441593-0000-0000-0000-008CFA048558" Asset="3441593" NIC1="008CFA048558" />
+    <Blade Location="3_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.139" BladeId="03441692-0000-0000-0000-008CFA038D04" Asset="3441692" NIC1="008CFA038D04" />
+    <Blade Location="3_2" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.140" BladeId="03441685-0000-0000-0000-008CFA022136" Asset="3441685" NIC1="008CFA022136" />
+    <Blade Location="3_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.141" BladeId="03441375-0000-0000-0000-008CFA038BE4" Asset="3441375" NIC1="008CFA038BE4" />
+    <Blade Location="3_4" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.142" BladeId="03441700-0000-0000-0000-008CFA02028E" Asset="3441700" NIC1="008CFA02028E" />
+    <Blade Location="3_5" MachinePool="CO1IntStr01FCCMP1" BladeIP="10.113.13.146" BladeId="03441423-0000-0000-0000-008CFA02212C" Asset="3441423" NIC1="008CFA02212C" />
+    <Blade Location="3_6" MachinePool="CO1IntStr02FCCMP1" BladeIP="10.113.13.150" BladeId="03441471-0000-0000-0000-008CFA0360EC" Asset="3441471" NIC1="008CFA0360EC" />
+    <Blade Location="3_7" MachinePool="CO1IntStr02FCCMP1" BladeIP="10.113.13.151" BladeId="03441122-0000-0000-0000-008CFA0486F8" Asset="3441122" NIC1="008CFA0486F8" />
+    <Blade Location="3_8" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.143" BladeId="03441695-0000-0000-0000-008CFA038F9E" Asset="3441695" NIC1="008CFA038F9E" />
+    <Blade Location="3_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.144" BladeId="03441698-0000-0000-0000-008CFA0225B2" Asset="3441698" NIC1="008CFA0225B2" />
+    <Blade Location="3_13" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.145" BladeId="03441434-0000-0000-0000-008CFA0204B0" Asset="3441434" NIC1="008CFA0204B0" />
+    <Blade Location="3_14" MachinePool="CO1IntStr01MP1" BladeIP="10.113.3.146" BladeId="03441547-0000-0000-0000-008CFA0360EE" Asset="3441547" NIC1="008CFA0360EE" />
+    <Blade Location="3_15" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.203" BladeId="03441469-0000-0000-0000-008CFA0390AA" Asset="3441469" NIC1="008CFA0390AA" />
+    <Blade Location="3_16" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.204" BladeId="03441594-0000-0000-0000-008CFA0201F4" Asset="3441594" NIC1="008CFA0201F4" />
+    <Blade Location="3_17" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.205" BladeId="03441632-0000-0000-0000-008CFA022360" Asset="3441632" NIC1="008CFA022360" />
+    <Blade Location="3_18" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.206" BladeId="03441467-0000-0000-0000-008CFA022128" Asset="3441467" NIC1="008CFA022128" />
+    <Blade Location="3_19" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.207" BladeId="03441558-0000-0000-0000-008CFA0223CE" Asset="3441558" NIC1="008CFA0223CE" />
+    <Blade Location="3_20" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.208" BladeId="03441324-0000-0000-0000-008CFA0384A4" Asset="3441324" NIC1="008CFA0384A4" />
+    <Blade Location="3_21" MachinePool="CO1IntStr02MP1" BladeIP="10.113.3.209" BladeId="03441505-0000-0000-0000-008CFA022330" Asset="3441505" NIC1="008CFA022330" />
+  </Rack>
+
+  <Rack Location="1.5.BC523" SKU="EX-50A-RACK-36-DCS8100-MSF-006173-86016GB-APP-REVA">
+    <NetworkSwitch Location="NS1" Address="10.59.0.68" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.113.13.82" Vlan="30dC" />
+    <SerialServer Location="TS2" Address="10.113.13.83" Vlan="30dC" />
+    <SerialServer Location="TS3" Address="10.113.13.84" Vlan="30dC" />
+    <SerialServer Location="TS4" Address="10.113.13.85" Vlan="30dC" />
+    <PowerStrip Location="PS1" Address="10.113.13.82" Vlan="30dC" />
+    <PowerStrip Location="PS2" Address="10.113.13.83" Vlan="30dC" />
+    <PowerStrip Location="PS3" Address="10.113.13.84" Vlan="30dC" />
+    <PowerStrip Location="PS4" Address="10.113.13.85" Vlan="30dC" />
+    <Blade Location="1_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.2" BladeId="03415974-0000-0000-0000-008CFA03CE2C" Asset="3415974" NIC1="008CFA03CE2C" />
+    <Blade Location="1_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.3" BladeId="03441617-0000-0000-0000-008CFA0387B6" Asset="3441617" NIC1="008CFA0387B6" />
+    <Blade Location="1_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.4" BladeId="03441499-0000-0000-0000-008CFA04892C" Asset="3441499" NIC1="008CFA04892C" />
+    <Blade Location="1_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.5" BladeId="03441330-0000-0000-0000-008CFA03CE56" Asset="3441330" NIC1="008CFA03CE56" />
+    <Blade Location="1_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.6" BladeId="03441570-0000-0000-0000-008CFA04840C" Asset="3441570" NIC1="008CFA04840C" />
+    <Blade Location="1_11" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.7" BladeId="03441018-0000-0000-0000-008CFA0439B6" Asset="3441018" NIC1="008CFA0439B6" />
+    <Blade Location="2_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.8" BladeId="03441682-0000-0000-0000-008CFA038634" Asset="3441682" NIC1="008CFA038634" />
+    <Blade Location="2_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.9" BladeId="03441120-0000-0000-0000-008CFA03ADD0" Asset="3441120" NIC1="008CFA03ADD0" />
+    <Blade Location="2_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.10" BladeId="03441442-0000-0000-0000-008CFA038DD4" Asset="3441442" NIC1="008CFA038DD4" />
+    <Blade Location="2_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.64" BladeId="03441691-0000-0000-0000-008CFA03AFDE" Asset="3441691" NIC1="008CFA03AFDE" />
+    <Blade Location="2_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.65" BladeId="03441147-0000-0000-0000-008CFA038314" Asset="3441147" NIC1="008CFA038314" />
+    <Blade Location="2_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.66" BladeId="03441549-0000-0000-0000-008CFA038876" Asset="3441549" NIC1="008CFA038876" />
+    <Blade Location="4_1" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.67" BladeId="03441635-0000-0000-0000-008CFA038594" Asset="3441635" NIC1="008CFA038594" />
+    <Blade Location="4_3" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.68" BladeId="03441127-0000-0000-0000-008CFA043F4A" Asset="3441127" NIC1="008CFA043F4A" />
+    <Blade Location="4_5" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.69" BladeId="03441322-0000-0000-0000-008CFA03AE3C" Asset="3441322" NIC1="008CFA03AE3C" />
+    <Blade Location="4_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.70" BladeId="03441015-0000-0000-0000-008CFA037F7E" Asset="3441015" NIC1="008CFA037F7E" />
+    <Blade Location="4_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.71" BladeId="03441673-0000-0000-0000-008CFA02062A" Asset="3441673" NIC1="008CFA02062A" />
+    <Blade Location="4_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.72" BladeId="03441559-0000-0000-0000-008CFA048926" Asset="3441559" NIC1="008CFA048926" />
+    <Blade Location="3_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.11" BladeId="03441100-0000-0000-0000-008CFA02273C" Asset="3441100" NIC1="008CFA02273C" />
+    <Blade Location="3_2" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.12" BladeId="03441514-0000-0000-0000-008CFA0223AE" Asset="3441514" NIC1="008CFA0223AE" />
+    <Blade Location="3_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.13" BladeId="03441293-0000-0000-0000-008CFA03B02E" Asset="3441293" NIC1="008CFA03B02E" />
+    <Blade Location="3_4" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.14" BladeId="03441545-0000-0000-0000-008CFA03CED0" Asset="3441545" NIC1="008CFA03CED0" />
+    <Blade Location="3_5" MachinePool="CO1IntStr01FCCMP1" BladeIP="10.113.13.162" BladeId="03441123-0000-0000-0000-008CFA04DF6A" Asset="3441123" NIC1="008CFA04DF6A" />
+    <Blade Location="3_6" MachinePool="CO1IntStr02FCCMP1" BladeIP="10.113.13.168" BladeId="03441607-0000-0000-0000-008CFA0361CA" Asset="3441607" NIC1="008CFA0361CA" />
+    <Blade Location="3_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.15" BladeId="03441568-0000-0000-0000-008CFA02212E" Asset="3441568" NIC1="008CFA02212E" />
+    <Blade Location="3_8" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.16" BladeId="03441623-0000-0000-0000-008CFA0361C6" Asset="3441623" NIC1="008CFA0361C6" />
+    <Blade Location="3_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.17" BladeId="03441655-0000-0000-0000-008CFA038716" Asset="3441655" NIC1="008CFA038716" />
+    <Blade Location="3_13" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.18" BladeId="03441319-0000-0000-0000-008CFA038BD8" Asset="3441319" NIC1="008CFA038BD8" />
+    <Blade Location="3_14" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.73" BladeId="03441693-0000-0000-0000-008CFA03C964" Asset="3441693" NIC1="008CFA03C964" />
+    <Blade Location="3_15" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.74" BladeId="03441529-0000-0000-0000-008CFA02274E" Asset="3441529" NIC1="008CFA02274E" />
+    <Blade Location="3_16" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.75" BladeId="03441412-0000-0000-0000-008CFA04DB26" Asset="3441412" NIC1="008CFA04DB26" />
+    <Blade Location="3_17" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.76" BladeId="03441620-0000-0000-0000-008CFA035E46" Asset="3441620" NIC1="008CFA035E46" />
+    <Blade Location="3_18" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.77" BladeId="03441663-0000-0000-0000-008CFA03CABE" Asset="3441663" NIC1="008CFA03CABE" />
+    <Blade Location="3_19" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.78" BladeId="03441657-0000-0000-0000-008CFA038714" Asset="3441657" NIC1="008CFA038714" />
+    <Blade Location="3_20" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.79" BladeId="03441432-0000-0000-0000-008CFA022326" Asset="3441432" NIC1="008CFA022326" />
+    <Blade Location="3_21" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.80" BladeId="03441689-0000-0000-0000-008CFA04852C" Asset="3441689" NIC1="008CFA04852C" />
+  </Rack>
+
+  <Rack Location="1.5.BC524" SKU="EX-50A-RACK-36-DCS8100-MSF-006173-86016GB-APP-REVA">
+    <NetworkSwitch Location="NS1" Address="10.59.0.69" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.113.13.90" Vlan="30dD" />
+    <SerialServer Location="TS2" Address="10.113.13.91" Vlan="30dD" />
+    <SerialServer Location="TS3" Address="10.113.13.92" Vlan="30dD" />
+    <SerialServer Location="TS4" Address="10.113.13.93" Vlan="30dD" />
+    <PowerStrip Location="PS1" Address="10.113.13.90" Vlan="30dD" />
+    <PowerStrip Location="PS2" Address="10.113.13.91" Vlan="30dD" />
+    <PowerStrip Location="PS3" Address="10.113.13.92" Vlan="30dD" />
+    <PowerStrip Location="PS4" Address="10.113.13.93" Vlan="30dD" />
+    <Blade Location="1_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.130" BladeId="03441678-0000-0000-0000-008CFA0385CC" Asset="3441678" NIC1="008CFA0385CC" />
+    <Blade Location="1_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.131" BladeId="03441584-0000-0000-0000-008CFA03B482" Asset="3441584" NIC1="008CFA03B482" />
+    <Blade Location="1_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.132" BladeId="03441667-0000-0000-0000-008CFA02060A" Asset="3441667" NIC1="008CFA02060A" />
+    <Blade Location="1_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.133" BladeId="03441331-0000-0000-0000-008CFA03D314" Asset="3441331" NIC1="008CFA03D314" />
+    <Blade Location="1_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.134" BladeId="03441374-0000-0000-0000-008CFA03AF0A" Asset="3441374" NIC1="008CFA03AF0A" />
+    <Blade Location="1_11" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.135" BladeId="03441585-0000-0000-0000-008CFA037FD8" Asset="3441585" NIC1="008CFA037FD8" />
+    <Blade Location="2_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.136" BladeId="03441094-0000-0000-0000-008CFA03D316" Asset="3441094" NIC1="008CFA03D316" />
+    <Blade Location="2_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.137" BladeId="03441421-0000-0000-0000-008CFA03C8CA" Asset="3441421" NIC1="008CFA03C8CA" />
+    <Blade Location="2_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.138" BladeId="03441684-0000-0000-0000-008CFA038AC2" Asset="3441684" NIC1="008CFA038AC2" />
+    <Blade Location="2_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.192" BladeId="03441377-0000-0000-0000-008CFA03C91A" Asset="3441377" NIC1="008CFA03C91A" />
+    <Blade Location="2_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.193" BladeId="03441668-0000-0000-0000-008CFA04E0A6" Asset="3441668" NIC1="008CFA04E0A6" />
+    <Blade Location="2_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.194" BladeId="03441688-0000-0000-0000-008CFA0483A4" Asset="3441688" NIC1="008CFA0483A4" />
+    <Blade Location="4_1" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.195" BladeId="03441261-0000-0000-0000-008CFA03ADD6" Asset="3441261" NIC1="008CFA03ADD6" />
+    <Blade Location="4_3" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.196" BladeId="03441026-0000-0000-0000-008CFA03843E" Asset="3441026" NIC1="008CFA03843E" />
+    <Blade Location="4_5" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.197" BladeId="03441027-0000-0000-0000-008CFA038166" Asset="3441027" NIC1="008CFA038166" />
+    <Blade Location="4_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.198" BladeId="03441519-0000-0000-0000-008CFA038F18" Asset="3441519" NIC1="008CFA038F18" />
+    <Blade Location="4_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.199" BladeId="03441648-0000-0000-0000-008CFA038D00" Asset="3441648" NIC1="008CFA038D00" />
+    <Blade Location="4_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.200" BladeId="03415942-0000-0000-0000-008CFA04D9D6" Asset="3415942" NIC1="008CFA04D9D6" />
+    <Blade Location="3_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.139" BladeId="03441540-0000-0000-0000-008CFA022100" Asset="3441540" NIC1="008CFA022100" />
+    <Blade Location="3_2" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.140" BladeId="03441438-0000-0000-0000-008CFA04835C" Asset="3441438" NIC1="008CFA04835C" />
+    <Blade Location="3_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.141" BladeId="03441394-0000-0000-0000-008CFA0225A4" Asset="3441394" NIC1="008CFA0225A4" />
+    <Blade Location="3_4" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.142" BladeId="03441095-0000-0000-0000-008CFA04867E" Asset="3441095" NIC1="008CFA04867E" />
+    <Blade Location="3_5" MachinePool="CO1IntStr01FCCMP1" BladeIP="10.113.13.178" BladeId="03441542-0000-0000-0000-008CFA022746" Asset="3441542" NIC1="008CFA022746" />
+    <Blade Location="3_6" MachinePool="CO1IntStr02FCCMP1" BladeIP="10.113.13.184" BladeId="03441113-0000-0000-0000-008CFA048360" Asset="3441113" NIC1="008CFA048360" />
+    <Blade Location="3_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.143" BladeId="03441411-0000-0000-0000-008CFA04DAF6" Asset="3441411" NIC1="008CFA04DAF6" />
+    <Blade Location="3_8" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.144" BladeId="03441465-0000-0000-0000-008CFA03898E" Asset="3441465" NIC1="008CFA03898E" />
+    <Blade Location="3_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.145" BladeId="03441002-0000-0000-0000-008CFA043B0E" Asset="3441002" NIC1="008CFA043B0E" />
+    <Blade Location="3_13" MachinePool="CO1IntStr01MP1" BladeIP="10.113.4.146" BladeId="03441143-0000-0000-0000-008CFA043DE8" Asset="3441143" NIC1="008CFA043DE8" />
+    <Blade Location="3_14" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.201" BladeId="03441510-0000-0000-0000-008CFA022106" Asset="3441510" NIC1="008CFA022106" />
+    <Blade Location="3_15" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.202" BladeId="03441225-0000-0000-0000-008CFA04DAD4" Asset="3441225" NIC1="008CFA04DAD4" />
+    <Blade Location="3_16" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.203" BladeId="03441397-0000-0000-0000-008CFA04DBBC" Asset="3441397" NIC1="008CFA04DBBC" />
+    <Blade Location="3_17" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.204" BladeId="03441543-0000-0000-0000-008CFA022366" Asset="3441543" NIC1="008CFA022366" />
+    <Blade Location="3_18" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.205" BladeId="03441254-0000-0000-0000-008CFA04DC5C" Asset="3441254" NIC1="008CFA04DC5C" />
+    <Blade Location="3_19" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.206" BladeId="03441573-0000-0000-0000-008CFA02254A" Asset="3441573" NIC1="008CFA02254A" />
+    <Blade Location="3_20" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.207" BladeId="03441512-0000-0000-0000-008CFA0222AE" Asset="3441512" NIC1="008CFA0222AE" />
+    <Blade Location="3_21" MachinePool="CO1IntStr02MP1" BladeIP="10.113.4.208" BladeId="03441536-0000-0000-0000-008CFA048362" Asset="3441536" NIC1="008CFA048362" />
+  </Rack>
+
+  <Rack Location="1.5.BC525" SKU="EX-50A-RACK-36-DCS8100-MSF-006173-86016GB-APP-REVA">
+    <NetworkSwitch Location="NS1" Address="10.59.0.70" Vlan="VlanTor" />
+    <SerialServer Location="TS1" Address="10.113.13.98" Vlan="30dE" />
+    <SerialServer Location="TS2" Address="10.113.13.99" Vlan="30dE" />
+    <SerialServer Location="TS3" Address="10.113.13.100" Vlan="30dE" />
+    <SerialServer Location="TS4" Address="10.113.13.101" Vlan="30dE" />
+    <PowerStrip Location="PS1" Address="10.113.13.98" Vlan="30dE" />
+    <PowerStrip Location="PS2" Address="10.113.13.99" Vlan="30dE" />
+    <PowerStrip Location="PS3" Address="10.113.13.100" Vlan="30dE" />
+    <PowerStrip Location="PS4" Address="10.113.13.101" Vlan="30dE" />
+    <Blade Location="1_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.2" BladeId="03441370-0000-0000-0000-008CFA028484" Asset="3441370" NIC1="008CFA028484" />
+    <Blade Location="1_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.3" BladeId="03441490-0000-0000-0000-008CFA04E0AA" Asset="3441490" NIC1="008CFA04E0AA" />
+    <Blade Location="1_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.4" BladeId="03441649-0000-0000-0000-008CFA038578" Asset="3441649" NIC1="008CFA038578" />
+    <Blade Location="1_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.5" BladeId="03471717-0000-0000-0000-008CFA022464" Asset="3471717" NIC1="008CFA022464" />
+    <Blade Location="1_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.6" BladeId="03441690-0000-0000-0000-008CFA0486BA" Asset="3441690" NIC1="008CFA0486BA" />
+    <Blade Location="1_11" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.7" BladeId="03441567-0000-0000-0000-008CFA03CA4C" Asset="3441567" NIC1="008CFA03CA4C" />
+    <Blade Location="2_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.8" BladeId="03441634-0000-0000-0000-008CFA0224AE" Asset="3441634" NIC1="008CFA0224AE" />
+    <Blade Location="2_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.9" BladeId="03441576-0000-0000-0000-008CFA048928" Asset="3441576" NIC1="008CFA048928" />
+    <Blade Location="2_5" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.10" BladeId="03441583-0000-0000-0000-008CFA04DF76" Asset="3441583" NIC1="008CFA04DF76" />
+    <Blade Location="2_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.64" BladeId="03441106-0000-0000-0000-008CFA02021A" Asset="3441106" NIC1="008CFA02021A" />
+    <Blade Location="2_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.65" BladeId="03441272-0000-0000-0000-008CFA0439C2" Asset="3441272" NIC1="008CFA0439C2" />
+    <Blade Location="2_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.66" BladeId="03441615-0000-0000-0000-008CFA043A52" Asset="3441615" NIC1="008CFA043A52" />
+    <Blade Location="4_1" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.67" BladeId="03441372-0000-0000-0000-008CFA03B022" Asset="3441372" NIC1="008CFA03B022" />
+    <Blade Location="4_3" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.68" BladeId="03415996-0000-0000-0000-008CFA038FCC" Asset="3415996" NIC1="008CFA038FCC" />
+    <Blade Location="4_5" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.69" BladeId="03441150-0000-0000-0000-008CFA0210B8" Asset="3441150" NIC1="008CFA0210B8" />
+    <Blade Location="4_7" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.70" BladeId="03441645-0000-0000-0000-008CFA03CBFA" Asset="3441645" NIC1="008CFA03CBFA" />
+    <Blade Location="4_9" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.71" BladeId="03441639-0000-0000-0000-008CFA03B19A" Asset="3441639" NIC1="008CFA03B19A" />
+    <Blade Location="4_11" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.72" BladeId="03441697-0000-0000-0000-008CFA0384D4" Asset="3441697" NIC1="008CFA0384D4" />
+    <Blade Location="3_1" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.11" BladeId="03441683-0000-0000-0000-008CFA022362" Asset="3441683" NIC1="008CFA022362" />
+    <Blade Location="3_2" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.12" BladeId="03441248-0000-0000-0000-008CFA04DD36" Asset="3441248" NIC1="008CFA04DD36" />
+    <Blade Location="3_3" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.13" BladeId="03441430-0000-0000-0000-008CFA039062" Asset="3441430" NIC1="008CFA039062" />
+    <Blade Location="3_4" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.14" BladeId="03441181-0000-0000-0000-008CFA02228E" Asset="3441181" NIC1="008CFA02228E" />
+    <Blade Location="3_5" MachinePool="CO1IntStr01FCCMP1" BladeIP="10.113.13.194" BladeId="03441455-0000-0000-0000-008CFA04846E" Asset="3441455" NIC1="008CFA04846E" />
+    <Blade Location="3_6" MachinePool="CO1IntStr02FCCMP1" BladeIP="10.113.13.200" BladeId="03441023-0000-0000-0000-008CFA03CF36" Asset="3441023" NIC1="008CFA03CF36" />
+    <Blade Location="3_7" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.15" BladeId="03441578-0000-0000-0000-008CFA022658" Asset="3441578" NIC1="008CFA022658" />
+    <Blade Location="3_8" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.16" BladeId="03441599-0000-0000-0000-008CFA035E76" Asset="3441599" NIC1="008CFA035E76" />
+    <Blade Location="3_9" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.17" BladeId="03441494-0000-0000-0000-008CFA0222D6" Asset="3441494" NIC1="008CFA0222D6" />
+    <Blade Location="3_13" MachinePool="CO1IntStr01MP1" BladeIP="10.113.5.18" BladeId="03441589-0000-0000-0000-008CFA038328" Asset="3441589" NIC1="008CFA038328" />
+    <Blade Location="3_14" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.73" BladeId="03441681-0000-0000-0000-008CFA035E70" Asset="3441681" NIC1="008CFA035E70" />
+    <Blade Location="3_15" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.74" BladeId="03441507-0000-0000-0000-008CFA035EEC" Asset="3441507" NIC1="008CFA035EEC" />
+    <Blade Location="3_16" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.75" BladeId="03441099-0000-0000-0000-008CFA048348" Asset="3441099" NIC1="008CFA048348" />
+    <Blade Location="3_17" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.76" BladeId="03441205-0000-0000-0000-008CFA04DD38" Asset="3441205" NIC1="008CFA04DD38" />
+    <Blade Location="3_18" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.77" BladeId="03441517-0000-0000-0000-008CFA022190" Asset="3441517" NIC1="008CFA022190" />
+    <Blade Location="3_19" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.78" BladeId="03441315-0000-0000-0000-008CFA03B3CC" Asset="3441315" NIC1="008CFA03B3CC" />
+    <Blade Location="3_20" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.79" BladeId="03441534-0000-0000-0000-008CFA022544" Asset="3441534" NIC1="008CFA022544" />
+    <Blade Location="3_21" MachinePool="CO1IntStr02MP1" BladeIP="10.113.5.80" BladeId="03441398-0000-0000-0000-008CFA04860C" Asset="3441398" NIC1="008CFA04860C" />
+  </Rack>
+  
+  </Datacenter>

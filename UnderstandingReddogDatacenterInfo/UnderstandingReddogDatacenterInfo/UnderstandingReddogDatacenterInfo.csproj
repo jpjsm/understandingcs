@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C31F088-FFFE-48FF-97DE-CE0E24BB82FE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnderstandingReddogDatacenterInfo</RootNamespace>
+    <AssemblyName>UnderstandingReddogDatacenterInfo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatacenterClasses\AM1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\AM2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\AM3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\AM4_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BL2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BL3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BL4_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BL5_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BM1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BN1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BN3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BN4_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BY1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BY2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BY3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\BY4_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\CH1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\CH3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\CO1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\CO2Agg04_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\CO2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\CQ1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\DB3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\DB4_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\DB5_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\DEV_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\DM1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\DM2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\DM3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\HK2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\hkn_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\KW1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\MA1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\ML1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\OS1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\OS2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\PN1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\SG1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\SG2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\SG3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\SN1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\SN2_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\SN3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\SY3_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\TY1_Datacenter.cs" />
+    <Compile Include="DatacenterClasses\YT1_Datacenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\AM1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\AM2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\AM3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\AM4.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BL2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BL3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BL4.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BL5.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BM1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BN1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BN3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BN4.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BY1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BY2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BY3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BY4.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CH1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CH3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CO1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CO2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CO2Agg04.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CQ1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DB3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DB4.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DB5.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DEV.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DM1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DM2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DM3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HK2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\hkn.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\KW1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MA1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ML1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\OS1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\OS2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\PN1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SG1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SG2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SG3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SN1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SN2.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SN3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SY3.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TY1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\YT1.Datacenter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

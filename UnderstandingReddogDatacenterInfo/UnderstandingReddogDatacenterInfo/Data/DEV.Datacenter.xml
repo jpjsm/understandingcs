@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Datacenter Location="DEV">
+<!--
+  This file is intended to be used as a template to generate PDM & PCM for Dev Office.
+  Users should carefully review the information in this file before using the generated PDM & PCM.
+-->
+  <!-- RoutingRules -->
+  <!-- Uncomment this when auto generating of routing entries is ready
+  <RoutingRule Range="MonitorNodesIpRange" Gateway="RouterGateway" Capabilities="*"/>
+  <RoutingRule Range="UtilityNodesIpRange" Gateway="RouterGateway" Capabilities="*"/>
+  <RoutingRule Range="KmsNodesIpRange" Gateway="RouterGateway" Capabilities="*"/>
+  <RoutingRule Range="DnsServersIpRange" Gateway="RouterGateway" Capabilities="*"/>
+  <RoutingRule Range="ClusterIpRange" Gateway="RouterGateway" Capabilities="fabriccore;fabricservice;vm;app"/>
+  <RoutingRule Range="XStoreVipsIpRange" Gateway="RouterGateway" Capabilities="fabriccore;fabricservice;vm;app"/>
+  <RoutingRule Range="SwitchDigiPowerIpRange" Gateway="RouterGateway" Capabilities="fabriccore"/>
+  <RoutingRule Range="MachinePoolIpRange" Gateway="RouterGateway" Capabilities="hightransfer"/>
+  <RoutingRule Range="FcIpRange" Gateway="RouterGateway" Capabilities="hightransfer"/>
+  <RoutingRule Range="Default" Gateway="LoadBalancerGateway" Capabilities="fabricservice;vm;hightransfer;app"/>
+  -->
+
+  <!-- MachinePools -->
+  <MachinePool Name="DEVMP" Capabilities="fabriccore;fabricservice;vm;hightransfer;app" FillFactor="0.9">
+    <!-- Dev Scenario Update Range Gateway StartIP EndIP -->
+    <Vlan Name="100" Range="192.168.0.0/20" RouterGateway="192.168.0.1" StartIP="192.168.0.10" EndIP="192.168.0.100"><IPRange StartIP="192.168.0.10" EndIP="192.168.0.10" />
+      <IPRange StartIP="192.168.0.30" EndIP="192.168.0.37" />
+      <IPRange StartIP="192.168.0.11" EndIP="192.168.0.11" />
+      <IPRange StartIP="192.168.0.40" EndIP="192.168.0.47" />
+      <IPRange StartIP="192.168.0.12" EndIP="192.168.0.12" />
+      <IPRange StartIP="192.168.0.50" EndIP="192.168.0.57" />
+      <IPRange StartIP="192.168.0.13" EndIP="192.168.0.13" />
+      <IPRange StartIP="192.168.0.60" EndIP="192.168.0.67" />
+      <MacRange StartMac="00155D288000" EndMac="00155D288007" />
+      <MacRange StartMac="00155D288010" EndMac="00155D288017" />
+      <MacRange StartMac="00155D288020" EndMac="00155D288027" />
+      <MacRange StartMac="00155D288030" EndMac="00155D288037" />
+      <LoadBalancerSet Device="DEV.LB1" IP="192.168.0.4" SelfIPs="192.168.0.5;192.168.0.6" />
+    </Vlan>
+    <LoadBalancerSetConfiguration Name="DEVLBSET" Device="DEV.LB1" VipRange="192.168.1.10-192.168.1.20" VlanName="" />
+  </MachinePool>
+  <!-- Clusters -->
+  <Cluster Name="Private" Description="Private Cluster" DefaultIpRange="" DatacenterVipRange="" MonitorNodesIpRange="192.168.0.3" UtilityNodesIpRange="192.168.0.3" KmsNodesIpRange="192.168.0.3" DnsServersIpRange="192.168.0.4;192.168.0.5" XStoreVipsIpRange="10.0.0.0/24" SwitchDigiPowerIpRange="" FcIpRange="192.168.0.6">
+    <MachinePool Name="DEVMP" />
+  </Cluster>
+  <!-- LoadBalancers -->
+  <LoadBalancerSet Location="LB1" SKU="F5BigIP">
+    <LoadBalancer Name="dev-f6x-cis-1a" Location="1" Address="127.0.0.81" />
+    <LoadBalancer Name="dev-f6x-cis-1b" Location="2" Address="127.0.0.82" />
+  </LoadBalancerSet>
+  <!-- DELL PDC Racks -->
+  <Rack Location="A1" SKU="DellPDCRack">
+    <NetworkSwitch Location="NS1" Address="127.0.0.83" />
+    <SerialServer Location="TS1" Address="127.0.0.84" />
+    <PowerStrip Location="PS1" Address="127.0.0.85" />
+    <PowerStrip Location="PS2" Address="127.0.0.86" />
+    <!-- Dev Scenario Update BladeIP VMCount StartIP StartMac BladeId NIC1 -->
+    <Blade Location="1" MachinePool="DEVMP" BladeIP="192.168.0.10" BladeId="00000000-0000-0000-0000-0015177bacc1" Asset="" NIC1="0015177bacc1" />
+    <Blade Location="2" MachinePool="DEVMP" BladeIP="192.168.0.11" BladeId="00000000-0000-0000-0000-0015177bada8" Asset="" NIC1="0015177bada8" />
+    <Blade Location="3" MachinePool="DEVMP" BladeIP="192.168.0.12" BladeId="00000000-0000-0000-0000-001517790049" Asset="" NIC1="001517790049" />
+    <Blade Location="4" MachinePool="DEVMP" BladeIP="192.168.0.13" BladeId="00000000-0000-0000-0000-0015177Bab2e" Asset="" NIC1="0015177Bab2e" />
+  </Rack>
+</Datacenter>

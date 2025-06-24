@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazingMath", "AmazingMath\AmazingMath.csproj", "{7F617F77-20CF-4C55-999B-A55D83A81798}"
+EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "AmazingMathNupack", "AmazingMathNupack\AmazingMathNupack.nuproj", "{0F471D11-4206-4F4E-AFCD-7E3CC9C43491}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F617F77-20CF-4C55-999B-A55D83A81798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F617F77-20CF-4C55-999B-A55D83A81798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F617F77-20CF-4C55-999B-A55D83A81798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F617F77-20CF-4C55-999B-A55D83A81798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F471D11-4206-4F4E-AFCD-7E3CC9C43491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F471D11-4206-4F4E-AFCD-7E3CC9C43491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F471D11-4206-4F4E-AFCD-7E3CC9C43491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F471D11-4206-4F4E-AFCD-7E3CC9C43491}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {737E83D2-D5D9-4A7E-A269-1F71DE9D2FEA}
+	EndGlobalSection
+EndGlobal

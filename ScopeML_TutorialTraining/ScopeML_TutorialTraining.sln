@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScopeML_TutorialTraining", "ScopeML_TutorialTraining\ScopeML_TutorialTraining.csproj", "{70CF22BF-ACBF-493C-89D9-AD1F3A083E7F}"
+EndProject
+Project("{202899A3-C531-4771-9089-0213D66978AE}") = "BinaryRegression", "BinaryRegression\BinaryRegression.scopeproj", "{5B895B4A-47E1-4EEE-9B45-7D4CB6AEC492}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70CF22BF-ACBF-493C-89D9-AD1F3A083E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CF22BF-ACBF-493C-89D9-AD1F3A083E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CF22BF-ACBF-493C-89D9-AD1F3A083E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CF22BF-ACBF-493C-89D9-AD1F3A083E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B895B4A-47E1-4EEE-9B45-7D4CB6AEC492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B895B4A-47E1-4EEE-9B45-7D4CB6AEC492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B895B4A-47E1-4EEE-9B45-7D4CB6AEC492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B895B4A-47E1-4EEE-9B45-7D4CB6AEC492}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

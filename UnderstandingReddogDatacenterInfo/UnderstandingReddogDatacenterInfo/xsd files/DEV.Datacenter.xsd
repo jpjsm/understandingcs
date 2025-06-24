@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MachinePool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Vlan" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IPRange" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="StartIP" type="xs:string" />
+                  <xs:attribute name="EndIP" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MacRange" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="StartMac" type="xs:string" />
+                  <xs:attribute name="EndMac" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element ref="LoadBalancerSet" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="Range" type="xs:string" />
+            <xs:attribute name="RouterGateway" type="xs:string" />
+            <xs:attribute name="StartIP" type="xs:string" />
+            <xs:attribute name="EndIP" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LoadBalancerSetConfiguration" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="Device" type="xs:string" />
+            <xs:attribute name="VipRange" type="xs:string" />
+            <xs:attribute name="VlanName" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Name" type="xs:string" />
+      <xs:attribute name="Capabilities" type="xs:string" />
+      <xs:attribute name="FillFactor" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBalancerSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LoadBalancer" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="Location" type="xs:string" />
+            <xs:attribute name="Address" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Device" type="xs:string" />
+      <xs:attribute name="IP" type="xs:string" />
+      <xs:attribute name="SelfIPs" type="xs:string" />
+      <xs:attribute name="Location" type="xs:string" />
+      <xs:attribute name="SKU" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Datacenter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MachinePool" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Cluster" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="MachinePool" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="Description" type="xs:string" />
+            <xs:attribute name="DefaultIpRange" type="xs:string" />
+            <xs:attribute name="DatacenterVipRange" type="xs:string" />
+            <xs:attribute name="MonitorNodesIpRange" type="xs:string" />
+            <xs:attribute name="UtilityNodesIpRange" type="xs:string" />
+            <xs:attribute name="KmsNodesIpRange" type="xs:string" />
+            <xs:attribute name="DnsServersIpRange" type="xs:string" />
+            <xs:attribute name="XStoreVipsIpRange" type="xs:string" />
+            <xs:attribute name="SwitchDigiPowerIpRange" type="xs:string" />
+            <xs:attribute name="FcIpRange" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="LoadBalancerSet" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Rack" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NetworkSwitch" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="Address" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SerialServer" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="Address" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PowerStrip" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="Address" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Blade" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Location" type="xs:string" />
+                  <xs:attribute name="MachinePool" type="xs:string" />
+                  <xs:attribute name="BladeIP" type="xs:string" />
+                  <xs:attribute name="BladeId" type="xs:string" />
+                  <xs:attribute name="Asset" type="xs:string" />
+                  <xs:attribute name="NIC1" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Location" type="xs:string" />
+            <xs:attribute name="SKU" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Location" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MachinePool" />
+        <xs:element ref="LoadBalancerSet" />
+        <xs:element ref="Datacenter" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

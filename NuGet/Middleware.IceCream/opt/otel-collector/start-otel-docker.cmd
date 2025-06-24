@@ -1,0 +1,1 @@
+docker run -d --name=icecream-otel-collector -p 4317:4317 -p 18888:18888 -p 19089:19089 -v "C:\Users\Nour_Douffir\source\repos\IceCreamService\Middleware.IceCream\opt\otel-collector\otel-collector-config.yml:/etc/otel/config.yaml" otel/opentelemetry-collector-contrib:latest

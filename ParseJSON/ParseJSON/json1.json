@@ -1,0 +1,35 @@
+{
+  "query": "please list out new outages",
+  "prediction": {
+    "topIntent": "ShowList",
+    "intents": {
+      "ShowList": {
+        "score": 0.9874139
+      },
+      "None": {
+        "score": 0.00961567648
+      }
+    },
+    "entities": {
+      "outages": [
+        "outages"
+      ],
+      "$instance": {
+        "outages": [
+          {
+            "type": "outages",
+            "text": "outages",
+            "startIndex": 20,
+            "length": 7,
+            "score": 0.9607918,
+            "modelTypeId": 1,
+            "modelType": "Entity Extractor",
+            "recognitionSources": [
+              "model"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

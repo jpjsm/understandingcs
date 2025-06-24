@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Datacenter Location="CO2" AuthProxyIpRange="10.7.51.8/29;10.113.253.17/32;10.7.32.54/32;10.115.12.25/32;10.28.132.138/32;10.211.132.18/32;10.62.12.17/32">
+  <!-- RoutingRules -->
+  <!-- Uncomment this when auto generating of routing entries is ready  <RoutingRule Range="MonitorNodesIpRange" Gateway="RouterGateway" Capabilities="*"/>  <RoutingRule Range="UtilityNodesIpRange" Gateway="RouterGateway" Capabilities="*"/>  <RoutingRule Range="KmsNodesIpRange" Gateway="RouterGateway" Capabilities="*"/>  <RoutingRule Range="DnsServersIpRange" Gateway="RouterGateway" Capabilities="*"/>  <RoutingRule Range="ClusterIpRange" Gateway="RouterGateway" Capabilities="fabriccore;fabricservice;vm;app"/>  <RoutingRule Range="XStoreVipsIpRange" Gateway="RouterGateway" Capabilities="fabriccore;fabricservice;vm;app"/>  <RoutingRule Range="SwitchDigiPowerIpRange" Gateway="RouterGateway" Capabilities="fabriccore"/>  <RoutingRule Range="MachinePoolIpRange" Gateway="RouterGateway" Capabilities="hightransfer"/>  <RoutingRule Range="FcIpRange" Gateway="RouterGateway" Capabilities="hightransfer"/>  <RoutingRule Range="Default" Gateway="LoadBalancerGateway" Capabilities="fabricservice;vm;hightransfer;app"/>  -->
+  <!-- MachinePools -->
+  <!-- Storage Agg2 -->
+  <!-- Agg05 -->
+  <!-- Device VLANs -->
+  <Vlan Name="Vlan858" Range="10.113.9.0/25" RouterGateway="10.113.9.1" />
+  <Vlan Name="Vlan859" Range="10.113.9.128/25" RouterGateway="10.113.9.129" />
+  <Vlan Name="Vlan861" Range="10.113.10.128/25" RouterGateway="10.113.10.129" />
+  <!-- Agg1 Stage01 -->
+  <!-- Clusters -->
+  <!-- Agg2 Storage -->
+  <!-- Agg5 Stage2 -->
+  <!-- Routers -->
+  <!-- LoadBalancers -->
+  <!-- Central Devices -->
+  <CoreNetworkSwitchSet Location="AGG1" Address="10.10.1.1" Vlan="">
+    <Port Location="1" ConnectsTo="CO2.X1.NS1.UPLINK" />
+  </CoreNetworkSwitchSet>
+  <!-- co2-38t-cis-2 -->
+  <!-- DELL PDC Racks -->
+</Datacenter>
