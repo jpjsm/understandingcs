@@ -1,0 +1,1 @@
+docker run -d --name=icecream-prometheus -p 9090:9090 -v "C:\Users\Nour_Douffir\source\repos\IceCreamService\Middleware.IceCream\opt\prometheus\prometheus.yml:/etc/prometheus/prometheus.yml" prom/prometheus --config.file="/etc/prometheus/prometheus.yml"

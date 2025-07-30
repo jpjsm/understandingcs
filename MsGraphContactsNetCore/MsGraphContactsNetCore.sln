@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsGraphContactsNetCore", "MsGraphContactsNetCore\MsGraphContactsNetCore.csproj", "{AAD79179-D4FD-451C-9FF8-20E6EFA6334A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAD79179-D4FD-451C-9FF8-20E6EFA6334A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD79179-D4FD-451C-9FF8-20E6EFA6334A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD79179-D4FD-451C-9FF8-20E6EFA6334A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD79179-D4FD-451C-9FF8-20E6EFA6334A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69E4FAF1-1AA6-46EA-A1C5-0DA859A95910}
+	EndGlobalSection
+EndGlobal

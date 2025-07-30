@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "mini-pictures": {
+      "commandName": "Project",
+      "commandLineArgs": "-m 3 -M 64 -t 10 -n debug -s"
+    }
+  }
+}

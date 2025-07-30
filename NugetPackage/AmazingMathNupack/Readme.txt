@@ -1,0 +1,1 @@
+﻿AmazingMath distribution package.

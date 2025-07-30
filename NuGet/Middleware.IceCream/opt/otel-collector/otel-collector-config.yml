@@ -1,0 +1,37 @@
+# otel-collector-config.yaml
+receivers:
+    otlp:
+        protocols:
+            grpc:
+
+exporters:
+    prometheus:
+        namespace: "icecream-customer-metrics"
+        endpoint: "0.0.0.0:19089"
+    logging:
+        loglevel: debug
+    dynatrace:
+        endpoint: "https://<instanceId>.live.dynatrace.com/api/v2/metrics/ingest"
+        api_token: "<token>"
+
+processors:
+    batch:
+
+extensions:
+    health_check:
+    pprof:
+
+service:
+    extensions: [health_check, pprof]
+    telemetry:
+        logs:
+            level: debug
+            initial_fields:
+                service: icecream-collector-internal-metrics
+        metrics:
+            level: detailed
+            address: 0.0.0.0:18888
+    pipelines:
+        metrics:
+            receivers: [otlp]
+            exporters: [logging, prometheus]

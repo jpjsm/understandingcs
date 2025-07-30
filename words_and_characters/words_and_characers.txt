@@ -1,0 +1,335 @@
+Sentence:
+product name: 世界
+Description: 我對這個無法估量的邀請深感榮幸，但我無法接受，我很抱歉。
+
+Total test2 characters: 59
+--------------------------------------------------------------------------------
+
+Sentences:
+
+>	product name: 世界<
+>	Description: 我對這個無法估量的邀請深感榮幸，但我無法接受，我很抱歉。<
+--------------------------------------------------------------------------------
+
+Words:
+	product
+	name
+	世界
+	Description
+	我對這個無法估量的邀請深感榮幸
+	但我無法接受
+	我很抱歉
+--------------------------------------------------------------------------------
+
+Sentence:
+Ƶ̧̈ą́X̂è̠oe͜
+
+Total test characters: 14
+--------------------------------------------------------------------------------
+
+Sentences:
+
+>	Ƶ̧̈ą́X̂è̠oe͜<
+--------------------------------------------------------------------------------
+
+Words:
+	Ƶ̧̈ą́X̂è̠oe͜
+--------------------------------------------------------------------------------
+
+Sentence:
+Me siento profundamente honrada por esta inconmensurable invitación pero con humildad me disculpo por no poder aceptarla.
+Salí de casa al amparo de la oscuridad y traicioné la confianza de mi familia; tomé decisiones que sabía que arriesgarían su deshonra.
+Desde entonces... he hecho un juramento: ser leal, valiente y sincera.
+Para cumplir este juramento, debo regresar a casa y hacer las paces con mi familia.
+
+Total español_extendido characters: 420
+--------------------------------------------------------------------------------
+
+Sentences:
+
+>	Me siento profundamente honrada por esta inconmensurable invitación pero con humildad me disculpo por no poder aceptarla.<
+>	Salí de casa al amparo de la oscuridad y traicioné la confianza de mi familia; tomé decisiones que sabía que arriesgarían su deshonra.<
+>	Desde entonces... he hecho un juramento: ser leal, valiente y sincera.<
+>	Para cumplir este juramento, debo regresar a casa y hacer las paces con mi familia.<
+--------------------------------------------------------------------------------
+
+Words:
+	Me
+	siento
+	profundamente
+	honrada
+	por
+	esta
+	inconmensurable
+	invitación
+	pero
+	con
+	humildad
+	me
+	disculpo
+	por
+	no
+	poder
+	aceptarla
+	Salí
+	de
+	casa
+	al
+	amparo
+	de
+	la
+	oscuridad
+	y
+	traicioné
+	la
+	confianza
+	de
+	mi
+	familia
+	tomé
+	decisiones
+	que
+	sabía
+	que
+	arriesgarían
+	su
+	deshonra
+	Desde
+	entonces
+	he
+	hecho
+	un
+	juramento
+	ser
+	leal
+	valiente
+	y
+	sincera
+	Para
+	cumplir
+	este
+	juramento
+	debo
+	regresar
+	a
+	casa
+	y
+	hacer
+	las
+	paces
+	con
+	mi
+	familia
+--------------------------------------------------------------------------------
+
+Sentence:
+我對這個無法估量的邀請深感榮幸，但我無法接受，我很抱歉。
+我在黑暗的掩護下離開了家，背叛了家人的信任。
+我做出了我知道會冒著丟臉的風險的選擇。
+從那時起……我發誓：忠誠、勇敢、真實。
+為了履行這個誓言，我必須回家，為我的家人做出補償。
+
+Total chinese_traditional characters: 121
+--------------------------------------------------------------------------------
+
+Sentences:
+
+>	我對這個無法估量的邀請深感榮幸，但我無法接受，我很抱歉。<
+>	我在黑暗的掩護下離開了家，背叛了家人的信任。<
+>	我做出了我知道會冒著丟臉的風險的選擇。<
+>	從那時起……我發誓：忠誠、勇敢、真實。<
+>	為了履行這個誓言，我必須回家，為我的家人做出補償。<
+--------------------------------------------------------------------------------
+
+Words:
+	我對這個無法估量的邀請深感榮幸
+	但我無法接受
+	我很抱歉
+	我在黑暗的掩護下離開了家
+	背叛了家人的信任
+	我做出了我知道會冒著丟臉的風險的選擇
+	從那時起
+	我發誓
+	忠誠
+	勇敢
+	真實
+	為了履行這個誓言
+	我必須回家
+	為我的家人做出補償
+--------------------------------------------------------------------------------
+
+Sentence:
+I'm deeply honored by this immesurable invitation but with humble apologies I cannot accept it.
+I left home under cover of darkness and betrayed my family's trust.
+I made choices I knew would risk their dishonor.
+Since then... I have pledged an oath: to be loyal, brave, and true.
+In order to fulfill this oath, I must return home and make amends to my family.
+
+Total english characters: 364
+--------------------------------------------------------------------------------
+
+Sentences:
+
+>	I'm deeply honored by this immesurable invitation but with humble apologies I cannot accept it.<
+>	I left home under cover of darkness and betrayed my family's trust.<
+>	I made choices I knew would risk their dishonor.<
+>	Since then... I have pledged an oath: to be loyal, brave, and true.<
+>	In order to fulfill this oath, I must return home and make amends to my family.<
+--------------------------------------------------------------------------------
+
+Words:
+	I
+	m
+	deeply
+	honored
+	by
+	this
+	immesurable
+	invitation
+	but
+	with
+	humble
+	apologies
+	I
+	cannot
+	accept
+	it
+	I
+	left
+	home
+	under
+	cover
+	of
+	darkness
+	and
+	betrayed
+	my
+	family
+	s
+	trust
+	I
+	made
+	choices
+	I
+	knew
+	would
+	risk
+	their
+	dishonor
+	Since
+	then
+	I
+	have
+	pledged
+	an
+	oath
+	to
+	be
+	loyal
+	brave
+	and
+	true
+	In
+	order
+	to
+	fulfill
+	this
+	oath
+	I
+	must
+	return
+	home
+	and
+	make
+	amends
+	to
+	my
+	family
+--------------------------------------------------------------------------------
+
+Sentence:
+Me siento profundamente honrada por esta inconmensurable invitación pero con humildad me disculpo por no poder aceptarla.
+Salí de casa al amparo de la oscuridad y traicioné la confianza de mi familia; tomé decisiones que sabía que arriesgarían su deshonra.
+Desde entonces... he hecho un juramento: ser leal, valiente y sincera.
+Para cumplir este juramento, debo regresar a casa y hacer las paces con mi familia.
+
+Total español characters: 414
+--------------------------------------------------------------------------------
+
+Sentences:
+
+>	Me siento profundamente honrada por esta inconmensurable invitación pero con humildad me disculpo por no poder aceptarla.<
+>	Salí de casa al amparo de la oscuridad y traicioné la confianza de mi familia; tomé decisiones que sabía que arriesgarían su deshonra.<
+>	Desde entonces... he hecho un juramento: ser leal, valiente y sincera.<
+>	Para cumplir este juramento, debo regresar a casa y hacer las paces con mi familia.<
+--------------------------------------------------------------------------------
+
+Words:
+	Me
+	siento
+	profundamente
+	honrada
+	por
+	esta
+	inconmensurable
+	invitación
+	pero
+	con
+	humildad
+	me
+	disculpo
+	por
+	no
+	poder
+	aceptarla
+	Salí
+	de
+	casa
+	al
+	amparo
+	de
+	la
+	oscuridad
+	y
+	traicioné
+	la
+	confianza
+	de
+	mi
+	familia
+	tomé
+	decisiones
+	que
+	sabía
+	que
+	arriesgarían
+	su
+	deshonra
+	Desde
+	entonces
+	he
+	hecho
+	un
+	juramento
+	ser
+	leal
+	valiente
+	y
+	sincera
+	Para
+	cumplir
+	este
+	juramento
+	debo
+	regresar
+	a
+	casa
+	y
+	hacer
+	las
+	paces
+	con
+	mi
+	familia
+--------------------------------------------------------------------------------
+

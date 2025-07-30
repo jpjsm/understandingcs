@@ -1,0 +1,725 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="MFxBRHModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Attribute">
+        <Key>
+          <PropertyRef Name="AttributeId" />
+        </Key>
+        <Property Name="AttributeId" Type="Edm.Int16" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="MinSize" Type="Edm.Int16" />
+        <Property Name="MaxSize" Type="Edm.Int16" Nullable="false" />
+        <Property Name="AttributeDataTypeId" Type="Edm.Int16" />
+        <Property Name="AttributeControlTypeId" Type="Edm.Int16" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="AttributeControlType" Relationship="MFxBRHModel.fk_Attribute_AttributeControlTypeId" ToRole="AttributeControlType" FromRole="Attribute" />
+        <NavigationProperty Name="AttributeDataType" Relationship="MFxBRHModel.fk_Attribute_AttributeDataTypeId" ToRole="AttributeDataType" FromRole="Attribute" />
+        <NavigationProperty Name="AttributeDomains" Relationship="MFxBRHModel.fk_AttributeDomain_AttributeId" ToRole="AttributeDomain" FromRole="Attribute" />
+        <NavigationProperty Name="AuditLogs" Relationship="MFxBRHModel.fk_AuditLog_AttributeId" ToRole="AuditLog" FromRole="Attribute" />
+        <NavigationProperty Name="GroupAttributeTemplates" Relationship="MFxBRHModel.fk_GroupAttributeTemplate_AttributeId" ToRole="GroupAttributeTemplate" FromRole="Attribute" />
+        <NavigationProperty Name="GroupAttributeValues" Relationship="MFxBRHModel.fk_GroupAttributeValue_AttributeId" ToRole="GroupAttributeValue" FromRole="Attribute" />
+      </EntityType>
+      <EntityType Name="AttributeControlType">
+        <Key>
+          <PropertyRef Name="AttributeControlTypeId" />
+        </Key>
+        <Property Name="AttributeControlTypeId" Type="Edm.Int16" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="Attributes" Relationship="MFxBRHModel.fk_Attribute_AttributeControlTypeId" ToRole="Attribute" FromRole="AttributeControlType" />
+      </EntityType>
+      <EntityType Name="AttributeDataType">
+        <Key>
+          <PropertyRef Name="AttributeDataTypeId" />
+        </Key>
+        <Property Name="AttributeDataTypeId" Type="Edm.Int16" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="Attributes" Relationship="MFxBRHModel.fk_Attribute_AttributeDataTypeId" ToRole="Attribute" FromRole="AttributeDataType" />
+      </EntityType>
+      <EntityType Name="AttributeDomain">
+        <Key>
+          <PropertyRef Name="AttributeDomainId" />
+        </Key>
+        <Property Name="AttributeDomainId" Type="Edm.Int16" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="AttributeId" Type="Edm.Int16" />
+        <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="Attribute" Relationship="MFxBRHModel.fk_AttributeDomain_AttributeId" ToRole="Attribute" FromRole="AttributeDomain" />
+      </EntityType>
+      <EntityType Name="AttributeSection">
+        <Key>
+          <PropertyRef Name="AttributeSectionId" />
+        </Key>
+        <Property Name="AttributeSectionId" Type="Edm.Byte" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="DisplayOrder" Type="Edm.Byte" Nullable="false" />
+        <Property Name="IsVisible" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="GroupAttributeTemplates" Relationship="MFxBRHModel.fk_GroupAttributeTemplate_AttributeSectionId" ToRole="GroupAttributeTemplate" FromRole="AttributeSection" />
+      </EntityType>
+      <EntityType Name="AuditLog">
+        <Key>
+          <PropertyRef Name="AuditLogId" />
+        </Key>
+        <Property Name="AuditLogId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GroupId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AuditLogTypeId" Type="Edm.Int16" Nullable="false" />
+        <Property Name="AttributeId" Type="Edm.Int16" />
+        <Property Name="OldValue" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="NewValue" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <NavigationProperty Name="Attribute" Relationship="MFxBRHModel.fk_AuditLog_AttributeId" ToRole="Attribute" FromRole="AuditLog" />
+        <NavigationProperty Name="AuditLogType" Relationship="MFxBRHModel.fk_AuditLog_AuditLogTypeId" ToRole="AuditLogType" FromRole="AuditLog" />
+        <NavigationProperty Name="Group" Relationship="MFxBRHModel.fk_AuditLog_GroupId" ToRole="Group" FromRole="AuditLog" />
+      </EntityType>
+      <EntityType Name="AuditLogType">
+        <Key>
+          <PropertyRef Name="AuditLogTypeId" />
+        </Key>
+        <Property Name="AuditLogTypeId" Type="Edm.Int16" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="AuditLogs" Relationship="MFxBRHModel.fk_AuditLog_AuditLogTypeId" ToRole="AuditLog" FromRole="AuditLogType" />
+      </EntityType>
+      <EntityType Name="Group">
+        <Key>
+          <PropertyRef Name="GroupId" />
+        </Key>
+        <Property Name="GroupId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GroupTypeId" Type="Edm.Byte" Nullable="false" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <NavigationProperty Name="AuditLogs" Relationship="MFxBRHModel.fk_AuditLog_GroupId" ToRole="AuditLog" FromRole="Group" />
+        <NavigationProperty Name="GroupType" Relationship="MFxBRHModel.fk_Group_GroupTypeId" ToRole="GroupType" FromRole="Group" />
+        <NavigationProperty Name="GroupAttributeValues" Relationship="MFxBRHModel.fk_GroupAttributeValue_GroupId" ToRole="GroupAttributeValue" FromRole="Group" />
+        <NavigationProperty Name="GroupContacts" Relationship="MFxBRHModel.fk_GroupContact_GroupId" ToRole="GroupContact" FromRole="Group" />
+      </EntityType>
+      <EntityType Name="GroupAttributeTemplate">
+        <Key>
+          <PropertyRef Name="GroupAttributeTemplateId" />
+        </Key>
+        <Property Name="GroupAttributeTemplateId" Type="Edm.Int16" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GroupTypeId" Type="Edm.Byte" Nullable="false" />
+        <Property Name="AttributeId" Type="Edm.Int16" Nullable="false" />
+        <Property Name="AttributeSectionId" Type="Edm.Byte" />
+        <Property Name="IsRequired" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="IsEditable" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="DisplayOrder" Type="Edm.Int16" Nullable="false" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="Attribute" Relationship="MFxBRHModel.fk_GroupAttributeTemplate_AttributeId" ToRole="Attribute" FromRole="GroupAttributeTemplate" />
+        <NavigationProperty Name="AttributeSection" Relationship="MFxBRHModel.fk_GroupAttributeTemplate_AttributeSectionId" ToRole="AttributeSection" FromRole="GroupAttributeTemplate" />
+        <NavigationProperty Name="GroupType" Relationship="MFxBRHModel.fk_GroupAttributeTemplate_GroupTypeId" ToRole="GroupType" FromRole="GroupAttributeTemplate" />
+      </EntityType>
+      <EntityType Name="GroupAttributeValue">
+        <Key>
+          <PropertyRef Name="GroupAttributeValueId" />
+        </Key>
+        <Property Name="GroupAttributeValueId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GroupId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AttributeId" Type="Edm.Int16" Nullable="false" />
+        <Property Name="AttributeValue" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="StartTime" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="EndTime" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <NavigationProperty Name="Attribute" Relationship="MFxBRHModel.fk_GroupAttributeValue_AttributeId" ToRole="Attribute" FromRole="GroupAttributeValue" />
+        <NavigationProperty Name="Group" Relationship="MFxBRHModel.fk_GroupAttributeValue_GroupId" ToRole="Group" FromRole="GroupAttributeValue" />
+        <NavigationProperty Name="GroupAttributeValueCollections" Relationship="MFxBRHModel.fk_GroupAttributeValueCollection_GroupAttributeValueId" ToRole="GroupAttributeValueCollection" FromRole="GroupAttributeValue" />
+      </EntityType>
+      <EntityType Name="GroupAttributeValueCollection">
+        <Key>
+          <PropertyRef Name="GroupAttributeValueCollectionId" />
+        </Key>
+        <Property Name="GroupAttributeValueCollectionId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GroupAttributeValueId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="Value" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <NavigationProperty Name="GroupAttributeValue" Relationship="MFxBRHModel.fk_GroupAttributeValueCollection_GroupAttributeValueId" ToRole="GroupAttributeValue" FromRole="GroupAttributeValueCollection" />
+      </EntityType>
+      <EntityType Name="GroupType">
+        <Key>
+          <PropertyRef Name="GroupTypeId" />
+        </Key>
+        <Property Name="GroupTypeId" Type="Edm.Byte" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="Abbreviation" Type="Edm.String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+        <Property Name="HierarchyLevel" Type="Edm.Byte" Nullable="false" />
+        <Property Name="ColorCode" Type="Edm.String" MaxLength="30" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="Groups" Relationship="MFxBRHModel.fk_Group_GroupTypeId" ToRole="Group" FromRole="GroupType" />
+        <NavigationProperty Name="GroupAttributeTemplates" Relationship="MFxBRHModel.fk_GroupAttributeTemplate_GroupTypeId" ToRole="GroupAttributeTemplate" FromRole="GroupType" />
+      </EntityType>
+      <EntityType Name="GetBrhData">
+        <Key>
+          <PropertyRef Name="GroupId" />
+          <PropertyRef Name="GroupType" />
+          <PropertyRef Name="GroupTypeId" />
+        </Key>
+        <Property Name="GroupId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GroupName" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="ParentGroupId" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="GroupTypeId" Type="Edm.Byte" Nullable="false" />
+        <Property Name="GroupType" Type="Edm.String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="GroupState" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+      </EntityType>
+      <EntityType Name="vwBrhTreeData">
+        <Key>
+          <PropertyRef Name="GroupId" />
+          <PropertyRef Name="GroupType" />
+          <PropertyRef Name="GroupTypeId" />
+        </Key>
+        <Property Name="GroupId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="GroupName" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="ParentGroupId" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="GroupTypeId" Type="Edm.Byte" Nullable="false" />
+        <Property Name="GroupType" Type="Edm.String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="GroupState" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="StateScheduleDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="AttributeScheduleDate" Type="Edm.DateTime" Precision="7" />
+      </EntityType>
+      <EntityType Name="vwGroupAttributeTemplate">
+        <Key>
+          <PropertyRef Name="AttributeDisplayOrder" />
+          <PropertyRef Name="AttributeId" />
+          <PropertyRef Name="AttributeName" />
+          <PropertyRef Name="ControlTypeId" />
+          <PropertyRef Name="DataTypeId" />
+          <PropertyRef Name="GroupType" />
+          <PropertyRef Name="GroupTypeId" />
+          <PropertyRef Name="IsEditable" />
+          <PropertyRef Name="IsRequired" />
+          <PropertyRef Name="IsSectionVisible" />
+          <PropertyRef Name="MaxSize" />
+          <PropertyRef Name="SectionDisplayOrder" />
+          <PropertyRef Name="SectionId" />
+          <PropertyRef Name="SectionName" />
+        </Key>
+        <Property Name="GroupTypeId" Type="Edm.Byte" Nullable="false" />
+        <Property Name="GroupType" Type="Edm.String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="SectionName" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="AttributeName" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+        <Property Name="DataType" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="ControlType" Type="Edm.String" MaxLength="256" FixedLength="false" Unicode="true" />
+        <Property Name="IsSectionVisible" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="SectionDisplayOrder" Type="Edm.Byte" Nullable="false" />
+        <Property Name="AttributeDisplayOrder" Type="Edm.Int16" Nullable="false" />
+        <Property Name="MinSize" Type="Edm.Int16" />
+        <Property Name="MaxSize" Type="Edm.Int16" Nullable="false" />
+        <Property Name="IsRequired" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="IsEditable" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="SectionId" Type="Edm.Byte" Nullable="false" />
+        <Property Name="AttributeId" Type="Edm.Int16" Nullable="false" />
+        <Property Name="DataTypeId" Type="Edm.Int16" Nullable="false" />
+        <Property Name="ControlTypeId" Type="Edm.Int16" Nullable="false" />
+      </EntityType>
+      <EntityType Name="vwGroupAttributeValue">
+        <Key>
+          <PropertyRef Name="AttributeId" />
+          <PropertyRef Name="CreatedBy" />
+          <PropertyRef Name="CreatedDate" />
+          <PropertyRef Name="EndTime" />
+          <PropertyRef Name="GroupId" />
+          <PropertyRef Name="GroupTypeId" />
+          <PropertyRef Name="StartTime" />
+          <PropertyRef Name="UpdatedBy" />
+          <PropertyRef Name="UpdatedDate" />
+        </Key>
+        <Property Name="GroupTypeId" Type="Edm.Byte" Nullable="false" />
+        <Property Name="GroupId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AttributeId" Type="Edm.Int16" Nullable="false" />
+        <Property Name="AttributeValue" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="StartTime" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="EndTime" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="7" />
+        <Property Name="AttributeValueRank" Type="Edm.Int64" />
+      </EntityType>
+      <EntityType Name="GetBRHReportData">
+        <Key>
+          <PropertyRef Name="RowNumber" />
+        </Key>
+        <Property Name="RowNumber" Type="Edm.Int32" Nullable="false" />
+        <Property Name="BusinessDivisionId" Type="Edm.Int32" />
+        <Property Name="OnlineBusinessId" Type="Edm.Int32" />
+        <Property Name="OnlineServiceId" Type="Edm.Int32" />
+        <Property Name="PropertyGroupId" Type="Edm.Int32" />
+        <Property Name="PropertyDimensionId" Type="Edm.Int32" />
+        <Property Name="BusinessDivision" Type="Edm.String" MaxLength="75" FixedLength="false" Unicode="true" />
+        <Property Name="OnlineBusiness" Type="Edm.String" MaxLength="75" FixedLength="false" Unicode="true" />
+        <Property Name="OnlineService" Type="Edm.String" MaxLength="75" FixedLength="false" Unicode="true" />
+        <Property Name="PropertyGroup" Type="Edm.String" MaxLength="75" FixedLength="false" Unicode="true" />
+        <Property Name="PropertyDimension" Type="Edm.String" MaxLength="75" FixedLength="false" Unicode="true" />
+        <Property Name="ProfitCenter" Type="Edm.String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        <Property Name="SECFunctionalAreaCode" Type="Edm.String" MaxLength="2" FixedLength="false" Unicode="true" />
+        <Property Name="SECFunctionalArea" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="GrowthDriver" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="Revenue" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="UnitofSale" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="Audience" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="RevenueCategory" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="RevenueSubCategory" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="RevenueSubCategoryType" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="iAdminPropertyGroupId" Type="Edm.Int32" />
+        <Property Name="PropertyGroupShortName" Type="Edm.String" MaxLength="6" FixedLength="false" Unicode="true" />
+        <Property Name="Billable" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="true" />
+        <Property Name="CaptureDemandPlan" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="ProductFamilyCode" Type="Edm.String" MaxLength="3" FixedLength="false" Unicode="true" />
+        <Property Name="ProductFamilyName" Type="Edm.String" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="VLANManagement" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="NetworkConsumptionScenario" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="DedicatedNetworkingBillToProfitCenter" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="true" />
+        <Property Name="BandwidthConsumptionScenario" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="DedicatedBandwidthBillToProfitCenter" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="true" />
+        <Property Name="ApplicationSupport" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="SupportBillToProfitCenter" Type="Edm.String" MaxLength="10" FixedLength="false" Unicode="true" />
+        <Property Name="IncidentRateType" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="PropertyGroupType" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="iAdminPropertyDimensionId" Type="Edm.Int32" />
+        <Property Name="MSChangeUse" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="AzureHosted" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="SupportingOperationsCenter" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="OperationsCenterSupportTeam" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="BusinessDivisionStatus" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="OnlineBusinessStatus" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="OnlineServiceStatus" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="PropertyGroupStatus" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="PropertyDimensionStatus" Type="Edm.String" MaxLength="35" FixedLength="false" Unicode="true" />
+        <Property Name="BusinessDivisionCreatedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="OnlineBusinessCreatedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="OnlineServiceCreatedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="PropertyGroupCreatedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="PropertyDimensionCreatedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="BusinessDivisionLastModifiedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="OnlineBusinessLastModifiedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="OnlineServiceLastModifiedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="PropertyGroupLastModifiedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="PropertyDimensionLastModifiedDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="BusinessDivisionRetiredDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="OnlineBusinessRetiredDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="OnlineServiceRetiredDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="PropertyGroupRetiredDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="PropertyDimensionRetiredDate" Type="Edm.DateTime" Precision="7" />
+        <Property Name="MOCSupportCommenced" Type="Edm.DateTime" Precision="7" />
+      </EntityType>
+      <EntityType Name="Contact">
+        <Key>
+          <PropertyRef Name="ContactId" />
+        </Key>
+        <Property Name="ContactId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Reference" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" MaxLength="1024" FixedLength="false" Unicode="true" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="GroupContacts" Relationship="MFxBRHModel.fk_GroupContact_ContactId" ToRole="GroupContact" FromRole="Contact" />
+      </EntityType>
+      <EntityType Name="ContactType">
+        <Key>
+          <PropertyRef Name="ContactTypeId" />
+        </Key>
+        <Property Name="ContactTypeId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+        <NavigationProperty Name="GroupContacts" Relationship="MFxBRHModel.fk_GroupContact_ContactTypeId" ToRole="GroupContact" FromRole="ContactType" />
+      </EntityType>
+      <EntityType Name="GroupContact">
+        <Key>
+          <PropertyRef Name="GroupContactId" />
+        </Key>
+        <Property Name="GroupContactId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="GroupId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ContactTypeId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ContactId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <Property Name="UpdatedBy" Type="Edm.String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        <Property Name="UpdatedDate" Type="Edm.DateTime" Nullable="false" Precision="0" />
+        <NavigationProperty Name="Contact" Relationship="MFxBRHModel.fk_GroupContact_ContactId" ToRole="Contact" FromRole="GroupContact" />
+        <NavigationProperty Name="ContactType" Relationship="MFxBRHModel.fk_GroupContact_ContactTypeId" ToRole="ContactType" FromRole="GroupContact" />
+        <NavigationProperty Name="Group" Relationship="MFxBRHModel.fk_GroupContact_GroupId" ToRole="Group" FromRole="GroupContact" />
+      </EntityType>
+      <Association Name="fk_Attribute_AttributeControlTypeId">
+        <End Type="MFxBRHModel.AttributeControlType" Role="AttributeControlType" Multiplicity="0..1" />
+        <End Type="MFxBRHModel.Attribute" Role="Attribute" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="AttributeControlType">
+            <PropertyRef Name="AttributeControlTypeId" />
+          </Principal>
+          <Dependent Role="Attribute">
+            <PropertyRef Name="AttributeControlTypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_Attribute_AttributeDataTypeId">
+        <End Type="MFxBRHModel.AttributeDataType" Role="AttributeDataType" Multiplicity="0..1" />
+        <End Type="MFxBRHModel.Attribute" Role="Attribute" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="AttributeDataType">
+            <PropertyRef Name="AttributeDataTypeId" />
+          </Principal>
+          <Dependent Role="Attribute">
+            <PropertyRef Name="AttributeDataTypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_AttributeDomain_AttributeId">
+        <End Type="MFxBRHModel.Attribute" Role="Attribute" Multiplicity="0..1" />
+        <End Type="MFxBRHModel.AttributeDomain" Role="AttributeDomain" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Attribute">
+            <PropertyRef Name="AttributeId" />
+          </Principal>
+          <Dependent Role="AttributeDomain">
+            <PropertyRef Name="AttributeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_AuditLog_AttributeId">
+        <End Type="MFxBRHModel.Attribute" Role="Attribute" Multiplicity="0..1" />
+        <End Type="MFxBRHModel.AuditLog" Role="AuditLog" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Attribute">
+            <PropertyRef Name="AttributeId" />
+          </Principal>
+          <Dependent Role="AuditLog">
+            <PropertyRef Name="AttributeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupAttributeTemplate_AttributeId">
+        <End Type="MFxBRHModel.Attribute" Role="Attribute" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupAttributeTemplate" Role="GroupAttributeTemplate" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Attribute">
+            <PropertyRef Name="AttributeId" />
+          </Principal>
+          <Dependent Role="GroupAttributeTemplate">
+            <PropertyRef Name="AttributeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupAttributeValue_AttributeId">
+        <End Type="MFxBRHModel.Attribute" Role="Attribute" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupAttributeValue" Role="GroupAttributeValue" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Attribute">
+            <PropertyRef Name="AttributeId" />
+          </Principal>
+          <Dependent Role="GroupAttributeValue">
+            <PropertyRef Name="AttributeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupAttributeTemplate_AttributeSectionId">
+        <End Type="MFxBRHModel.AttributeSection" Role="AttributeSection" Multiplicity="0..1" />
+        <End Type="MFxBRHModel.GroupAttributeTemplate" Role="GroupAttributeTemplate" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="AttributeSection">
+            <PropertyRef Name="AttributeSectionId" />
+          </Principal>
+          <Dependent Role="GroupAttributeTemplate">
+            <PropertyRef Name="AttributeSectionId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_AuditLog_AuditLogTypeId">
+        <End Type="MFxBRHModel.AuditLogType" Role="AuditLogType" Multiplicity="1" />
+        <End Type="MFxBRHModel.AuditLog" Role="AuditLog" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="AuditLogType">
+            <PropertyRef Name="AuditLogTypeId" />
+          </Principal>
+          <Dependent Role="AuditLog">
+            <PropertyRef Name="AuditLogTypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_AuditLog_GroupId">
+        <End Type="MFxBRHModel.Group" Role="Group" Multiplicity="1" />
+        <End Type="MFxBRHModel.AuditLog" Role="AuditLog" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Group">
+            <PropertyRef Name="GroupId" />
+          </Principal>
+          <Dependent Role="AuditLog">
+            <PropertyRef Name="GroupId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_Group_GroupTypeId">
+        <End Type="MFxBRHModel.GroupType" Role="GroupType" Multiplicity="1" />
+        <End Type="MFxBRHModel.Group" Role="Group" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="GroupType">
+            <PropertyRef Name="GroupTypeId" />
+          </Principal>
+          <Dependent Role="Group">
+            <PropertyRef Name="GroupTypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupAttributeValue_GroupId">
+        <End Type="MFxBRHModel.Group" Role="Group" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupAttributeValue" Role="GroupAttributeValue" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Group">
+            <PropertyRef Name="GroupId" />
+          </Principal>
+          <Dependent Role="GroupAttributeValue">
+            <PropertyRef Name="GroupId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupContact_GroupId">
+        <End Type="MFxBRHModel.Group" Role="Group" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupContact" Role="GroupContact" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Group">
+            <PropertyRef Name="GroupId" />
+          </Principal>
+          <Dependent Role="GroupContact">
+            <PropertyRef Name="GroupId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupAttributeTemplate_GroupTypeId">
+        <End Type="MFxBRHModel.GroupType" Role="GroupType" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupAttributeTemplate" Role="GroupAttributeTemplate" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="GroupType">
+            <PropertyRef Name="GroupTypeId" />
+          </Principal>
+          <Dependent Role="GroupAttributeTemplate">
+            <PropertyRef Name="GroupTypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupAttributeValueCollection_GroupAttributeValueId">
+        <End Type="MFxBRHModel.GroupAttributeValue" Role="GroupAttributeValue" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupAttributeValueCollection" Role="GroupAttributeValueCollection" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="GroupAttributeValue">
+            <PropertyRef Name="GroupAttributeValueId" />
+          </Principal>
+          <Dependent Role="GroupAttributeValueCollection">
+            <PropertyRef Name="GroupAttributeValueId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupContact_ContactId">
+        <End Type="MFxBRHModel.Contact" Role="Contact" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupContact" Role="GroupContact" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Contact">
+            <PropertyRef Name="ContactId" />
+          </Principal>
+          <Dependent Role="GroupContact">
+            <PropertyRef Name="ContactId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="fk_GroupContact_ContactTypeId">
+        <End Type="MFxBRHModel.ContactType" Role="ContactType" Multiplicity="1" />
+        <End Type="MFxBRHModel.GroupContact" Role="GroupContact" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="ContactType">
+            <PropertyRef Name="ContactTypeId" />
+          </Principal>
+          <Dependent Role="GroupContact">
+            <PropertyRef Name="ContactTypeId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Annotations Target="MSDial.BRH.Service.DataModel.MFxBRHEntities">
+        <ValueAnnotation Term="Org.OData.Publication.V1.DocumentationUrl" String="https://GFSTechCentral/" />
+        <ValueAnnotation Term="Org.OData.Publication.V1.PublisherName" String="msgpms@microsoft.com" />
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="The BRH (Business Relationship Hierarchy) service exposes an organizational structure used to align applications/services hosted by GFS to the various profit centers within Microsoft. The hierarchy is composed of business group of the following types: Business Division, Online Business, Online Service, Property Group, and Application. BRH's primary purpose is for billing, but it also makes visible the large number of online applications and services produced by many product teams across the company. BRH OData service is designed to provide access to the BRH data and functional support for BRH UI (http://mfx/BRH/)." />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.Attribute">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="Attribute of BRH groups" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.AttributeDataType">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="Data type of BRH group attribute" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.AttributeDomain">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="Domain (available data variation) of certain BRH group attribute (associated only for BRH group attribute with drop down or state control types)" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.AuditLog">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="History of BRH group attribute changes" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.AuditLogType">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="Type of change recorded in AuditLog" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.Group">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="Collection of BRH group IDs and group types" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.GroupAttributeValue">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="The value and related data of a BRH group attribute" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.GroupAttributeValueCollection">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="Collection of values of BRH group attributes that can have multiple values" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.GroupType">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="Types and related information (such as background color for BRH UI presentation) of BRH group" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.AttributeControlType">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) HTML control type for presentation of the attribute in BRH UI" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.AttributeSection">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) Grouping of BRH group attributes in BRH UI" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.GetBrhData">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) Specialized view of group hierarchy data" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.GetBRHReportData">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) A flat view of the complete dataset such as shown on the report" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.GroupAttributeTemplate">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) UI template for BRH group levels" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.vwBrhTreeData">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) Specialized view of group hierarchy data in BRH UI" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.vwGroupAttributeTemplate">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) Specialized view of group attribute template" />
+      </Annotations>
+      <Annotations Target="MFxBRHModel.vwGroupAttributeValue">
+        <ValueAnnotation Term="Org.OData.Documentation.V1.Description" String="(UI function) Specialized view of group attribute values" />
+      </Annotations>
+    </Schema>
+    <Schema Namespace="MSDial.BRH.Service.DataModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="MFxBRHEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="Attributes" EntityType="MFxBRHModel.Attribute" />
+        <EntitySet Name="AttributeControlTypes" EntityType="MFxBRHModel.AttributeControlType" />
+        <EntitySet Name="AttributeDataTypes" EntityType="MFxBRHModel.AttributeDataType" />
+        <EntitySet Name="AttributeDomains" EntityType="MFxBRHModel.AttributeDomain" />
+        <EntitySet Name="AttributeSections" EntityType="MFxBRHModel.AttributeSection" />
+        <EntitySet Name="AuditLogs" EntityType="MFxBRHModel.AuditLog" />
+        <EntitySet Name="AuditLogTypes" EntityType="MFxBRHModel.AuditLogType" />
+        <EntitySet Name="Groups" EntityType="MFxBRHModel.Group" />
+        <EntitySet Name="GroupAttributeTemplates" EntityType="MFxBRHModel.GroupAttributeTemplate" />
+        <EntitySet Name="GroupAttributeValues" EntityType="MFxBRHModel.GroupAttributeValue" />
+        <EntitySet Name="GroupAttributeValueCollections" EntityType="MFxBRHModel.GroupAttributeValueCollection" />
+        <EntitySet Name="GroupTypes" EntityType="MFxBRHModel.GroupType" />
+        <EntitySet Name="GetBrhDatas" EntityType="MFxBRHModel.GetBrhData" />
+        <EntitySet Name="vwBrhTreeDatas" EntityType="MFxBRHModel.vwBrhTreeData" />
+        <EntitySet Name="vwGroupAttributeTemplates" EntityType="MFxBRHModel.vwGroupAttributeTemplate" />
+        <EntitySet Name="vwGroupAttributeValues" EntityType="MFxBRHModel.vwGroupAttributeValue" />
+        <EntitySet Name="GetBRHReportDatas" EntityType="MFxBRHModel.GetBRHReportData" />
+        <EntitySet Name="Contacts" EntityType="MFxBRHModel.Contact" />
+        <EntitySet Name="ContactTypes" EntityType="MFxBRHModel.ContactType" />
+        <EntitySet Name="GroupContacts" EntityType="MFxBRHModel.GroupContact" />
+        <FunctionImport Name="BRHGroup" ReturnType="Collection(MFxBRHModel.GroupAttributeValue)" EntitySet="GroupAttributeValues" m:HttpMethod="GET">
+          <Parameter Name="id" Type="Edm.Int32" Nullable="false" />
+        </FunctionImport>
+        <AssociationSet Name="fk_Attribute_AttributeControlTypeId" Association="MFxBRHModel.fk_Attribute_AttributeControlTypeId">
+          <End Role="Attribute" EntitySet="Attributes" />
+          <End Role="AttributeControlType" EntitySet="AttributeControlTypes" />
+        </AssociationSet>
+        <AssociationSet Name="fk_Attribute_AttributeDataTypeId" Association="MFxBRHModel.fk_Attribute_AttributeDataTypeId">
+          <End Role="Attribute" EntitySet="Attributes" />
+          <End Role="AttributeDataType" EntitySet="AttributeDataTypes" />
+        </AssociationSet>
+        <AssociationSet Name="fk_AttributeDomain_AttributeId" Association="MFxBRHModel.fk_AttributeDomain_AttributeId">
+          <End Role="Attribute" EntitySet="Attributes" />
+          <End Role="AttributeDomain" EntitySet="AttributeDomains" />
+        </AssociationSet>
+        <AssociationSet Name="fk_AuditLog_AttributeId" Association="MFxBRHModel.fk_AuditLog_AttributeId">
+          <End Role="Attribute" EntitySet="Attributes" />
+          <End Role="AuditLog" EntitySet="AuditLogs" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupAttributeTemplate_AttributeId" Association="MFxBRHModel.fk_GroupAttributeTemplate_AttributeId">
+          <End Role="Attribute" EntitySet="Attributes" />
+          <End Role="GroupAttributeTemplate" EntitySet="GroupAttributeTemplates" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupAttributeValue_AttributeId" Association="MFxBRHModel.fk_GroupAttributeValue_AttributeId">
+          <End Role="Attribute" EntitySet="Attributes" />
+          <End Role="GroupAttributeValue" EntitySet="GroupAttributeValues" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupAttributeTemplate_AttributeSectionId" Association="MFxBRHModel.fk_GroupAttributeTemplate_AttributeSectionId">
+          <End Role="AttributeSection" EntitySet="AttributeSections" />
+          <End Role="GroupAttributeTemplate" EntitySet="GroupAttributeTemplates" />
+        </AssociationSet>
+        <AssociationSet Name="fk_AuditLog_AuditLogTypeId" Association="MFxBRHModel.fk_AuditLog_AuditLogTypeId">
+          <End Role="AuditLog" EntitySet="AuditLogs" />
+          <End Role="AuditLogType" EntitySet="AuditLogTypes" />
+        </AssociationSet>
+        <AssociationSet Name="fk_AuditLog_GroupId" Association="MFxBRHModel.fk_AuditLog_GroupId">
+          <End Role="AuditLog" EntitySet="AuditLogs" />
+          <End Role="Group" EntitySet="Groups" />
+        </AssociationSet>
+        <AssociationSet Name="fk_Group_GroupTypeId" Association="MFxBRHModel.fk_Group_GroupTypeId">
+          <End Role="Group" EntitySet="Groups" />
+          <End Role="GroupType" EntitySet="GroupTypes" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupAttributeValue_GroupId" Association="MFxBRHModel.fk_GroupAttributeValue_GroupId">
+          <End Role="Group" EntitySet="Groups" />
+          <End Role="GroupAttributeValue" EntitySet="GroupAttributeValues" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupContact_GroupId" Association="MFxBRHModel.fk_GroupContact_GroupId">
+          <End Role="Group" EntitySet="Groups" />
+          <End Role="GroupContact" EntitySet="GroupContacts" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupAttributeTemplate_GroupTypeId" Association="MFxBRHModel.fk_GroupAttributeTemplate_GroupTypeId">
+          <End Role="GroupAttributeTemplate" EntitySet="GroupAttributeTemplates" />
+          <End Role="GroupType" EntitySet="GroupTypes" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupAttributeValueCollection_GroupAttributeValueId" Association="MFxBRHModel.fk_GroupAttributeValueCollection_GroupAttributeValueId">
+          <End Role="GroupAttributeValue" EntitySet="GroupAttributeValues" />
+          <End Role="GroupAttributeValueCollection" EntitySet="GroupAttributeValueCollections" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupContact_ContactId" Association="MFxBRHModel.fk_GroupContact_ContactId">
+          <End Role="Contact" EntitySet="Contacts" />
+          <End Role="GroupContact" EntitySet="GroupContacts" />
+        </AssociationSet>
+        <AssociationSet Name="fk_GroupContact_ContactTypeId" Association="MFxBRHModel.fk_GroupContact_ContactTypeId">
+          <End Role="ContactType" EntitySet="ContactTypes" />
+          <End Role="GroupContact" EntitySet="GroupContacts" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

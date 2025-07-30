@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: jpjofre
+  name: opa-logger
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http-opa-logs
+      protocol: TCP
+      name: http-opa-logs
+  selector:
+    app: opa-logger

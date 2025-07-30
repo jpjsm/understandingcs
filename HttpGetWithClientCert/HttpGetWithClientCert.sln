@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpGetWithClientCert", "HttpGetWithClientCert.csproj", "{E53AACF4-DAAA-4E66-AE5E-E06F3F2A0D67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E53AACF4-DAAA-4E66-AE5E-E06F3F2A0D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E53AACF4-DAAA-4E66-AE5E-E06F3F2A0D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E53AACF4-DAAA-4E66-AE5E-E06F3F2A0D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E53AACF4-DAAA-4E66-AE5E-E06F3F2A0D67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1BB7358-D5DB-4DA3-A4A3-65719641C616}
+	EndGlobalSection
+EndGlobal

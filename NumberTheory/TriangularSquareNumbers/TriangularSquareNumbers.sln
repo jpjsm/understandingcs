@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriangularSquareNumbers", "TriangularSquareNumbers\TriangularSquareNumbers.csproj", "{A8091937-CA64-4CF2-95D9-DFCA9D341D25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberTheory", "..\NumberTheory\NumberTheory\NumberTheory.csproj", "{628BC51F-677E-4EA5-8C03-9D7FB2218B00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8091937-CA64-4CF2-95D9-DFCA9D341D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8091937-CA64-4CF2-95D9-DFCA9D341D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8091937-CA64-4CF2-95D9-DFCA9D341D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8091937-CA64-4CF2-95D9-DFCA9D341D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628BC51F-677E-4EA5-8C03-9D7FB2218B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628BC51F-677E-4EA5-8C03-9D7FB2218B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628BC51F-677E-4EA5-8C03-9D7FB2218B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628BC51F-677E-4EA5-8C03-9D7FB2218B00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B22AC0DF-8F4D-41AA-8FB0-558AC17CD6E1}
+	EndGlobalSection
+EndGlobal
