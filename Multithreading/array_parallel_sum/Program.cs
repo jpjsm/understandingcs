@@ -1,4 +1,11 @@
-﻿using System.Diagnostics;
+/// ***************************************************************************
+/// 
+/// This code intents to shows how to convert a sequential process into a fully
+/// parallelized process 
+/// 
+/// ***************************************************************************
+
+using System.Diagnostics;
 
 
 namespace array_parallel_sum;
@@ -33,7 +40,16 @@ class Program
         for (int i = 0; i < A.Length; i++)
             A[i] = i;
     }
-    static void ArrayAdd(long[] A, int i, int j)
+
+    /// <summary>
+    /// Adds the value of the j-th item to the value of the i-th item
+    /// </summary>
+    /// <param name="A">The array of values to add</param>
+    /// <param name="i">the index of the value to be incremente by the j-th value</param>
+    /// <param name="j">the index of the value to be added</param>
+    /// <exception cref="ArgumentException">traps the invalid argumernts for debugging</exception>
+    /// <remarks>By design: if j is outside the valid range of values, no operation is made</remarks>
+    static void ArrayAdd(long[] A, long i, long j)
     {
         // Argument validation
         if (A == null || A.Length == 0)
@@ -86,13 +102,13 @@ class Program
         // Argument validation
         if (A == null || A.Length == 0) throw new ArgumentException("'A' must have elements");
 
-        int size = A.Length;
-        int stride = 1;
-        int step = 2;
+        long size = A.Length;
+        long stride = 1;
+        long step = 2;
 
         while (stride < size)
         {
-            for (int j = 0; j < size; j += step)
+            for (long j = 0; j < size; j += step)
                 ArrayAdd(A, j, j + stride);
             stride <<= 1;
             step <<= 1;
@@ -105,15 +121,15 @@ class Program
         // Argument validation
         if (A == null || A.Length == 0) throw new ArgumentException("'A' must have elements");
 
-        int size = A.Length;
-        int stride = 1;
-        int step = 2;
+        long size = A.Length;
+        long stride = 1;
+        long step = 2;
 
         while (stride < size)
         {
-            Parallel.For(0, size / step + 1, new ParallelOptions { MaxDegreeOfParallelism = 256 }, idx =>
+            Parallel.For(0, size / step + 1L, new ParallelOptions { MaxDegreeOfParallelism = 14 }, idx =>
             {
-                int j = idx * step;
+                long j = idx * step;
                 ArrayAdd(A, j, j + stride);
             });
             stride <<= 1;
@@ -123,20 +139,22 @@ class Program
 
     static void Main(string[] args)
     {
+        Console.WriteLine($"{"Size",16} | {"Serial (ms)",24} | {"Reduction-serial (ms),24"} | {"Reduction-parallel (ms),24"}");
         long[] sizes = [1031 * 1031, 5003 * 5003, 7001 * 7001, 10007 * 10007, 14143 * 14143, 17327 * 17327, 19997 * 19997, 22367 * 22367, 43331 * 43331];
         foreach (long size in sizes)
         {
             long[] A = new long[size];
 
             InitArray(A);
-            Console.WriteLine("Size: {0:N0}, SequentialArraySum: {1} ms", size, Profile(() => SequentialArraySum(A)));
+            long seq_array_sum = Profile(() => SequentialArraySum(A));
 
             InitArray(A);
-            Console.WriteLine("Size: {0:N0}, SequentialReductionArraySum: {1} ms", size, Profile(() => SequentialReductionArraySum(A)));
+            long seq_reduction_sum = Profile(() => SequentialReductionArraySum(A));
 
 
             InitArray(A);
-            Console.WriteLine("Size: {0:N0}, ParallelReductionArraySum: {1} ms", size, Profile(() => ParallelReductionArraySum(A)));
+            long par_reduction_sum = Profile(() => ParallelReductionArraySum(A));
+            Console.WriteLine($"{size,16:N0} | {seq_array_sum,24:N0} | {seq_reduction_sum,24:N0} | {par_reduction_sum,24:N0}");
         }
         // foreach(int base in bases)
         // {
