@@ -5,6 +5,7 @@
 /// 
 /// ***************************************************************************
 
+using System.Data;
 using System.Diagnostics;
 
 
@@ -88,16 +89,18 @@ class Program
         return; // obvious, but cleaner.
     }
 
-    static void SequentialArraySum(long[] A)
+    static void SequentialArraySum(long[] A, out long sum)
     {
         // Argument validation
         if (A == null || A.Length == 0) throw new ArgumentException("'A' must have elements");
 
         for (int i = 1; i < A.Length; i++)
             A[0] += A[i];
+
+        sum = A[0];
     }
 
-    static void SequentialReductionArraySum(long[] A)
+    static void SequentialReductionArraySum(long[] A, out long sum)
     {
         // Argument validation
         if (A == null || A.Length == 0) throw new ArgumentException("'A' must have elements");
@@ -109,14 +112,16 @@ class Program
         while (stride < size)
         {
             for (long j = 0; j < size; j += step)
-                ArrayAdd(A, j, j + stride);
+                if ((j + stride) < A.Length) A[j] += A[j + stride];
+
             stride <<= 1;
             step <<= 1;
         }
 
+        sum = A[0];
     }
 
-    static void ParallelReductionArraySum(long[] A)
+    static void ParallelReductionArraySum(long[] A, out long sum)
     {
         // Argument validation
         if (A == null || A.Length == 0) throw new ArgumentException("'A' must have elements");
@@ -130,44 +135,43 @@ class Program
             Parallel.For(0, size / step + 1L, new ParallelOptions { MaxDegreeOfParallelism = 14 }, idx =>
             {
                 long j = idx * step;
-                ArrayAdd(A, j, j + stride);
+
+                if ((j + stride) < A.Length) A[j] += A[j + stride];
             });
+
             stride <<= 1;
             step <<= 1;
         }
+
+        sum = A[0];
     }
 
     static void Main(string[] args)
     {
-        Console.WriteLine($"{"Size",16} | {"Serial (ms)",24} | {"Reduction-serial (ms),24"} | {"Reduction-parallel (ms),24"}");
+        Console.WriteLine($"{"Size",16} | {"Serial (ms)",24} | {"Reduction-serial (ms)",24} | {"Reduction-parallel (ms)",24}");
         long[] sizes = [1031 * 1031, 5003 * 5003, 7001 * 7001, 10007 * 10007, 14143 * 14143, 17327 * 17327, 19997 * 19997, 22367 * 22367, 43331 * 43331];
         foreach (long size in sizes)
         {
             long[] A = new long[size];
+            long expected = size * (size - 1) / 2;
+            long sum;
+            InitArray(A);
+            sum = -1;
+            long seq_array_sum = Profile(() => SequentialArraySum(A, out sum));
+            if (sum != expected) throw new EvaluateException($"'SequentialArraySum' returned value {sum} != {expected} expected.");
 
             InitArray(A);
-            long seq_array_sum = Profile(() => SequentialArraySum(A));
+            sum = -1;
+            long seq_reduction_sum = Profile(() => SequentialReductionArraySum(A, out sum));
+            if (sum != expected) throw new EvaluateException($"'SequentialReductionArraySum' returned value {sum} != {expected} expected.");
+
 
             InitArray(A);
-            long seq_reduction_sum = Profile(() => SequentialReductionArraySum(A));
+            sum = -1;
+            long par_reduction_sum = Profile(() => ParallelReductionArraySum(A, out sum));
+            if (sum != expected) throw new EvaluateException($"'SequentialReductionArraySum' returned value {sum} != {expected} expected.");
 
-
-            InitArray(A);
-            long par_reduction_sum = Profile(() => ParallelReductionArraySum(A));
             Console.WriteLine($"{size,16:N0} | {seq_array_sum,24:N0} | {seq_reduction_sum,24:N0} | {par_reduction_sum,24:N0}");
         }
-        // foreach(int base in bases)
-        // {
-
-        // }
-        // int size = 5003 * 5003;
-
-        // long actual = A[0];
-        // long expected = (long)size * ((long)size - 1) / 2;
-
-        // Console.WriteLine("Actual   sum: {0:N0}", actual);
-        // Console.WriteLine("Expected sum: {0:N0}", expected);
-        // Console.WriteLine("Is match: {0}", actual == expected);
-
     }
 }
