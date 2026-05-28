@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using System.Text.Json;
 
 namespace nearest_prime;
 
@@ -88,11 +89,36 @@ class Program
 {
     static void Main(string[] args)
     {
-        long[] numbers = [1000000L, 5000000, 10000000L, 20000000L, 50000000L, 100000000L, 250000000L, 500000000L, 750000000L, 1000000000L];
+        long[] numbers = [1000000L, 5000000, 10000000L, 20000000L, 50000000L, 100000000L, 250000000L, 500000000L, 750000000L, 1000000000L, 4294967295L];
         foreach (long number in numbers)
         {
             // Console.WriteLine($"{PrimeUtils.PreviousPrime(number),12:N0} | {PrimeUtils.NextPrime(number),14:N0}");
-            Console.WriteLine($"{PrimeUtils.NextPrime(number)},");
+            Console.WriteLine($"{PrimeUtils.PreviousPrime(number)},{number}, {PrimeUtils.NextPrime(number)}");
         }
+
+        // List<int> primes = [];
+
+        // for (int n = 1000; n <= 10000; n++)
+        // {
+        //     if (PrimeUtils.IsPrime(n))
+        //     {
+        //         primes.Add(n);
+        //     }
+        // }
+
+        // // Configure JSON options for compact-printing
+        // var options = new JsonSerializerOptions
+        // {
+        //     WriteIndented = false // Makes JSON human-readable
+        // };
+
+        // // Serialize array to JSON string
+        // string jsonString = JsonSerializer.Serialize(primes, options);
+
+        // // Save JSON to file
+        // string filePath = @"C:\repos\jpjsm@github\understandingcs\NearestPrime\primes.json";
+        // System.IO.File.WriteAllText(filePath, jsonString);
+        // Console.WriteLine($"\nJSON saved to: {filePath}");
+
     }
 }
