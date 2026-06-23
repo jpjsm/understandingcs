@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Collections.Concurrent;
+using System.IO;
 using System.Numerics;
 using System.Text.Json;
+using System.Text.Json.Nodes;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 
 namespace nearest_prime;
 
@@ -47,7 +53,7 @@ public static class PrimeUtils
             return false;
         }
 
-        long[] bases = { 2, 325, 9375, 28178, 450775, 9780504, 1795265022 };
+        long[] bases = [2, 325, 9375, 28178, 450775, 9780504, 1795265022];
         foreach (var a in bases)
         {
             if (a % n == 0) return true;
@@ -83,12 +89,90 @@ public static class PrimeUtils
         }
         return -1;
     }
+
+    public static HashSet<long> FindDivisors(long n)
+    {
+        ArgumentOutOfRangeException.ThrowIfZero(n);
+
+        if (n < 0) n = -n;
+
+        HashSet<long> results = [];
+
+        ConcurrentDictionary<long, long> divisors = new();
+        long high_limit = (long)Math.Ceiling(Math.Sqrt(n)) + 1L;
+        Parallel.For(1L, high_limit, new ParallelOptions { MaxDegreeOfParallelism = 14 }, d =>
+        {
+            (long quotient, long remainder) = Math.DivRem(n, d);
+            if (remainder == 0)
+            {
+                divisors.TryAdd(d, quotient);
+            }
+        });
+
+        foreach (var kvp in divisors)
+        {
+            results.Add(kvp.Key);
+            results.Add(kvp.Value);
+        }
+
+        return results;
+    }
 }
 
 class Program
 {
     static void Main(string[] args)
     {
+        BigInteger max_long = long.MaxValue;
+        BigInteger composite = BigInteger.One;
+        BigInteger next_composite = composite;
+        BigInteger d = BigInteger.One;
+        for (; next_composite < max_long; d++)
+        {
+            next_composite = next_composite * d;
+            if (next_composite < max_long)
+            {
+                composite = next_composite;
+            }
+        }
+        Console.WriteLine($"N: {d - 1}, composite: {composite}");
+
+        /*
+        long n = 73513440L;
+        HashSet<long> actual_divisors = PrimeUtils.FindDivisors(n);
+
+        Console.WriteLine($"N: {n:N0} has {actual_divisors.Count:N0} divisors");
+
+
+        return;
+
+        string json = File.ReadAllText(@"C:\repos\jpjsm@github\understandingcs\NearestPrime\divisors-test-data.json");
+        ArgumentException.ThrowIfNullOrWhiteSpace(json);
+
+        var jsonNode = JsonNode.Parse(json);
+
+        var outerArray = jsonNode.AsArray();
+
+        foreach (var innerNode in outerArray)
+        {
+            var test_case = innerNode.AsArray();
+
+            long n = (long)test_case[0];
+            HashSet<long> expected_divisors = [];
+            foreach (var d in test_case[1].AsArray())
+            {
+                expected_divisors.Add((long)d);
+            }
+
+            HashSet<long> actual_divisors = PrimeUtils.FindDivisors(n);
+
+            if (!expected_divisors.SetEquals(actual_divisors))
+            {
+                Console.WriteLine($"[ERROR] For N: {n:N0} actual [{string.Join(", ", actual_divisors)}] != [{string.Join(", ", expected_divisors)}]");
+            }
+        }
+
+        return;
         long[] numbers = [1000000L, 5000000, 10000000L, 20000000L, 50000000L, 100000000L, 250000000L, 500000000L, 750000000L, 1000000000L, 4294967295L];
         foreach (long number in numbers)
         {
@@ -119,6 +203,6 @@ class Program
         // string filePath = @"C:\repos\jpjsm@github\understandingcs\NearestPrime\primes.json";
         // System.IO.File.WriteAllText(filePath, jsonString);
         // Console.WriteLine($"\nJSON saved to: {filePath}");
-
+        */
     }
 }
